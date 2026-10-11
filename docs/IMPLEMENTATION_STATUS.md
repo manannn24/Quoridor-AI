@@ -5,7 +5,7 @@ This document records the independent audit, testing, bug fixes, benchmark measu
 
 - **Audit Date:** 2026-10-11
 - **Pre-Audit Baseline Commit:** `7f2aec7`
-- **Post-Audit Fixes Commit:** Recorded in Git history (`HEAD`)
+- **Final Audit Commit:** `785c718`
 - **Initial Working Tree Status:** Clean (no untracked, staged, or unstaged changes)
 - **Baseline Verification Result:** `check:all` (35 tests passing) and `benchmark -- --games 2` (12 games) passed.
 - **Post-Audit Verification Result:** `check:all` (49 tests passing, 0 errors, 0 warnings) and `benchmark -- --games 2` (12 games) passed.
