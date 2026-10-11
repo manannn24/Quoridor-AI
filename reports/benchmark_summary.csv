@@ -1,0 +1,4 @@
+Matchup,Agent1,A1_Wins,A1_WinRate,A1_MeanTimeMs,A1_MeanNodes,Agent2,A2_Wins,A2_WinRate,A2_MeanTimeMs,A2_MeanNodes,A2_MeanCutoffs,AvgPlies
+"greedy (d1) vs minimax (d2)",greedy,0,0.0%,0.99,13,minimax,4,100.0%,4.44,81,0,20.5
+"greedy (d1) vs alpha-beta (d2)",greedy,0,0.0%,0.68,13,alpha-beta,4,100.0%,2.41,30,8.33,20.5
+"minimax (d2) vs alpha-beta (d2)",minimax,2,50.0%,2.46,47,alpha-beta,2,50.0%,1.68,26,5.18,62

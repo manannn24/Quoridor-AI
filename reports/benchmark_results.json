@@ -1,0 +1,83 @@
+{
+  "timestamp": "2026-10-11T14:20:57.405Z",
+  "options": {
+    "gamesPerSide": 2,
+    "depth": 2,
+    "seed": 42,
+    "outputPath": "D:\\Quoridor_AI\\reports\\benchmark_results.json"
+  },
+  "matchups": [
+    {
+      "matchup": "greedy (d1) vs minimax (d2)",
+      "totalGames": 4,
+      "agent1": {
+        "strategy": "greedy",
+        "depth": 1,
+        "wins": 0,
+        "winRate": "0.0%",
+        "meanDecisionTimeMs": 0.99,
+        "meanNodesVisited": 13,
+        "meanCutoffs": 0
+      },
+      "agent2": {
+        "strategy": "minimax",
+        "depth": 2,
+        "wins": 4,
+        "winRate": "100.0%",
+        "meanDecisionTimeMs": 4.44,
+        "meanNodesVisited": 81,
+        "meanCutoffs": 0
+      },
+      "draws": 0,
+      "meanGameLengthPlies": 20.5
+    },
+    {
+      "matchup": "greedy (d1) vs alpha-beta (d2)",
+      "totalGames": 4,
+      "agent1": {
+        "strategy": "greedy",
+        "depth": 1,
+        "wins": 0,
+        "winRate": "0.0%",
+        "meanDecisionTimeMs": 0.68,
+        "meanNodesVisited": 13,
+        "meanCutoffs": 0
+      },
+      "agent2": {
+        "strategy": "alpha-beta",
+        "depth": 2,
+        "wins": 4,
+        "winRate": "100.0%",
+        "meanDecisionTimeMs": 2.41,
+        "meanNodesVisited": 30,
+        "meanCutoffs": 8.33
+      },
+      "draws": 0,
+      "meanGameLengthPlies": 20.5
+    },
+    {
+      "matchup": "minimax (d2) vs alpha-beta (d2)",
+      "totalGames": 4,
+      "agent1": {
+        "strategy": "minimax",
+        "depth": 2,
+        "wins": 2,
+        "winRate": "50.0%",
+        "meanDecisionTimeMs": 2.46,
+        "meanNodesVisited": 47,
+        "meanCutoffs": 0
+      },
+      "agent2": {
+        "strategy": "alpha-beta",
+        "depth": 2,
+        "wins": 2,
+        "winRate": "50.0%",
+        "meanDecisionTimeMs": 1.68,
+        "meanNodesVisited": 26,
+        "meanCutoffs": 5.18
+      },
+      "draws": 0,
+      "meanGameLengthPlies": 62
+    }
+  ]
+}
