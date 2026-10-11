@@ -82,6 +82,13 @@ export function canPlaceWallGeometrically(
   existingWalls: Wall[],
   newWall: Wall
 ): { valid: boolean; reason?: string } {
+  if (newWall.orientation !== 'horizontal' && newWall.orientation !== 'vertical') {
+    return {
+      valid: false,
+      reason: `Invalid wall orientation: ${newWall.orientation}. Must be 'horizontal' or 'vertical'.`,
+    };
+  }
+
   if (!isValidWallAnchor(newWall.row, newWall.col)) {
     return {
       valid: false,

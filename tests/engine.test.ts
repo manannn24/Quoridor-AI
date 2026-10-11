@@ -7,6 +7,7 @@ import {
 import {
   applyAction,
   isWallPlacementLegal,
+  getAllLegalActions,
 } from '../src/game/actions';
 import { Wall } from '../src/game/types';
 
@@ -118,9 +119,58 @@ describe('Quoridor Engine - Jump Rules', () => {
     expect(moves).not.toContainEqual({ row: 4, col: 3 });
     expect(moves).toContainEqual({ row: 4, col: 5 });
   });
+
+  it('allows only in-bounds diagonal jump when one diagonal is off-board', () => {
+    const state = createInitialState();
+    // Opponent P2 at left edge (4, 0), P1 at (5, 0)
+    state.p1Pos = { row: 5, col: 0 };
+    state.p2Pos = { row: 4, col: 0 };
+    state.activePlayer = 'P1';
+    // Horizontal wall behind P2: at (3, 0) blocks (3, 0)-(4, 0)
+    state.walls.push({ row: 3, col: 0, orientation: 'horizontal' });
+
+    const moves = getLegalPawnMoves(state, 'P1');
+    // Straight jump (3, 0) blocked by wall
+    expect(moves).not.toContainEqual({ row: 3, col: 0 });
+    // Left diagonal (4, -1) is off-board, only right diagonal (4, 1) is legal
+    expect(moves).toContainEqual({ row: 4, col: 1 });
+    expect(moves.filter((m) => m.row === 4)).toHaveLength(1);
+  });
+
+  it('blocks all jumps when straight jump and both diagonals are blocked by walls', () => {
+    const state = createInitialState();
+    state.p1Pos = { row: 5, col: 4 };
+    state.p2Pos = { row: 4, col: 4 };
+    state.activePlayer = 'P1';
+    // Wall behind P2: blocks straight jump (3, 4)
+    state.walls.push({ row: 3, col: 4, orientation: 'horizontal' });
+    // Wall blocking left diagonal (4, 3)
+    state.walls.push({ row: 4, col: 3, orientation: 'vertical' });
+    // Wall blocking right diagonal (4, 5)
+    state.walls.push({ row: 4, col: 4, orientation: 'vertical' });
+
+    const moves = getLegalPawnMoves(state, 'P1');
+    // No jumps over P2 possible
+    expect(moves).not.toContainEqual({ row: 3, col: 4 });
+    expect(moves).not.toContainEqual({ row: 4, col: 3 });
+    expect(moves).not.toContainEqual({ row: 4, col: 5 });
+    // Orthogonal moves from (5, 4): down (6, 4) is open
+    expect(moves).toContainEqual({ row: 6, col: 4 });
+  });
 });
 
 describe('Quoridor Engine - Wall Geometry & Legality', () => {
+  it('rejects invalid wall orientations', () => {
+    const state = createInitialState();
+    const res = canPlaceWallGeometrically(state.walls, {
+      row: 3,
+      col: 3,
+      orientation: 'diagonal' as unknown as Wall['orientation'],
+    });
+    expect(res.valid).toBe(false);
+    expect(res.reason).toMatch(/Invalid wall orientation/i);
+  });
+
   it('rejects out-of-range wall anchors', () => {
     const state = createInitialState();
     expect(canPlaceWallGeometrically(state.walls, { row: -1, col: 0, orientation: 'horizontal' }).valid).toBe(false);
@@ -239,5 +289,43 @@ describe('Quoridor Engine - State Transitions & Winning', () => {
     const postWinRes = applyAction(res.state, nextAction);
     expect(postWinRes.success).toBe(false);
     expect(postWinRes.error).toMatch(/concluded/i);
+
+    // Wall placement after game end must also be rejected
+    const wallAction = {
+      type: 'placeWall' as const,
+      wall: { row: 2, col: 2, orientation: 'horizontal' as const },
+    };
+    const postWinWallRes = applyAction(res.state, wallAction);
+    expect(postWinWallRes.success).toBe(false);
+    expect(postWinWallRes.error).toMatch(/concluded/i);
+  });
+});
+
+describe('Quoridor Engine - Legal Action Generation', () => {
+  it('generates exactly 131 legal actions on the initial board (3 pawn moves + 128 wall actions)', () => {
+    const state = createInitialState();
+    const actions = getAllLegalActions(state);
+    // 3 pawn moves from (8, 4)
+    const pawnMoves = actions.filter((a) => a.type === 'move');
+    expect(pawnMoves).toHaveLength(3);
+    // 8x8 anchors * 2 orientations = 128 wall placements, all legal on empty board
+    const wallActions = actions.filter((a) => a.type === 'placeWall');
+    expect(wallActions).toHaveLength(128);
+    expect(actions).toHaveLength(131);
+  });
+
+  it('generates only pawn moves when active player has 0 walls remaining', () => {
+    const state = createInitialState();
+    state.p1WallsRemaining = 0;
+    const actions = getAllLegalActions(state);
+    expect(actions.every((a) => a.type === 'move')).toBe(true);
+    expect(actions).toHaveLength(3);
+  });
+
+  it('returns empty array when game has already concluded', () => {
+    const state = createInitialState();
+    state.winner = 'P1';
+    const actions = getAllLegalActions(state);
+    expect(actions).toHaveLength(0);
   });
 });

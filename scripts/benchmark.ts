@@ -263,6 +263,7 @@ export function runBenchmark() {
       'A2 Mean Time (ms)': s.agent2.meanDecisionTimeMs,
       'A1 Nodes': s.agent1.meanNodesVisited,
       'A2 Nodes': s.agent2.meanNodesVisited,
+      'A1 Cutoffs': s.agent1.meanCutoffs,
       'A2 Cutoffs': s.agent2.meanCutoffs,
       'Avg Plies': s.meanGameLengthPlies,
     }))
@@ -285,10 +286,10 @@ export function runBenchmark() {
   // Also write CSV summary
   const csvPath = path.join(reportDir, 'benchmark_summary.csv');
   const csvRows = [
-    'Matchup,Agent1,A1_Wins,A1_WinRate,A1_MeanTimeMs,A1_MeanNodes,Agent2,A2_Wins,A2_WinRate,A2_MeanTimeMs,A2_MeanNodes,A2_MeanCutoffs,AvgPlies',
+    'Matchup,Agent1,A1_Wins,A1_WinRate,A1_MeanTimeMs,A1_MeanNodes,A1_MeanCutoffs,Agent2,A2_Wins,A2_WinRate,A2_MeanTimeMs,A2_MeanNodes,A2_MeanCutoffs,AvgPlies',
     ...summary.map(
       (s) =>
-        `"${s.matchup}",${s.agent1.strategy},${s.agent1.wins},${s.agent1.winRate},${s.agent1.meanDecisionTimeMs},${s.agent1.meanNodesVisited},${s.agent2.strategy},${s.agent2.wins},${s.agent2.winRate},${s.agent2.meanDecisionTimeMs},${s.agent2.meanNodesVisited},${s.agent2.meanCutoffs},${s.meanGameLengthPlies}`
+        `"${s.matchup}",${s.agent1.strategy},${s.agent1.wins},${s.agent1.winRate},${s.agent1.meanDecisionTimeMs},${s.agent1.meanNodesVisited},${s.agent1.meanCutoffs},${s.agent2.strategy},${s.agent2.wins},${s.agent2.winRate},${s.agent2.meanDecisionTimeMs},${s.agent2.meanNodesVisited},${s.agent2.meanCutoffs},${s.meanGameLengthPlies}`
     ),
   ];
   fs.writeFileSync(csvPath, csvRows.join('\n'), 'utf8');

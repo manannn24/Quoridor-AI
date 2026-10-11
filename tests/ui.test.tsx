@@ -3,6 +3,7 @@ import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { App } from '../src/app/App';
 import { Panel } from '../src/components/Panel';
 import { createInitialState } from '../src/game/state';
+import * as minimaxModule from '../src/ai/minimax';
 
 describe('UI Integration & Accessibility', () => {
   beforeEach(() => {
@@ -129,5 +130,61 @@ describe('UI Integration & Accessibility', () => {
     expect(screen.getByText(/Computer is thinking/i)).toBeInTheDocument();
     const movePawnBtn = screen.getByRole('button', { name: /Move Pawn/i });
     expect(movePawnBtn).toBeDisabled();
+  });
+
+  it('Undo Turn reverts human and AI move and clears last decision metrics when returning to start', async () => {
+    render(<App />);
+
+    // Perform human move
+    const moveBtn = screen.getByRole('button', {
+      name: /Square row 8, column 5 - Legal move destination/i,
+    });
+    fireEvent.click(moveBtn);
+
+    // Wait for AI response
+    await waitFor(() => {
+      expect(screen.queryByText(/No computer decision made yet/i)).not.toBeInTheDocument();
+      expect(screen.getByText(/2 ply/i)).toBeInTheDocument();
+    });
+
+    // Click Undo
+    const undoBtn = screen.getByRole('button', { name: /Undo Turn/i });
+    fireEvent.click(undoBtn);
+
+    // Pawn should be back at (8, 4) and decision metrics cleared
+    expect(screen.getByText(/No computer decision made yet/i)).toBeInTheDocument();
+  });
+
+  it('displays error alert and unfreezes thinking state if AI search throws an error', async () => {
+    const spy = vi
+      .spyOn(minimaxModule, 'chooseAIAction')
+      .mockImplementationOnce(() => {
+        throw new Error('Simulated AI timeout failure');
+      });
+
+    render(<App />);
+
+    const moveBtn = screen.getByRole('button', {
+      name: /Square row 8, column 5 - Legal move destination/i,
+    });
+    fireEvent.click(moveBtn);
+
+    // Wait for error banner
+    await waitFor(() => {
+      expect(screen.getByText(/Simulated AI timeout failure/i)).toBeInTheDocument();
+    });
+
+    // Thinking state must be cleared
+    expect(screen.queryByText(/Computer is thinking/i)).not.toBeInTheDocument();
+
+    // Undo must be enabled to allow recovering from the failure
+    const undoBtn = screen.getByRole('button', { name: /Undo Turn/i });
+    expect(undoBtn).not.toBeDisabled();
+
+    // Clicking Undo reverts to human turn
+    fireEvent.click(undoBtn);
+    expect(screen.getByRole('button', { name: /Move Pawn/i })).not.toBeDisabled();
+
+    spy.mockRestore();
   });
 });

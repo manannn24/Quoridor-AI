@@ -5,6 +5,7 @@ import {
   hasPathToGoal,
 } from '../src/game/pathfinding';
 import { createInitialState } from '../src/game/state';
+import { isEdgeBlocked } from '../src/game/walls';
 import { Wall, Position } from '../src/game/types';
 
 describe('Pathfinding: BFS vs A*', () => {
@@ -128,5 +129,53 @@ describe('Pathfinding: BFS vs A*', () => {
     const astar = findShortestPathAStar({ row: 0, col: 0 }, 'P2', walls);
     expect(astar.distance).toBe(Infinity);
     expect(astar.path).toBeNull();
+  });
+
+  it('guarantees that every consecutive step in the path is a valid unblocked orthogonal move', () => {
+    const walls: Wall[] = [
+      { row: 7, col: 2, orientation: 'horizontal' },
+      { row: 7, col: 4, orientation: 'horizontal' },
+      { row: 5, col: 3, orientation: 'vertical' },
+      { row: 3, col: 3, orientation: 'horizontal' },
+    ];
+
+    const startPos: Position = { row: 8, col: 4 };
+    const astar = findShortestPathAStar(startPos, 'P1', walls);
+    expect(astar.path).not.toBeNull();
+    const path = astar.path!;
+
+    expect(path[0]).toEqual(startPos);
+    expect(path[path.length - 1].row).toBe(0); // P1 goal row
+
+    // Verify all steps are unblocked orthogonal neighbors
+    for (let i = 0; i < path.length - 1; i++) {
+      const from = path[i];
+      const to = path[i + 1];
+      const dr = Math.abs(to.row - from.row);
+      const dc = Math.abs(to.col - from.col);
+      expect((dr === 1 && dc === 0) || (dr === 0 && dc === 1)).toBe(true);
+      expect(isEdgeBlocked(walls, from, to)).toBe(false);
+    }
+  });
+
+  it('evaluates identical distances on winding serpentine detour corridors', () => {
+    // Horizontal walls forcing player to weave back and forth
+    const walls: Wall[] = [
+      // Block row 7 from col 0 to col 5 (walls at (7, 0), (7, 2), (7, 4))
+      { row: 7, col: 0, orientation: 'horizontal' },
+      { row: 7, col: 2, orientation: 'horizontal' },
+      { row: 7, col: 4, orientation: 'horizontal' },
+      // Block row 5 from col 3 to col 7 (walls at (5, 3), (5, 5))
+      { row: 5, col: 3, orientation: 'horizontal' },
+      { row: 5, col: 5, orientation: 'horizontal' },
+    ];
+
+    const startPos: Position = { row: 8, col: 0 };
+    const bfs = findShortestPathBFS(startPos, 'P1', walls);
+    const astar = findShortestPathAStar(startPos, 'P1', walls);
+
+    expect(astar.distance).toBe(bfs.distance);
+    expect(astar.distance).toBeGreaterThan(8);
+    expect(astar.path).not.toBeNull();
   });
 });

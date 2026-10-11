@@ -69,7 +69,7 @@ export function searchMinimax(
 
     const isMaximizing = currentState.activePlayer === rootPlayer;
     let bestScore = isMaximizing ? -Infinity : Infinity;
-    let chosenAction: Action = candidates[0];
+    let chosenAction: Action | null = null;
 
     for (const action of candidates) {
       const res = applyAction(currentState, action);
@@ -78,12 +78,12 @@ export function searchMinimax(
       const result = minimaxRec(res.state, currentDepth - 1, plyFromRoot + 1);
 
       if (isMaximizing) {
-        if (result.score > bestScore) {
+        if (chosenAction === null || result.score > bestScore) {
           bestScore = result.score;
           chosenAction = action;
         }
       } else {
-        if (result.score < bestScore) {
+        if (chosenAction === null || result.score < bestScore) {
           bestScore = result.score;
           chosenAction = action;
         }
@@ -168,7 +168,7 @@ export function searchAlphaBeta(
 
     const isMaximizing = currentState.activePlayer === rootPlayer;
     let bestScore = isMaximizing ? -Infinity : Infinity;
-    let chosenAction: Action = candidates[0];
+    let chosenAction: Action | null = null;
 
     for (const action of candidates) {
       const res = applyAction(currentState, action);
@@ -183,7 +183,7 @@ export function searchAlphaBeta(
       );
 
       if (isMaximizing) {
-        if (result.score > bestScore) {
+        if (chosenAction === null || result.score > bestScore) {
           bestScore = result.score;
           chosenAction = action;
         }
@@ -195,7 +195,7 @@ export function searchAlphaBeta(
           break; // Beta cutoff
         }
       } else {
-        if (result.score < bestScore) {
+        if (chosenAction === null || result.score < bestScore) {
           bestScore = result.score;
           chosenAction = action;
         }
@@ -246,6 +246,8 @@ export function chooseAIAction(
     case 'minimax':
       return searchMinimax(state, config.depth, options);
     case 'alpha-beta':
+      return searchAlphaBeta(state, config.depth, options);
+    default:
       return searchAlphaBeta(state, config.depth, options);
   }
 }

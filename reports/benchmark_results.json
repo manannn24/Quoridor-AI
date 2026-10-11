@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-11T14:20:57.405Z",
+  "timestamp": "2026-10-11T15:42:03.490Z",
   "options": {
     "gamesPerSide": 2,
     "depth": 2,
@@ -15,7 +15,7 @@
         "depth": 1,
         "wins": 0,
         "winRate": "0.0%",
-        "meanDecisionTimeMs": 0.99,
+        "meanDecisionTimeMs": 1.8,
         "meanNodesVisited": 13,
         "meanCutoffs": 0
       },
@@ -24,7 +24,7 @@
         "depth": 2,
         "wins": 4,
         "winRate": "100.0%",
-        "meanDecisionTimeMs": 4.44,
+        "meanDecisionTimeMs": 7.32,
         "meanNodesVisited": 81,
         "meanCutoffs": 0
       },
@@ -39,7 +39,7 @@
         "depth": 1,
         "wins": 0,
         "winRate": "0.0%",
-        "meanDecisionTimeMs": 0.68,
+        "meanDecisionTimeMs": 1.05,
         "meanNodesVisited": 13,
         "meanCutoffs": 0
       },
@@ -48,7 +48,7 @@
         "depth": 2,
         "wins": 4,
         "winRate": "100.0%",
-        "meanDecisionTimeMs": 2.41,
+        "meanDecisionTimeMs": 3.57,
         "meanNodesVisited": 30,
         "meanCutoffs": 8.33
       },
@@ -63,7 +63,7 @@
         "depth": 2,
         "wins": 2,
         "winRate": "50.0%",
-        "meanDecisionTimeMs": 2.46,
+        "meanDecisionTimeMs": 4.78,
         "meanNodesVisited": 47,
         "meanCutoffs": 0
       },
@@ -72,7 +72,7 @@
         "depth": 2,
         "wins": 2,
         "winRate": "50.0%",
-        "meanDecisionTimeMs": 1.68,
+        "meanDecisionTimeMs": 3.15,
         "meanNodesVisited": 26,
         "meanCutoffs": 5.18
       },

@@ -103,6 +103,7 @@ export const Board: React.FC<BoardProps> = ({
                 }`}
                 onKeyDown={(e) => {
                   if (isLegalMove && (e.key === 'Enter' || e.key === ' ')) {
+                    e.preventDefault();
                     onCellClick(pos);
                   }
                 }}
@@ -286,6 +287,7 @@ export const Board: React.FC<BoardProps> = ({
                   aria-label={`Place ${wallMode} wall at anchor (${r}, ${c})`}
                   onKeyDown={(e) => {
                     if (isValid && (e.key === 'Enter' || e.key === ' ')) {
+                      e.preventDefault();
                       onWallClick(candidate);
                     }
                   }}

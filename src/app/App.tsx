@@ -15,6 +15,7 @@ export const App: React.FC = () => {
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [isAiThinking, setIsAiThinking] = useState<boolean>(false);
   const [lastAiMetrics, setLastAiMetrics] = useState<AIDecisionMetrics | null>(null);
+  const [metricsHistory, setMetricsHistory] = useState<(AIDecisionMetrics | null)[]>([]);
 
   const [aiConfig, setAiConfig] = useState<AgentConfig>({
     strategy: 'alpha-beta',
@@ -40,21 +41,28 @@ export const App: React.FC = () => {
           return;
         }
 
-        const metrics = chooseAIAction(currentState, aiConfig);
-        setLastAiMetrics(metrics);
+        try {
+          const metrics = chooseAIAction(currentState, aiConfig);
+          setLastAiMetrics(metrics);
+          setMetricsHistory((prev) => [...prev, metrics]);
 
-        if (metrics.selectedAction) {
-          const res = applyAction(currentState, metrics.selectedAction);
-          if (res.success) {
-            setGameState(res.state);
+          if (metrics.selectedAction) {
+            const res = applyAction(currentState, metrics.selectedAction);
+            if (res.success) {
+              setGameState(res.state);
+            } else {
+              setErrorMessage(res.error ?? 'AI generated an invalid move.');
+            }
           } else {
-            setErrorMessage(res.error ?? 'AI generated an invalid move.');
+            setErrorMessage('AI could not select an action.');
           }
-        } else {
-          setErrorMessage('AI could not select an action.');
+        } catch (err) {
+          setErrorMessage(
+            err instanceof Error ? err.message : 'An error occurred during AI search.'
+          );
+        } finally {
+          setIsAiThinking(false);
         }
-
-        setIsAiThinking(false);
       }, 50);
 
       return () => clearTimeout(timer);
@@ -95,6 +103,7 @@ export const App: React.FC = () => {
   const handleNewGame = () => {
     setGameState(createInitialState());
     setHistory([]);
+    setMetricsHistory([]);
     setWallMode('none');
     setErrorMessage(null);
     setLastAiMetrics(null);
@@ -111,6 +120,10 @@ export const App: React.FC = () => {
     if (previousState) {
       setGameState(previousState);
       setHistory(newHistory);
+      const newMetrics = [...metricsHistory];
+      newMetrics.pop();
+      setMetricsHistory(newMetrics);
+      setLastAiMetrics(newMetrics[newMetrics.length - 1] ?? null);
       setErrorMessage(null);
       setWallMode('none');
     }

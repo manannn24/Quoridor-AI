@@ -6,6 +6,8 @@ import {
   searchAlphaBeta,
   chooseAIAction,
 } from '../src/ai/minimax';
+import { AIStrategy } from '../src/ai/types';
+import { getCandidateActions } from '../src/ai/candidateActions';
 import { validateAction, applyAction } from '../src/game/actions';
 
 
@@ -110,6 +112,60 @@ describe('AI Agents - Minimax vs Alpha-Beta Equivalence', () => {
     // With depth 2 search across candidate actions, pruning occurs
     const ab = searchAlphaBeta(state, 2, { wallLimitRoot: 8, wallLimitSub: 6 });
     expect(ab.cutoffs).toBeGreaterThan(0);
+  });
+
+  it('Minimax and Alpha-Beta return identical score and action in late game with 0 walls remaining', () => {
+    const state = createInitialState();
+    state.p1WallsRemaining = 0;
+    state.p2WallsRemaining = 0;
+    state.p1Pos = { row: 4, col: 4 };
+    state.p2Pos = { row: 3, col: 4 };
+    state.activePlayer = 'P2';
+
+    const mm = searchMinimax(state, 2);
+    const ab = searchAlphaBeta(state, 2);
+
+    expect(ab.score).toBe(mm.score);
+    expect(ab.selectedAction).toEqual(mm.selectedAction);
+  });
+
+  it('produces identical decision and metrics deterministically across repeated searches', () => {
+    const state = createInitialState();
+    state.activePlayer = 'P2';
+    state.walls.push({ row: 2, col: 3, orientation: 'horizontal' });
+
+    const run1 = searchAlphaBeta(state, 2, { wallLimitRoot: 6, wallLimitSub: 4 });
+    const run2 = searchAlphaBeta(state, 2, { wallLimitRoot: 6, wallLimitSub: 4 });
+
+    expect(run1.score).toBe(run2.score);
+    expect(run1.selectedAction).toEqual(run2.selectedAction);
+    expect(run1.nodesVisited).toBe(run2.nodesVisited);
+    expect(run1.leavesEvaluated).toBe(run2.leavesEvaluated);
+    expect(run1.cutoffs).toBe(run2.cutoffs);
+  });
+});
+
+describe('AI Agents - Candidate Actions & Strategy Fallback', () => {
+  it('generates non-empty candidate list where every action is legal in nonterminal states', () => {
+    const state = createInitialState();
+    const candidates = getCandidateActions(state, 8);
+    expect(candidates.length).toBeGreaterThan(0);
+
+    for (const action of candidates) {
+      const validation = validateAction(state, action);
+      expect(validation.valid).toBe(true);
+    }
+  });
+
+  it('safely falls back to alpha-beta when unknown strategy string is provided', () => {
+    const state = createInitialState();
+    state.activePlayer = 'P2';
+    const metrics = chooseAIAction(state, {
+      strategy: 'unknown-algo' as unknown as AIStrategy,
+      depth: 1,
+    });
+    expect(metrics.strategy).toBe('alpha-beta');
+    expect(metrics.selectedAction).not.toBeNull();
   });
 });
 

@@ -45,7 +45,7 @@ export function chooseGreedyAction(
     };
   }
 
-  let bestAction: Action = candidateActions[0];
+  let bestAction: Action | null = null;
   let bestScore = -Infinity;
   let leavesEvaluated = 0;
   let nodesVisited = 0;
@@ -58,7 +58,7 @@ export function chooseGreedyAction(
     leavesEvaluated++;
     const score = evaluateState(res.state, player, 1);
 
-    if (score > bestScore) {
+    if (bestAction === null || score > bestScore) {
       bestScore = score;
       bestAction = action;
     }
