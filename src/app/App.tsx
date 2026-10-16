@@ -7,8 +7,14 @@ import { AgentConfig, AIDecisionMetrics } from '../ai/types';
 import { Header } from '../components/Header';
 import { Board } from '../components/Board';
 import { Panel } from '../components/Panel';
+import { ArenaView } from '../components/ArenaView';
+import { TournamentView } from '../components/TournamentView';
+import { HeuristicLabView } from '../components/HeuristicLabView';
+
+export type AppTab = 'human-vs-ai' | 'arena' | 'tournaments' | 'heuristics';
 
 export const App: React.FC = () => {
+  const [activeTab, setActiveTab] = useState<AppTab>('human-vs-ai');
   const [gameState, setGameState] = useState<GameState>(createInitialState);
   const [history, setHistory] = useState<GameState[]>([]);
   const [wallMode, setWallMode] = useState<'none' | WallOrientation>('none');
@@ -132,28 +138,72 @@ export const App: React.FC = () => {
   return (
     <div className="app-container">
       <Header />
-      <main className="game-layout">
-        <Board
-          gameState={gameState}
-          wallMode={wallMode}
-          isAiThinking={isAiThinking}
-          onCellClick={handleCellClick}
-          onWallClick={handleWallClick}
-        />
-        <Panel
-          gameState={gameState}
-          aiConfig={aiConfig}
-          onUpdateAiConfig={setAiConfig}
-          wallMode={wallMode}
-          onSetWallMode={setWallMode}
-          isAiThinking={isAiThinking}
-          lastAiMetrics={lastAiMetrics}
-          errorMessage={errorMessage}
-          canUndo={history.length > 0}
-          onNewGame={handleNewGame}
-          onUndo={handleUndo}
-        />
-      </main>
+
+      {/* Experimentation Platform Navigation Tabs */}
+      <nav className="nav-tabs" role="tablist" aria-label="Game Modes" style={{ marginBottom: 20 }}>
+        <button
+          role="tab"
+          aria-selected={activeTab === 'human-vs-ai'}
+          className={`nav-tab ${activeTab === 'human-vs-ai' ? 'active' : ''}`}
+          onClick={() => setActiveTab('human-vs-ai')}
+        >
+          🎮 Human vs AI
+        </button>
+        <button
+          role="tab"
+          aria-selected={activeTab === 'arena'}
+          className={`nav-tab ${activeTab === 'arena' ? 'active' : ''}`}
+          onClick={() => setActiveTab('arena')}
+        >
+          ⚔️ AI vs AI Arena
+        </button>
+        <button
+          role="tab"
+          aria-selected={activeTab === 'tournaments'}
+          className={`nav-tab ${activeTab === 'tournaments' ? 'active' : ''}`}
+          onClick={() => setActiveTab('tournaments')}
+        >
+          🏆 Tournaments & Experiments
+        </button>
+        <button
+          role="tab"
+          aria-selected={activeTab === 'heuristics'}
+          className={`nav-tab ${activeTab === 'heuristics' ? 'active' : ''}`}
+          onClick={() => setActiveTab('heuristics')}
+        >
+          🧪 Heuristic Lab
+        </button>
+      </nav>
+
+      {/* Tab Views */}
+      {activeTab === 'human-vs-ai' && (
+        <main className="game-layout">
+          <Board
+            gameState={gameState}
+            wallMode={wallMode}
+            isAiThinking={isAiThinking}
+            onCellClick={handleCellClick}
+            onWallClick={handleWallClick}
+          />
+          <Panel
+            gameState={gameState}
+            aiConfig={aiConfig}
+            onUpdateAiConfig={setAiConfig}
+            wallMode={wallMode}
+            onSetWallMode={setWallMode}
+            isAiThinking={isAiThinking}
+            lastAiMetrics={lastAiMetrics}
+            errorMessage={errorMessage}
+            canUndo={history.length > 0}
+            onNewGame={handleNewGame}
+            onUndo={handleUndo}
+          />
+        </main>
+      )}
+
+      {activeTab === 'arena' && <ArenaView />}
+      {activeTab === 'tournaments' && <TournamentView />}
+      {activeTab === 'heuristics' && <HeuristicLabView />}
     </div>
   );
 };

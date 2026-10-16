@@ -213,6 +213,7 @@ export const Panel: React.FC<PanelProps> = ({
             <option value="alpha-beta">Minimax + Alpha-Beta (Recommended)</option>
             <option value="minimax">Minimax (Without Pruning)</option>
             <option value="greedy">Greedy Heuristic Baseline</option>
+            <option value="mcts">Monte Carlo Tree Search (MCTS)</option>
           </select>
         </div>
 
@@ -224,7 +225,7 @@ export const Panel: React.FC<PanelProps> = ({
             id="ai-depth-select"
             className="select-input"
             value={aiConfig.depth}
-            disabled={aiConfig.strategy === 'greedy'}
+            disabled={aiConfig.strategy === 'greedy' || aiConfig.strategy === 'mcts'}
             onChange={(e) =>
               onUpdateAiConfig({
                 ...aiConfig,
