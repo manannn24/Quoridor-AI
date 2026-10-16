@@ -1,19 +1,19 @@
 Matchup,TotalGames,AgentA_Algo,AgentA_Heuristic,AgentA_Wins,AgentA_WinRate,AgentA_P1Wins,AgentA_P2Wins,AgentA_MeanTimeMs,AgentA_MeanNodes,AgentA_MeanCutoffs,AgentA_MeanMctsIters,AgentB_Algo,AgentB_Heuristic,AgentB_Wins,AgentB_WinRate,AgentB_P1Wins,AgentB_P2Wins,AgentB_MeanTimeMs,AgentB_MeanNodes,AgentB_MeanCutoffs,AgentB_MeanMctsIters,DrawsOrCapped,MeanPlies
-"greedy (d1) vs minimax (d2)",2,greedy,H0,0,0.0%,0,0,0.61,9,0,N/A,minimax,H0,2,100.0%,1,1,2.98,81,0,N/A,0,20.5
-"greedy (d1) vs alpha-beta (d2)",2,greedy,H0,0,0.0%,0,0,0.21,9,0,N/A,alpha-beta,H0,2,100.0%,1,1,1.07,30,8.33,N/A,0,20.5
-"minimax (d2) vs alpha-beta (d2)",2,minimax,H0,1,50.0%,0,1,1.59,47,0,N/A,alpha-beta,H0,1,50.0%,0,1,1.15,26,5.18,N/A,0,62
-"alpha-beta (H0) vs alpha-beta (H2)",2,alpha-beta,H0,1,50.0%,0,1,1.16,26,5.18,N/A,alpha-beta,H2,1,50.0%,0,1,1.08,26,5.18,N/A,0,62
-"alpha-beta (d2) vs mcts (50 iters)",2,alpha-beta,H0,1,50.0%,0,1,1.79,29,6.98,N/A,mcts,H0,0,0.0%,0,0,102.83,51,0,50,1,65
+"greedy (d1) vs minimax (d2)",2,greedy,H0,0,0.0%,0,0,0.72,9,0,N/A,minimax,H0,2,100.0%,1,1,3.67,81,0,N/A,0,20.5
+"greedy (d1) vs alpha-beta (d2)",2,greedy,H0,0,0.0%,0,0,0.23,9,0,N/A,alpha-beta,H0,2,100.0%,1,1,1.22,30,8.33,N/A,0,20.5
+"minimax (d2) vs alpha-beta (d2)",2,minimax,H0,1,50.0%,0,1,1.9,47,0,N/A,alpha-beta,H0,1,50.0%,0,1,1.31,26,5.18,N/A,0,62
+"alpha-beta (H0) vs alpha-beta (H2)",2,alpha-beta,H0,1,50.0%,0,1,1,26,5.18,N/A,alpha-beta,H2,1,50.0%,0,1,0.99,26,5.18,N/A,0,62
+"alpha-beta (d2) vs mcts (50 iters)",2,alpha-beta,H0,1,50.0%,0,1,1.32,29,6.98,N/A,mcts,H0,0,0.0%,0,0,72.92,51,0,50,1,65
 
 --- Per Game Results ---
 GameIndex,Seed,P1_Algo,P1_Heuristic,P2_Algo,P2_Heuristic,Winner,OutcomeReason,TotalPlies,DurationMs
-1,1379,greedy,H0,minimax,H0,P2,normal,14,39.8
-2,2716,minimax,H0,greedy,H0,P1,normal,27,36.9
-3,4053,greedy,H0,alpha-beta,H0,P2,normal,14,7.6
-4,5390,alpha-beta,H0,greedy,H0,P1,normal,27,19.8
-5,6727,minimax,H0,alpha-beta,H0,P2,normal,62,95.6
-6,8064,alpha-beta,H0,minimax,H0,P2,normal,62,76.9
-7,9401,alpha-beta,H0,alpha-beta,H2,P2,normal,62,78.1
-8,10738,alpha-beta,H2,alpha-beta,H0,P2,normal,62,63.5
-9,12075,alpha-beta,H0,mcts,H0,Draw/Capped,max_plies_capped,70,2773.6
-10,13412,mcts,H0,alpha-beta,H0,P2,normal,60,4033.5
+1,1379,greedy,H0,minimax,H0,P2,normal,14,46.5
+2,2716,minimax,H0,greedy,H0,P1,normal,27,47.3
+3,4053,greedy,H0,alpha-beta,H0,P2,normal,14,9.1
+4,5390,alpha-beta,H0,greedy,H0,P1,normal,27,21.8
+5,6727,minimax,H0,alpha-beta,H0,P2,normal,62,106.4
+6,8064,alpha-beta,H0,minimax,H0,P2,normal,62,95.7
+7,9401,alpha-beta,H0,alpha-beta,H2,P2,normal,62,62.2
+8,10738,alpha-beta,H2,alpha-beta,H0,P2,normal,62,63.3
+9,12075,alpha-beta,H0,mcts,H0,Draw/Capped,max_plies_capped,70,2564.0
+10,13412,mcts,H0,alpha-beta,H0,P2,normal,60,2266.2
