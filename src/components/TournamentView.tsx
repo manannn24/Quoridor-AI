@@ -338,12 +338,12 @@ export const TournamentView: React.FC = () => {
             <div
               style={{
                 display: 'grid',
-                gridTemplateColumns: '1fr 1fr',
+                gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
                 gap: 16,
-                padding: 14,
+                padding: 16,
                 background: 'var(--bg-card)',
                 border: '1px solid var(--border-color)',
-                borderRadius: 'var(--radius-sm)',
+                borderRadius: 'var(--radius-md)',
               }}
             >
               <div>
@@ -500,8 +500,8 @@ export const TournamentView: React.FC = () => {
                 )}
               </div>
 
-              <div style={{ gridColumn: 'span 2', display: 'flex', gap: 16 }}>
-                <div className="config-field" style={{ flex: 1 }}>
+              <div style={{ gridColumn: 'span 2', display: 'flex', gap: 16, flexWrap: 'wrap' }}>
+                <div className="config-field" style={{ flex: '1 1 180px', minWidth: 160 }}>
                   <label>Games per side (x2 for rotation): {customGamesPerSide}</label>
                   <input
                     type="number"
@@ -512,7 +512,7 @@ export const TournamentView: React.FC = () => {
                     disabled={isRunning}
                   />
                 </div>
-                <div className="config-field" style={{ flex: 1 }}>
+                <div className="config-field" style={{ flex: '1 1 180px', minWidth: 160 }}>
                   <label>Max Plies / Game: {customMaxPlies}</label>
                   <input
                     type="number"
@@ -523,7 +523,7 @@ export const TournamentView: React.FC = () => {
                     disabled={isRunning}
                   />
                 </div>
-                <div className="config-field" style={{ flex: 1 }}>
+                <div className="config-field" style={{ flex: '1 1 180px', minWidth: 160 }}>
                   <label>PRNG Seed: {customSeed}</label>
                   <input
                     type="number"
@@ -537,7 +537,7 @@ export const TournamentView: React.FC = () => {
           )}
 
           {/* Tournament Action Buttons */}
-          <div style={{ display: 'flex', gap: 12, alignItems: 'center' }}>
+          <div style={{ display: 'flex', gap: 12, alignItems: 'center', flexWrap: 'wrap' }}>
             <button
               className="btn btn-primary"
               onClick={handleStartTournament}
