@@ -1,47 +1,28 @@
 import fs from 'fs';
 import path from 'path';
-import { createInitialState } from '../src/game/state';
-import { applyAction } from '../src/game/actions';
-import { chooseAIAction } from '../src/ai/minimax';
-import { AgentConfig, AIDecisionMetrics } from '../src/ai/types';
-import { GameState, Player } from '../src/game/types';
+import { AgentConfig } from '../src/ai/types';
+import {
+  runTournament,
+  exportTournamentToJson,
+  exportTournamentToCsv,
+  TournamentOptions,
+} from '../src/arena/tournamentRunner';
 
-interface BenchmarkOptions {
+interface CliArgs {
   gamesPerSide: number;
   depth: number;
   seed: number;
   outputPath: string;
+  preset: 'standard' | 'experiments' | 'mcts';
 }
 
-interface MatchupStats {
-  matchupName: string;
-  totalGames: number;
-  agent1: {
-    config: AgentConfig;
-    wins: number;
-    decisionTimes: number[];
-    nodesVisited: number[];
-    leavesEvaluated: number[];
-    cutoffs: number[];
-  };
-  agent2: {
-    config: AgentConfig;
-    wins: number;
-    decisionTimes: number[];
-    nodesVisited: number[];
-    leavesEvaluated: number[];
-    cutoffs: number[];
-  };
-  draws: number;
-  gameLengths: number[];
-}
-
-function parseArgs(): BenchmarkOptions {
+function parseArgs(): CliArgs {
   const args = process.argv.slice(2);
-  let gamesPerSide = 1; // Default 1 per side -> 2 games per pairing for fast smoke runs
+  let gamesPerSide = 1;
   let depth = 2;
   let seed = 42;
   let outputPath = path.resolve('reports', 'benchmark_results.json');
+  let preset: 'standard' | 'experiments' | 'mcts' = 'standard';
 
   for (let i = 0; i < args.length; i++) {
     if (args[i] === '--games' && args[i + 1]) {
@@ -56,245 +37,222 @@ function parseArgs(): BenchmarkOptions {
     } else if (args[i] === '--output' && args[i + 1]) {
       outputPath = path.resolve(args[i + 1]);
       i++;
+    } else if (args[i] === '--preset' && args[i + 1]) {
+      const p = args[i + 1].toLowerCase();
+      if (p === 'experiments' || p === 'mcts' || p === 'standard') {
+        preset = p;
+      }
+      i++;
     }
   }
 
-  return { gamesPerSide, depth, seed, outputPath };
+  return { gamesPerSide, depth, seed, outputPath, preset };
 }
 
-function mean(nums: number[]): number {
-  if (nums.length === 0) return 0;
-  return nums.reduce((a, b) => a + b, 0) / nums.length;
-}
+export async function runBenchmark() {
+  const cliArgs = parseArgs();
+  console.log('=== Quoridor AI Benchmark & Tournament Suite ===');
+  console.log(`Preset: ${cliArgs.preset}, Games per side: ${cliArgs.gamesPerSide}, Depth: ${cliArgs.depth}, Seed: ${cliArgs.seed}\n`);
 
-function playGame(
-  agentP1: AgentConfig,
-  agentP2: AgentConfig,
-  maxPlies = 100
-): {
-  winner: Player | null;
-  plies: number;
-  metricsP1: AIDecisionMetrics[];
-  metricsP2: AIDecisionMetrics[];
-} {
-  let state: GameState = createInitialState();
-  const metricsP1: AIDecisionMetrics[] = [];
-  const metricsP2: AIDecisionMetrics[] = [];
-
-  let plies = 0;
-  while (state.winner === null && plies < maxPlies) {
-    plies++;
-    const active = state.activePlayer;
-    const config = active === 'P1' ? agentP1 : agentP2;
-
-    const decision = chooseAIAction(state, config);
-    if (active === 'P1') {
-      metricsP1.push(decision);
-    } else {
-      metricsP2.push(decision);
-    }
-
-    if (!decision.selectedAction) {
-      break;
-    }
-
-    const res = applyAction(state, decision.selectedAction);
-    if (!res.success) {
-      console.error(`Benchmark illegal action attempt by ${active}:`, res.error);
-      break;
-    }
-    state = res.state;
-  }
-
-  return {
-    winner: state.winner,
-    plies,
-    metricsP1,
-    metricsP2,
-  };
-}
-
-function runMatchup(
-  agent1Config: AgentConfig,
-  agent2Config: AgentConfig,
-  gamesPerSide: number
-): MatchupStats {
-  const matchupName = `${agent1Config.strategy} (d${agent1Config.depth}) vs ${agent2Config.strategy} (d${agent2Config.depth})`;
-  console.log(`\n--- Running Matchup: ${matchupName} ---`);
-
-  const stats: MatchupStats = {
-    matchupName,
-    totalGames: gamesPerSide * 2,
-    agent1: {
-      config: agent1Config,
-      wins: 0,
-      decisionTimes: [],
-      nodesVisited: [],
-      leavesEvaluated: [],
-      cutoffs: [],
-    },
-    agent2: {
-      config: agent2Config,
-      wins: 0,
-      decisionTimes: [],
-      nodesVisited: [],
-      leavesEvaluated: [],
-      cutoffs: [],
-    },
-    draws: 0,
-    gameLengths: [],
+  const greedyConfig: AgentConfig = {
+    algorithm: 'greedy',
+    strategy: 'greedy',
+    depth: 1,
+    heuristicId: 'H0',
+    candidateWallLimitRoot: 6,
   };
 
-  // Side rotation 1: Agent 1 is P1, Agent 2 is P2
-  for (let g = 0; g < gamesPerSide; g++) {
-    process.stdout.write(`  Game ${g + 1}/${gamesPerSide * 2} (${agent1Config.strategy} as P1)... `);
-    const start = performance.now();
-    const result = playGame(agent1Config, agent2Config);
-    const duration = ((performance.now() - start) / 1000).toFixed(2);
-    console.log(`Winner: ${result.winner ?? 'Draw'} in ${result.plies} plies (${duration}s)`);
-
-    stats.gameLengths.push(result.plies);
-    if (result.winner === 'P1') stats.agent1.wins++;
-    else if (result.winner === 'P2') stats.agent2.wins++;
-    else stats.draws++;
-
-    for (const m of result.metricsP1) {
-      stats.agent1.decisionTimes.push(m.elapsedMs);
-      stats.agent1.nodesVisited.push(m.nodesVisited);
-      stats.agent1.leavesEvaluated.push(m.leavesEvaluated);
-      stats.agent1.cutoffs.push(m.cutoffs);
-    }
-    for (const m of result.metricsP2) {
-      stats.agent2.decisionTimes.push(m.elapsedMs);
-      stats.agent2.nodesVisited.push(m.nodesVisited);
-      stats.agent2.leavesEvaluated.push(m.leavesEvaluated);
-      stats.agent2.cutoffs.push(m.cutoffs);
-    }
-  }
-
-  // Side rotation 2: Agent 2 is P1, Agent 1 is P2
-  for (let g = 0; g < gamesPerSide; g++) {
-    const gameNum = gamesPerSide + g + 1;
-    process.stdout.write(`  Game ${gameNum}/${gamesPerSide * 2} (${agent2Config.strategy} as P1)... `);
-    const start = performance.now();
-    const result = playGame(agent2Config, agent1Config);
-    const duration = ((performance.now() - start) / 1000).toFixed(2);
-    console.log(`Winner: ${result.winner ?? 'Draw'} in ${result.plies} plies (${duration}s)`);
-
-    stats.gameLengths.push(result.plies);
-    if (result.winner === 'P1') stats.agent2.wins++;
-    else if (result.winner === 'P2') stats.agent1.wins++;
-    else stats.draws++;
-
-    for (const m of result.metricsP1) {
-      stats.agent2.decisionTimes.push(m.elapsedMs);
-      stats.agent2.nodesVisited.push(m.nodesVisited);
-      stats.agent2.leavesEvaluated.push(m.leavesEvaluated);
-      stats.agent2.cutoffs.push(m.cutoffs);
-    }
-    for (const m of result.metricsP2) {
-      stats.agent1.decisionTimes.push(m.elapsedMs);
-      stats.agent1.nodesVisited.push(m.nodesVisited);
-      stats.agent1.leavesEvaluated.push(m.leavesEvaluated);
-      stats.agent1.cutoffs.push(m.cutoffs);
-    }
-  }
-
-  return stats;
-}
-
-export function runBenchmark() {
-  const options = parseArgs();
-  console.log('=== Quoridor AI Benchmark Suite ===');
-  console.log(`Config: ${options.gamesPerSide * 2} games per matchup, Depth: ${options.depth}, Seed: ${options.seed}`);
-
-  const greedyConfig: AgentConfig = { strategy: 'greedy', depth: 1 };
   const minimaxConfig: AgentConfig = {
+    algorithm: 'minimax',
     strategy: 'minimax',
-    depth: options.depth,
+    depth: cliArgs.depth,
+    heuristicId: 'H0',
     candidateWallLimitRoot: 6,
     candidateWallLimitSub: 4,
   };
+
   const alphaBetaConfig: AgentConfig = {
+    algorithm: 'alpha-beta',
     strategy: 'alpha-beta',
-    depth: options.depth,
+    depth: cliArgs.depth,
+    heuristicId: 'H0',
     candidateWallLimitRoot: 6,
     candidateWallLimitSub: 4,
   };
 
-  const matchups = [
-    runMatchup(greedyConfig, minimaxConfig, options.gamesPerSide),
-    runMatchup(greedyConfig, alphaBetaConfig, options.gamesPerSide),
-    runMatchup(minimaxConfig, alphaBetaConfig, options.gamesPerSide),
-  ];
+  const alphaBetaH1Config: AgentConfig = {
+    algorithm: 'alpha-beta',
+    strategy: 'alpha-beta',
+    depth: cliArgs.depth,
+    heuristicId: 'H1',
+    candidateWallLimitRoot: 6,
+    candidateWallLimitSub: 4,
+  };
 
-  const summary = matchups.map((m) => ({
-    matchup: m.matchupName,
-    totalGames: m.totalGames,
-    agent1: {
-      strategy: m.agent1.config.strategy,
-      depth: m.agent1.config.depth,
-      wins: m.agent1.wins,
-      winRate: ((m.agent1.wins / m.totalGames) * 100).toFixed(1) + '%',
-      meanDecisionTimeMs: parseFloat(mean(m.agent1.decisionTimes).toFixed(2)),
-      meanNodesVisited: Math.round(mean(m.agent1.nodesVisited)),
-      meanCutoffs: parseFloat(mean(m.agent1.cutoffs).toFixed(2)),
-    },
-    agent2: {
-      strategy: m.agent2.config.strategy,
-      depth: m.agent2.config.depth,
-      wins: m.agent2.wins,
-      winRate: ((m.agent2.wins / m.totalGames) * 100).toFixed(1) + '%',
-      meanDecisionTimeMs: parseFloat(mean(m.agent2.decisionTimes).toFixed(2)),
-      meanNodesVisited: Math.round(mean(m.agent2.nodesVisited)),
-      meanCutoffs: parseFloat(mean(m.agent2.cutoffs).toFixed(2)),
-    },
-    draws: m.draws,
-    meanGameLengthPlies: parseFloat(mean(m.gameLengths).toFixed(1)),
-  }));
+  const alphaBetaH2Config: AgentConfig = {
+    algorithm: 'alpha-beta',
+    strategy: 'alpha-beta',
+    depth: cliArgs.depth,
+    heuristicId: 'H2',
+    candidateWallLimitRoot: 6,
+    candidateWallLimitSub: 4,
+  };
 
-  console.log('\n=== Benchmark Summary Table ===');
+  const alphaBetaH3Config: AgentConfig = {
+    algorithm: 'alpha-beta',
+    strategy: 'alpha-beta',
+    depth: cliArgs.depth,
+    heuristicId: 'H3',
+    candidateWallLimitRoot: 6,
+    candidateWallLimitSub: 4,
+  };
+
+  const mctsSmallConfig: AgentConfig = {
+    algorithm: 'mcts',
+    strategy: 'mcts',
+    heuristicId: 'H0',
+    depth: 1,
+    mctsIterations: 50,
+    mctsRolloutPlyCap: 20,
+    candidateWallLimitRoot: 6,
+  };
+
+  const mctsStandardConfig: AgentConfig = {
+    algorithm: 'mcts',
+    strategy: 'mcts',
+    heuristicId: 'H0',
+    depth: 1,
+    mctsIterations: 120,
+    mctsRolloutPlyCap: 25,
+    candidateWallLimitRoot: 6,
+  };
+
+  let pairings: TournamentOptions['pairings'] = [];
+
+  if (cliArgs.preset === 'standard') {
+    pairings = [
+      {
+        label: 'greedy (d1) vs minimax (d2)',
+        configA: greedyConfig,
+        configB: minimaxConfig,
+        gamesPerSide: cliArgs.gamesPerSide,
+      },
+      {
+        label: 'greedy (d1) vs alpha-beta (d2)',
+        configA: greedyConfig,
+        configB: alphaBetaConfig,
+        gamesPerSide: cliArgs.gamesPerSide,
+      },
+      {
+        label: 'minimax (d2) vs alpha-beta (d2)',
+        configA: minimaxConfig,
+        configB: alphaBetaConfig,
+        gamesPerSide: cliArgs.gamesPerSide,
+      },
+      // Also include MCTS and Heuristic comparison for comprehensive experiment evidence
+      {
+        label: 'alpha-beta (H0) vs alpha-beta (H2)',
+        configA: alphaBetaConfig,
+        configB: alphaBetaH2Config,
+        gamesPerSide: cliArgs.gamesPerSide,
+      },
+      {
+        label: 'alpha-beta (d2) vs mcts (50 iters)',
+        configA: alphaBetaConfig,
+        configB: mctsSmallConfig,
+        gamesPerSide: cliArgs.gamesPerSide,
+      },
+    ];
+  } else if (cliArgs.preset === 'experiments') {
+    pairings = [
+      {
+        label: 'H0 (Baseline) vs H1 (Distance-Only)',
+        configA: alphaBetaConfig,
+        configB: alphaBetaH1Config,
+        gamesPerSide: cliArgs.gamesPerSide,
+      },
+      {
+        label: 'H0 (Baseline) vs H2 (Wall-Resource)',
+        configA: alphaBetaConfig,
+        configB: alphaBetaH2Config,
+        gamesPerSide: cliArgs.gamesPerSide,
+      },
+      {
+        label: 'H0 (Baseline) vs H3 (Composite)',
+        configA: alphaBetaConfig,
+        configB: alphaBetaH3Config,
+        gamesPerSide: cliArgs.gamesPerSide,
+      },
+      {
+        label: 'Alpha-Beta (d2) vs MCTS (120 iters)',
+        configA: alphaBetaConfig,
+        configB: mctsStandardConfig,
+        gamesPerSide: cliArgs.gamesPerSide,
+      },
+    ];
+  } else if (cliArgs.preset === 'mcts') {
+    pairings = [
+      {
+        label: 'MCTS (50 iters) vs MCTS (120 iters)',
+        configA: mctsSmallConfig,
+        configB: mctsStandardConfig,
+        gamesPerSide: cliArgs.gamesPerSide,
+      },
+      {
+        label: 'Alpha-Beta (d2) vs MCTS (120 iters)',
+        configA: alphaBetaConfig,
+        configB: mctsStandardConfig,
+        gamesPerSide: cliArgs.gamesPerSide,
+      },
+    ];
+  }
+
+  const report = await runTournament({
+    pairings,
+    baseSeed: cliArgs.seed,
+    maxPliesPerGame: 70,
+    onProgress: (completed, total, latest) => {
+      if (latest) {
+        const winnerStr = latest.winner ? `Winner: ${latest.winner}` : `Outcome: ${latest.reason}`;
+        console.log(`[${completed}/${total}] Game #${latest.gameIndex} (${latest.p1Config.algorithm} vs ${latest.p2Config.algorithm}) -> ${winnerStr} in ${latest.totalPlies} plies (${(latest.durationMs / 1000).toFixed(2)}s)`);
+      }
+    },
+  });
+
+  console.log('\n=== Tournament Aggregated Summary Table ===');
   console.table(
-    summary.map((s) => ({
-      Matchup: s.matchup,
-      'A1 Wins': `${s.agent1.strategy}: ${s.agent1.wins}`,
-      'A2 Wins': `${s.agent2.strategy}: ${s.agent2.wins}`,
-      'A1 Mean Time (ms)': s.agent1.meanDecisionTimeMs,
-      'A2 Mean Time (ms)': s.agent2.meanDecisionTimeMs,
-      'A1 Nodes': s.agent1.meanNodesVisited,
-      'A2 Nodes': s.agent2.meanNodesVisited,
-      'A1 Cutoffs': s.agent1.meanCutoffs,
-      'A2 Cutoffs': s.agent2.meanCutoffs,
-      'Avg Plies': s.meanGameLengthPlies,
-    }))
+    report.matchups.map((m) => {
+      const rateA = m.totalGames > 0 ? ((m.winsA / m.totalGames) * 100).toFixed(1) + '%' : '0.0%';
+      const rateB = m.totalGames > 0 ? ((m.winsB / m.totalGames) * 100).toFixed(1) + '%' : '0.0%';
+      return {
+        Matchup: m.matchupLabel,
+        'A Wins': `${m.winsA} (${rateA})`,
+        'B Wins': `${m.winsB} (${rateB})`,
+        Draws: m.drawsOrCapped,
+        'A Mean Time': `${m.meanDecisionTimeA} ms`,
+        'B Mean Time': `${m.meanDecisionTimeB} ms`,
+        'A Nodes/Iters': m.meanNodesA ?? m.meanMctsIterationsA ?? 'N/A',
+        'B Nodes/Iters': m.meanNodesB ?? m.meanMctsIterationsB ?? 'N/A',
+        'Avg Plies': m.meanPlies,
+      };
+    })
   );
 
-  const reportDir = path.dirname(options.outputPath);
+  const reportDir = path.dirname(cliArgs.outputPath);
   if (!fs.existsSync(reportDir)) {
     fs.mkdirSync(reportDir, { recursive: true });
   }
 
-  const outputData = {
-    timestamp: new Date().toISOString(),
-    options,
-    matchups: summary,
-  };
+  // Export JSON
+  const jsonContent = exportTournamentToJson(report);
+  fs.writeFileSync(cliArgs.outputPath, jsonContent, 'utf8');
+  console.log(`\nMachine-readable JSON report written to: ${cliArgs.outputPath}`);
 
-  fs.writeFileSync(options.outputPath, JSON.stringify(outputData, null, 2), 'utf8');
-  console.log(`\nReport written to: ${options.outputPath}`);
-
-  // Also write CSV summary
+  // Export CSV
   const csvPath = path.join(reportDir, 'benchmark_summary.csv');
-  const csvRows = [
-    'Matchup,Agent1,A1_Wins,A1_WinRate,A1_MeanTimeMs,A1_MeanNodes,A1_MeanCutoffs,Agent2,A2_Wins,A2_WinRate,A2_MeanTimeMs,A2_MeanNodes,A2_MeanCutoffs,AvgPlies',
-    ...summary.map(
-      (s) =>
-        `"${s.matchup}",${s.agent1.strategy},${s.agent1.wins},${s.agent1.winRate},${s.agent1.meanDecisionTimeMs},${s.agent1.meanNodesVisited},${s.agent1.meanCutoffs},${s.agent2.strategy},${s.agent2.wins},${s.agent2.winRate},${s.agent2.meanDecisionTimeMs},${s.agent2.meanNodesVisited},${s.agent2.meanCutoffs},${s.meanGameLengthPlies}`
-    ),
-  ];
-  fs.writeFileSync(csvPath, csvRows.join('\n'), 'utf8');
-  console.log(`CSV report written to: ${csvPath}\n`);
+  const csvContent = exportTournamentToCsv(report);
+  fs.writeFileSync(csvPath, csvContent, 'utf8');
+  console.log(`CSV summary report written to: ${csvPath}\n`);
 }
 
 runBenchmark();
-

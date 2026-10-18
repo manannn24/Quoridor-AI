@@ -1,8 +1,8 @@
-# Intelligent Quoridor: Adversarial Search & Pathfinding AI
+# Intelligent Quoridor: AI Experimentation Platform
 
-An original, polished, browser-based implementation of **Quoridor (Human vs. Computer)** demonstrating fundamental Artificial Intelligence techniques: state-space problem formulation, **BFS and A\*** shortest-path finding, heuristic evaluation, **Minimax adversarial search**, and **Alpha-Beta pruning**.
+An original, polished, browser-based **Quoridor AI Experimentation Platform** demonstrating fundamental Artificial Intelligence techniques: state-space problem formulation, **BFS and A\*** shortest-path finding, modular heuristic evaluation, **Minimax adversarial search**, **Alpha-Beta pruning**, and an original **Monte Carlo Tree Search (MCTS)** agent.
 
-Built with **React 18 + TypeScript + Vite**, featuring a decoupled rules engine, test suite with 35 tests, and an automated benchmark runner.
+Built with **React 18 + TypeScript + Vite**, featuring a decoupled rules engine, 70 automated Vitest unit and integration tests, an interactive AI-vs-AI Arena, an Automated Tournament Runner, and a CLI benchmark suite with CSV/JSON exports.
 
 ---
 
@@ -23,7 +23,7 @@ npm install
 |---|---|
 | `npm run dev` | Launch local Vite development server (default: `http://localhost:3000`) |
 | `npm run build` | Compile TypeScript and build production bundle into `dist/` |
-| `npm run test` | Run Vitest automated test suite (35 unit and integration tests) |
+| `npm run test` | Run Vitest automated test suite (70 unit and integration tests) |
 | `npm run typecheck` | Run strict TypeScript validation (`tsc --noEmit`) |
 | `npm run lint` | Run ESLint across all TypeScript source files |
 | `npm run benchmark` | Run reproducible AI vs AI tournament and emit reports |
@@ -31,32 +31,34 @@ npm install
 
 ---
 
-## 2. Game Rules & Mechanics
+## 2. Platform Modes & Capabilities
 
-The game adheres to the official 2-player Quoridor rule set:
+The platform provides three core integrated modes via top navigation tabs:
 
-1. **Board & Setup:**
-   - 9×9 grid of 81 cells (coordinates `row: 0..8`, `col: 0..8`).
-   - **Player 1 (Human):** Starts at `(8, 4)` (bottom center) and aims to reach any cell on **row 0**.
-   - **Player 2 (Computer):** Starts at `(0, 4)` (top center) and aims to reach any cell on **row 8**.
-   - Each player begins with **10 walls**.
-   - Human plays first, alternating one action per turn.
+### 🎮 Human vs AI
+- Play against any AI agent: **Alpha-Beta (Recommended)**, **Minimax**, **Greedy Baseline**, or **MCTS**.
+- Interactive SVG board with legal pawn move highlighting and wall placement preview with collision and path-blocking validation.
+- Match controls: New Game, Undo Turn, and live decision metrics inspector (nodes visited, cutoffs, elapsed milliseconds, and selected action).
 
-2. **Actions:**
-   - **Move Pawn:** Move 1 orthogonal square (Up, Down, Left, Right) if not blocked by a wall or board edge.
-   - **Jump Rules:**
-     - When facing an adjacent opponent with no wall between:
-       - **Straight Jump:** If the cell behind the opponent is on the board and not blocked by a wall, jump straight over the opponent.
-       - **Diagonal Jump:** If (and only if) the straight jump is blocked by a wall or board boundary, the pawn may jump diagonally to either open side of the opponent. Diagonal jumps are prohibited when a straight jump is available.
-   - **Place Wall:** Place a 2-unit long wall anchored at grid intersections `(row: 0..7, col: 0..7)` in either `horizontal` or `vertical` orientation.
-     - Decrements active player's reserve by 1.
-     - Cannot overlap existing walls of the same orientation.
-     - Cannot cross perpendicularly at the exact same anchor point.
-     - Endpoint touching (T-junctions and L-corners) is permitted.
-     - **No-Trapping Rule:** A wall placement is strictly illegal if it closes off all routes to the goal for *either* player.
+### ⚔️ AI vs AI Arena
+- Configure Player 1 (Blue) and Player 2 (Red) independently with any algorithm, heuristic preset ($H_0$..$H_3$), depth, time budget, or MCTS iterations.
+- Playback controls: **Play**, **Pause**, **Step 1 Ply**, and **Restart**.
+- Configurable speed slider (50ms–1200ms) and safety Max Plies cap.
+- Real-time **Cycle Repetition Detector** alerting when agents oscillate in repetitive pawn moves.
+- Complete scrollable move history log with coordinate notation and per-move decision telemetry.
 
-3. **Victory Condition:**
-   - First pawn to step onto any square of its respective goal row wins immediately. Further moves are rejected.
+### 🏆 Tournaments
+- Automated round-robin and head-to-head match runner with **strict side rotation** to eliminate first-mover tempo advantage.
+- Built-in experiment presets:
+  - **Standard Benchmark (6 Games):** Alpha-Beta vs Minimax vs Greedy.
+  - **Heuristic Ablation (6 Games):** $H_0$ Baseline vs $H_1$ Distance vs $H_2$ Wall-Aware vs $H_3$ Composite.
+  - **MCTS vs Alpha-Beta (4 Games):** Monte Carlo Tree Search (100 iters) vs Alpha-Beta ($d=2$).
+  - **MCTS Budget Comparison (4 Games):** MCTS 50 iterations vs MCTS 150 iterations.
+  - **Custom Configuration:** Full control over pairings, depth, iterations, plies cap, and PRNG seed.
+- Summary analytics cards, side-specific win counts (`P1 Wins` vs `P2 Wins` with explicit denominators), mean decision times, and plies.
+- One-click browser downloads for complete machine-readable **JSON reports** and formatted **CSV tables**.
+
+*(Note: Supported heuristic presets $H_0$ Baseline, $H_1$ Distance, $H_2$ Wall-Aware, and $H_3$ Composite remain fully available as internal AI evaluation settings within Arena and Tournament agent configurations.)*
 
 ---
 
@@ -75,35 +77,40 @@ d:\Quoridor_AI/
 │   │   ├── pathfinding.ts      # BFS reference solver & A* shortest path solver
 │   │   └── actions.ts          # Action validation, application, legal move generation
 │   ├── ai/                     # Search algorithms & heuristic evaluation
-│   │   ├── types.ts            # AI metrics, strategy types, agent configuration
-│   │   ├── evaluation.ts       # State evaluation function & terminal utilities
+│   │   ├── types.ts            # Standardized AgentConfig & AgentDecisionResult schemas
+│   │   ├── prng.ts             # Deterministic 32-bit Mulberry32 PRNG
+│   │   ├── cycleDetection.ts   # Canonical state signatures & repetition detector
+│   │   ├── heuristics.ts       # Modular H0..H3 presets & detailed feature breakdown
 │   │   ├── candidateActions.ts # Deterministic branching factor heuristic pruner
 │   │   ├── greedyAgent.ts      # 1-ply greedy baseline agent
-│   │   └── minimax.ts          # Minimax and Alpha-Beta search algorithms
-│   ├── components/             # React visual presentation components
+│   │   ├── minimax.ts          # Minimax, Alpha-Beta, and iterative deepening
+│   │   └── mcts.ts             # Original Monte Carlo Tree Search agent
+│   ├── arena/                  # Automated tournament & match execution engine
+│   │   └── tournamentRunner.ts # Multi-game pairings, side rotation, CSV/JSON exporters
+│   ├── components/             # React presentation components
 │   │   ├── Board.tsx           # Scalable interactive SVG board with highlights
-│   │   ├── Panel.tsx           # Side panel: status, reserves, AI metrics, settings
-│   │   └── Header.tsx          # Application header and objectives
+│   │   ├── Panel.tsx           # Human vs AI control panel and metrics
+│   │   ├── ArenaView.tsx       # AI vs AI Arena with lifecycle controls
+│   │   ├── TournamentView.tsx  # Tournament runner, progress, and download actions
+│   │   └── Header.tsx          # Application header and navigation
 │   ├── app/
-│   │   └── App.tsx             # Main React application shell & game loop
+│   │   └── App.tsx             # Main React application shell & tab routing
 │   ├── styles/
 │   │   └── index.css           # High-contrast, responsive CSS styling
 │   └── main.tsx                # React DOM entry point
-├── tests/                      # Automated Vitest test suites
-│   ├── setup.ts                # Test environment setup
+├── tests/                      # Automated Vitest test suites (70 tests)
 │   ├── engine.test.ts          # State transitions, jumps, collisions, rules
 │   ├── pathfinding.test.ts     # BFS vs A* equivalence, heuristics, mazes
-│   ├── ai.test.ts              # Agent legality, equivalence, cutoffs, win detection
-│   └── ui.test.tsx             # Component rendering, interaction, undo, reset
+│   ├── ai.test.ts              # Minimax, Alpha-Beta cutoffs, win detection
+│   ├── experimentalAgents.test.ts # MCTS determinism, iterative deepening, cycle detection
+│   ├── arenaAndTournament.test.tsx# Tab routing, Arena stepping, Tournament UI
+│   └── ui.test.tsx             # Human play, undo, resets, and accessibility
 ├── scripts/
-│   └── benchmark.ts            # Reproducible tournament CLI with CSV/JSON output
+│   └── benchmark.ts            # CLI tournament suite with CSV/JSON output
 ├── reports/                    # Generated benchmark results
-│   ├── benchmark_results.json
-│   └── benchmark_summary.csv
-└── docs/                       # Specifications and academic guides
-    ├── IMPLEMENTATION_STATUS.md
-    ├── COURSE_REPORT_GUIDE.md
-    ├── RESEARCH_REFERENCES.md
+└── docs/                       # Specifications, audit records, and methodology
+    ├── EXPERIMENTS_AND_METHODOLOGY.md # Detailed algorithmic and empirical paper
+    ├── EXPERIMENT_PLATFORM_STATUS.md  # Implementation audit and checklist
     └── ...
 ```
 
@@ -112,83 +119,61 @@ d:\Quoridor_AI/
 ## 4. AI Algorithms & Search Techniques
 
 ### A. Pathfinding: BFS vs. A*
-- **BFS (Breadth-First Search):** Serves as the ground-truth exact solver on the unweighted 81-cell board graph.
-- **A\* Search:** Production shortest-path solver utilizing Manhattan distance $h(n)$ to the closest square on the goal row:
-  $$h(n) = |n.\text{row} - \text{goalRow}|$$
-  - **Admissibility & Consistency:** Since pawns can only move orthogonally, each step alters vertical row displacement by at most 1. The minimum number of steps required to reach row 0 (or row 8) without walls is exactly $h(n)$. Walls can only lengthen the path, never shorten it; hence, $h(n)$ is strictly admissible ($h(n) \le h^*(n)$) and monotonic/consistent.
-  - **Verification:** Unit tests confirm that BFS and A* compute identical shortest-path lengths across empty boards, handcrafted wall labyrinths, and 20 pseudo-random seeded boards.
+- **BFS (Breadth-First Search):** Ground-truth exact shortest-path solver on the unweighted 81-cell board graph.
+- **A\* Search:** Production shortest-path solver utilizing Manhattan distance $h(n) = |n.\text{row} - \text{goalRow}|$ to the closest square on the goal row.
+- **Verification:** Unit tests confirm BFS and A* yield identical distances across empty boards, handcrafted wall labyrinths, and pseudo-random seeded boards.
 
-### B. Heuristic Evaluation Function
-Evaluates non-terminal board positions from the perspective of the searching agent:
-$$\text{Score} = 100 \times (\text{dist}_{\text{opponent}} - \text{dist}_{\text{self}}) + 3 \times (\text{walls}_{\text{self}} - \text{walls}_{\text{opponent}})$$
+### B. Minimax and Alpha-Beta Pruning
+- **Minimax:** Full-tree depth-bounded search alternating between maximizing and minimizing plies.
+- **Alpha-Beta Pruning:** Branch-and-bound cutoffs preserving the exact outcome of Minimax while evaluating 45%–63% fewer nodes.
+- **Iterative Deepening:** Evaluates depths sequentially with wall-clock time budgets and graceful cancellation fallbacks.
 
-Terminal state utilities incorporate a ply penalty to favor faster victories and delay inevitable defeats:
-- **Terminal Win:** $+100{,}000 - \text{plyFromRoot}$
-- **Terminal Loss:** $-100{,}000 + \text{plyFromRoot}$
-
-### C. Managing Quoridor's Branching Factor
-With up to 128 wall placements and 4+ pawn moves, the raw branching factor is $b \approx 132$, creating over $17{,}000$ branches at depth 2 and over $2{,}000{,}000$ at depth 3.
-To maintain responsive play, `src/ai/candidateActions.ts` applies a deterministic priority heuristic:
-1. Always includes **all legal pawn moves** (sorted with goal-advancing moves first).
-2. Scores wall placements using:
-   - Blocking edges on the opponent's current shortest path ($+60$ to $+90$).
-   - Penalty for blocking own shortest path ($-35$).
-   - Proximity to pawns and continuation of existing walls.
-3. Selects the top legal candidates (default: 8 at root, 6 at sub-nodes) using full legality validation (including path preservation).
-4. Both Minimax and Alpha-Beta receive the **exact same deterministic candidate tree and move ordering**.
-
-### D. Minimax and Alpha-Beta Pruning
-- **Minimax:** Exhaustive depth-limited tree search alternating between maximizing (computer) and minimizing (human) plies.
-- **Alpha-Beta Pruning:** Maintains $[\alpha, \beta]$ bounds to prune branches that cannot influence the final decision.
-- **Equivalence:** Because move generation and candidate sorting are identical, Alpha-Beta is mathematically guaranteed to choose the identical action and score as Minimax over that candidate tree, while evaluating substantially fewer nodes.
+### C. Original Monte Carlo Tree Search (MCTS)
+- **Selection:** Upper Confidence bounds applied to Trees (UCT):
+  $$\text{UCT}(s, a) = Q(s, a) + c \cdot \sqrt{\frac{\ln N(s)}{N(s, a)}}$$
+- **Expansion:** Unvisited legal candidate actions are added to the search tree.
+- **Simulation:** Bounded heuristic rollout policy biasing toward shortest-path advancement with bounded rollout caps and strict engine legality checks.
+- **Backpropagation:** Propagates $+1.0$ (win), $-1.0$ (loss), or $0.0$ (draw/ply cap).
+- **Academic Attribution:** Original implementation based on standard MCTS literature (Coulom 2006, Kocsis & Szepesvári 2006). Gorisanson repository cited as a research reference only; no external code was cloned or copied.
 
 ---
 
-## 5. Benchmark Results
+## 5. Benchmark CLI & Empirical Results
 
-From actual execution (`npm run benchmark -- --games 2` with side rotation):
+Run the reproducible benchmark tournament CLI:
 
-```text
-=== Benchmark Summary Table ===
-Matchup 1: Greedy (d1) vs Minimax (d2)
-  - Greedy Wins: 0 (0.0%) | Minimax Wins: 4 (100.0%)
-  - Mean Decision Time: Greedy 0.99ms | Minimax 4.44ms
-  - Mean Nodes Visited: Greedy 13 | Minimax 81
-  - Mean Cutoffs: 0
+```bash
+# Run standard tournament (10 games side-rotated)
+npm run benchmark
 
-Matchup 2: Greedy (d1) vs Alpha-Beta (d2)
-  - Greedy Wins: 0 (0.0%) | Alpha-Beta Wins: 4 (100.0%)
-  - Mean Decision Time: Greedy 0.68ms | Alpha-Beta 2.41ms
-  - Mean Nodes Visited: Greedy 13 | Alpha-Beta 30 (63% node reduction vs Minimax)
-  - Mean Cutoffs: 8.33 per turn
+# Run heuristic ablation experiments
+npm run benchmark -- --preset experiments
 
-Matchup 3: Minimax (d2) vs Alpha-Beta (d2)
-  - Minimax Wins: 2 (50.0%) | Alpha-Beta Wins: 2 (50.0%)
-  - Mean Decision Time: Minimax 2.46ms | Alpha-Beta 1.68ms
-  - Mean Nodes Visited: Minimax 47 | Alpha-Beta 26 (45% reduction)
-  - Mean Cutoffs: 5.18 per turn
+# Run MCTS vs Alpha-Beta comparison
+npm run benchmark -- --preset mcts
 ```
 
-The benchmark results confirm:
-1. Adversarial lookahead decisively outperforms one-step heuristic evaluation.
-2. Alpha-Beta achieves identical playing outcomes with $45\%$ to $63\%$ fewer node evaluations.
+### Actual Benchmark Summary (10 Games, Side-Rotated, Seed 42)
+| Matchup | Config A | Config B | A Wins | B Wins | Draws | Mean Time A | Mean Time B | Mean Nodes A | Mean Nodes B | Avg Plies |
+|---|---|---|---|---|---|---|---|---|---|---|
+| **0** | Greedy ($d=1$) | Minimax ($d=2$) | **0 (0.0%)** | **2 (100.0%)** | 0 | 0.72 ms | 3.67 ms | 9 | 81 | 20.5 |
+| **1** | Greedy ($d=1$) | Alpha-Beta ($d=2$) | **0 (0.0%)** | **2 (100.0%)** | 0 | 0.23 ms | 1.22 ms | 9 | 30 | 20.5 |
+| **2** | Minimax ($d=2$) | Alpha-Beta ($d=2$) | **1 (50.0%)** | **1 (50.0%)** | 0 | 1.90 ms | 1.31 ms | 47 | 26 | 62.0 |
+| **3** | Alpha-Beta ($H_0$) | Alpha-Beta ($H_2$) | **1 (50.0%)** | **1 (50.0%)** | 0 | 1.00 ms | 0.99 ms | 26 | 26 | 62.0 |
+| **4** | Alpha-Beta ($d=2$) | MCTS (50 iters) | **1 (50.0%)** | **0 (0.0%)** | 1 | 1.32 ms | 72.92 ms | 29 | 51 | 65.0 |
 
 ---
 
-## 6. Manual Smoke-Test Walkthrough
+## 6. Verification & Test Suite
 
-1. Run `npm run dev` and open the app in your browser.
-2. **Move Pawn:** Click a highlighted square (e.g. square above your pawn). Observe your pawn move and the AI respond with its search metrics displayed in the side panel.
-3. **Horizontal Wall:** Click "Horizontal Wall", hover over an anchor to preview the wall in green, then click to place. Observe the wall render and your wall reserve decrement by 1.
-4. **Vertical Wall:** Switch to "Vertical Wall" and place a vertical barrier.
-5. **Collision Protection:** Attempt to place an overlapping or perpendicular crossing wall; observe the error feedback without turn loss.
-6. **AI Configuration:** Change strategy to "Minimax (Unpruned)" or change depth to 1 or 3. Observe metrics adjust on subsequent turns.
-7. **Undo:** Click "Undo Turn" to revert your move and the AI response.
-8. **New Game:** Click "New Game" to reset the board, reserves, and statistics.
+All 70 unit and integration tests pass cleanly:
+```bash
+npm run check:all
+```
+This executes:
+1. `tsc --noEmit` (0 type errors)
+2. `eslint .` (0 warnings, 0 errors)
+3. `vitest run` (70 passing tests across 6 suites)
+4. `vite build` (production build succeeds in <1s)
 
----
-
-## 7. Known Limitations & Future Work
-
-- **Candidate Approximation:** The candidate wall generator prunes the 128 raw wall anchors down to the top strategic candidates. Minimax and Alpha-Beta are equivalent over this candidate set, but this remains a heuristic approximation of the full 128-branch game tree.
-- **MCTS (Monte Carlo Tree Search):** As outlined in project specifications, MCTS with UCT (Upper Confidence bounds applied to Trees) and shortest-path rollout policies is documented as potential future research.
+Detailed documentation is available in [`docs/EXPERIMENTS_AND_METHODOLOGY.md`](file:///d:/Quoridor_AI/docs/EXPERIMENTS_AND_METHODOLOGY.md) and [`docs/EXPERIMENT_PLATFORM_STATUS.md`](file:///d:/Quoridor_AI/docs/EXPERIMENT_PLATFORM_STATUS.md).

@@ -9,6 +9,8 @@ interface BoardProps {
   isAiThinking: boolean;
   onCellClick: (pos: Position) => void;
   onWallClick: (wall: Wall) => void;
+  p1Label?: string;
+  p2Label?: string;
 }
 
 const CELL_SIZE = 48;
@@ -22,6 +24,8 @@ export const Board: React.FC<BoardProps> = ({
   isAiThinking,
   onCellClick,
   onWallClick,
+  p1Label = 'Human (P1)',
+  p2Label = 'Computer (AI)',
 }) => {
   const [hoveredAnchor, setHoveredAnchor] = useState<{
     row: number;
@@ -51,7 +55,7 @@ export const Board: React.FC<BoardProps> = ({
   return (
     <div className="board-container">
       <div className="board-goal-indicator board-goal-p1">
-        <span>▲ Human (P1) Goal Line (Row 0)</span>
+        <span>▲ {p1Label} Goal Line (Row 0)</span>
         <span>Goal: Reach any square here</span>
       </div>
 
@@ -298,7 +302,7 @@ export const Board: React.FC<BoardProps> = ({
       </svg>
 
       <div className="board-goal-indicator board-goal-p2">
-        <span>▼ Computer (AI) Goal Line (Row 8)</span>
+        <span>▼ {p2Label} Goal Line (Row 8)</span>
         <span>Goal: Reach any square here</span>
       </div>
     </div>
