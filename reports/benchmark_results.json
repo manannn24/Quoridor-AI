@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-16T21:38:01.524Z",
+  "timestamp": "2026-10-18T05:48:23.429Z",
   "totalGames": 10,
   "completedGames": 10,
   "wasCancelled": false,
@@ -30,8 +30,8 @@
       "bAsP1Wins": 1,
       "bAsP2Wins": 1,
       "meanPlies": 20.5,
-      "meanDecisionTimeA": 0.72,
-      "meanDecisionTimeB": 3.67,
+      "meanDecisionTimeA": 1.15,
+      "meanDecisionTimeB": 5.24,
       "meanNodesA": 9,
       "meanNodesB": 81,
       "meanCutoffsA": 0,
@@ -63,8 +63,8 @@
       "bAsP1Wins": 1,
       "bAsP2Wins": 1,
       "meanPlies": 20.5,
-      "meanDecisionTimeA": 0.23,
-      "meanDecisionTimeB": 1.22,
+      "meanDecisionTimeA": 0.42,
+      "meanDecisionTimeB": 1.94,
       "meanNodesA": 9,
       "meanNodesB": 30,
       "meanCutoffsA": 0,
@@ -97,8 +97,8 @@
       "bAsP1Wins": 0,
       "bAsP2Wins": 1,
       "meanPlies": 62,
-      "meanDecisionTimeA": 1.9,
-      "meanDecisionTimeB": 1.31,
+      "meanDecisionTimeA": 2.66,
+      "meanDecisionTimeB": 1.88,
       "meanNodesA": 47,
       "meanNodesB": 26,
       "meanCutoffsA": 0,
@@ -131,8 +131,8 @@
       "bAsP1Wins": 0,
       "bAsP2Wins": 1,
       "meanPlies": 62,
-      "meanDecisionTimeA": 1,
-      "meanDecisionTimeB": 0.99,
+      "meanDecisionTimeA": 1.92,
+      "meanDecisionTimeB": 1.89,
       "meanNodesA": 26,
       "meanNodesB": 26,
       "meanCutoffsA": 5.18,
@@ -166,8 +166,8 @@
       "bAsP1Wins": 0,
       "bAsP2Wins": 0,
       "meanPlies": 65,
-      "meanDecisionTimeA": 1.32,
-      "meanDecisionTimeB": 72.92,
+      "meanDecisionTimeA": 2.23,
+      "meanDecisionTimeB": 115.85,
       "meanNodesA": 29,
       "meanNodesB": 51,
       "meanCutoffsA": 6.98,
@@ -208,7 +208,7 @@
       "winner": "P2",
       "reason": "normal",
       "totalPlies": 14,
-      "durationMs": 46.5035,
+      "durationMs": 68.0974,
       "decisions": [
         {
           "ply": 1,
@@ -222,7 +222,7 @@
           },
           "algorithm": "greedy",
           "heuristicId": "H0",
-          "elapsedMs": 6.831999999999994,
+          "elapsedMs": 10.407300000000077,
           "score": 100,
           "nodesVisited": 9,
           "cutoffs": 0
@@ -239,7 +239,7 @@
           },
           "algorithm": "minimax",
           "heuristicId": "H0",
-          "elapsedMs": 11.801700000000011,
+          "elapsedMs": 15.224699999999984,
           "score": -100,
           "nodesVisited": 80,
           "cutoffs": 0
@@ -256,7 +256,7 @@
           },
           "algorithm": "greedy",
           "heuristicId": "H0",
-          "elapsedMs": 0.5980999999999881,
+          "elapsedMs": 0.8405999999999949,
           "score": 100,
           "nodesVisited": 10,
           "cutoffs": 0
@@ -273,7 +273,7 @@
           },
           "algorithm": "minimax",
           "heuristicId": "H0",
-          "elapsedMs": 6.495499999999993,
+          "elapsedMs": 9.642299999999977,
           "score": -100,
           "nodesVisited": 89,
           "cutoffs": 0
@@ -290,7 +290,7 @@
           },
           "algorithm": "greedy",
           "heuristicId": "H0",
-          "elapsedMs": 0.7287000000000035,
+          "elapsedMs": 1.592300000000023,
           "score": 100,
           "nodesVisited": 10,
           "cutoffs": 0
@@ -307,7 +307,7 @@
           },
           "algorithm": "minimax",
           "heuristicId": "H0",
-          "elapsedMs": 6.631599999999992,
+          "elapsedMs": 10.54200000000003,
           "score": -100,
           "nodesVisited": 90,
           "cutoffs": 0
@@ -324,7 +324,7 @@
           },
           "algorithm": "greedy",
           "heuristicId": "H0",
-          "elapsedMs": 1.005899999999997,
+          "elapsedMs": 1.9972000000000207,
           "score": 100,
           "nodesVisited": 10,
           "cutoffs": 0
@@ -341,7 +341,7 @@
           },
           "algorithm": "minimax",
           "heuristicId": "H0",
-          "elapsedMs": 4.284300000000002,
+          "elapsedMs": 7.222700000000032,
           "score": 0,
           "nodesVisited": 93,
           "cutoffs": 0
@@ -358,7 +358,7 @@
           },
           "algorithm": "greedy",
           "heuristicId": "H0",
-          "elapsedMs": 0.25200000000000955,
+          "elapsedMs": 0.439899999999966,
           "score": 0,
           "nodesVisited": 10,
           "cutoffs": 0
@@ -375,7 +375,7 @@
           },
           "algorithm": "minimax",
           "heuristicId": "H0",
-          "elapsedMs": 2.8515999999999906,
+          "elapsedMs": 4.0131000000000085,
           "score": 0,
           "nodesVisited": 89,
           "cutoffs": 0
@@ -392,7 +392,7 @@
           },
           "algorithm": "greedy",
           "heuristicId": "H0",
-          "elapsedMs": 0.1967000000000212,
+          "elapsedMs": 0.217899999999986,
           "score": 0,
           "nodesVisited": 10,
           "cutoffs": 0
@@ -409,7 +409,7 @@
           },
           "algorithm": "minimax",
           "heuristicId": "H0",
-          "elapsedMs": 1.9339999999999975,
+          "elapsedMs": 1.8902000000000498,
           "score": 0,
           "nodesVisited": 87,
           "cutoffs": 0
@@ -426,7 +426,7 @@
           },
           "algorithm": "greedy",
           "heuristicId": "H0",
-          "elapsedMs": 0.11530000000001905,
+          "elapsedMs": 0.15260000000000673,
           "score": 0,
           "nodesVisited": 10,
           "cutoffs": 0
@@ -443,7 +443,7 @@
           },
           "algorithm": "minimax",
           "heuristicId": "H0",
-          "elapsedMs": 1.244100000000003,
+          "elapsedMs": 1.8584000000000742,
           "score": 99999,
           "nodesVisited": 77,
           "cutoffs": 0
@@ -482,7 +482,7 @@
       "winner": "P1",
       "reason": "normal",
       "totalPlies": 27,
-      "durationMs": 47.28139999999999,
+      "durationMs": 68.17110000000002,
       "decisions": [
         {
           "ply": 1,
@@ -496,7 +496,7 @@
           },
           "algorithm": "minimax",
           "heuristicId": "H0",
-          "elapsedMs": 3.221299999999985,
+          "elapsedMs": 5.620400000000018,
           "score": 0,
           "nodesVisited": 71,
           "cutoffs": 0
@@ -513,7 +513,7 @@
           },
           "algorithm": "greedy",
           "heuristicId": "H0",
-          "elapsedMs": 0.4730999999999881,
+          "elapsedMs": 0.8321999999999434,
           "score": 0,
           "nodesVisited": 9,
           "cutoffs": 0
@@ -530,7 +530,7 @@
           },
           "algorithm": "minimax",
           "heuristicId": "H0",
-          "elapsedMs": 3.4455000000000098,
+          "elapsedMs": 7.002299999999991,
           "score": 0,
           "nodesVisited": 89,
           "cutoffs": 0
@@ -547,7 +547,7 @@
           },
           "algorithm": "greedy",
           "heuristicId": "H0",
-          "elapsedMs": 0.4479000000000326,
+          "elapsedMs": 0.9194999999999709,
           "score": 0,
           "nodesVisited": 10,
           "cutoffs": 0
@@ -564,7 +564,7 @@
           },
           "algorithm": "minimax",
           "heuristicId": "H0",
-          "elapsedMs": 3.94380000000001,
+          "elapsedMs": 6.069500000000062,
           "score": 0,
           "nodesVisited": 89,
           "cutoffs": 0
@@ -581,7 +581,7 @@
           },
           "algorithm": "greedy",
           "heuristicId": "H0",
-          "elapsedMs": 0.32600000000002183,
+          "elapsedMs": 1.0199999999999818,
           "score": 0,
           "nodesVisited": 10,
           "cutoffs": 0
@@ -599,7 +599,7 @@
           },
           "algorithm": "minimax",
           "heuristicId": "H0",
-          "elapsedMs": 3.2444000000000415,
+          "elapsedMs": 4.595600000000104,
           "score": -3,
           "nodesVisited": 91,
           "cutoffs": 0
@@ -616,7 +616,7 @@
           },
           "algorithm": "greedy",
           "heuristicId": "H0",
-          "elapsedMs": 0.5645999999999844,
+          "elapsedMs": 0.54099999999994,
           "score": 3,
           "nodesVisited": 10,
           "cutoffs": 0
@@ -633,7 +633,7 @@
           },
           "algorithm": "minimax",
           "heuristicId": "H0",
-          "elapsedMs": 3.8127000000000066,
+          "elapsedMs": 6.582499999999982,
           "score": 97,
           "nodesVisited": 83,
           "cutoffs": 0
@@ -650,7 +650,7 @@
           },
           "algorithm": "greedy",
           "heuristicId": "H0",
-          "elapsedMs": 0.5241999999999507,
+          "elapsedMs": 0.5331999999999653,
           "score": -97,
           "nodesVisited": 10,
           "cutoffs": 0
@@ -667,7 +667,7 @@
           },
           "algorithm": "minimax",
           "heuristicId": "H0",
-          "elapsedMs": 3.3590000000000373,
+          "elapsedMs": 2.3127999999999247,
           "score": 97,
           "nodesVisited": 79,
           "cutoffs": 0
@@ -684,7 +684,7 @@
           },
           "algorithm": "greedy",
           "heuristicId": "H0",
-          "elapsedMs": 0.14679999999998472,
+          "elapsedMs": 0.20939999999995962,
           "score": -97,
           "nodesVisited": 9,
           "cutoffs": 0
@@ -702,7 +702,7 @@
           },
           "algorithm": "minimax",
           "heuristicId": "H0",
-          "elapsedMs": 1.4165000000000418,
+          "elapsedMs": 2.0096999999999525,
           "score": 194,
           "nodesVisited": 89,
           "cutoffs": 0
@@ -719,7 +719,7 @@
           },
           "algorithm": "greedy",
           "heuristicId": "H0",
-          "elapsedMs": 0.161200000000008,
+          "elapsedMs": 0.4067999999999756,
           "score": -194,
           "nodesVisited": 9,
           "cutoffs": 0
@@ -737,7 +737,7 @@
           },
           "algorithm": "minimax",
           "heuristicId": "H0",
-          "elapsedMs": 1.936399999999992,
+          "elapsedMs": 2.0283000000000584,
           "score": 391,
           "nodesVisited": 79,
           "cutoffs": 0
@@ -754,7 +754,7 @@
           },
           "algorithm": "greedy",
           "heuristicId": "H0",
-          "elapsedMs": 0.31529999999997926,
+          "elapsedMs": 0.26070000000004256,
           "score": -391,
           "nodesVisited": 9,
           "cutoffs": 0
@@ -772,7 +772,7 @@
           },
           "algorithm": "minimax",
           "heuristicId": "H0",
-          "elapsedMs": 1.908299999999997,
+          "elapsedMs": 2.8426000000000613,
           "score": 688,
           "nodesVisited": 79,
           "cutoffs": 0
@@ -789,7 +789,7 @@
           },
           "algorithm": "greedy",
           "heuristicId": "H0",
-          "elapsedMs": 0.362700000000018,
+          "elapsedMs": 0.6039000000000669,
           "score": -688,
           "nodesVisited": 9,
           "cutoffs": 0
@@ -807,7 +807,7 @@
           },
           "algorithm": "minimax",
           "heuristicId": "H0",
-          "elapsedMs": 3.4220000000000255,
+          "elapsedMs": 5.070299999999975,
           "score": 985,
           "nodesVisited": 70,
           "cutoffs": 0
@@ -824,7 +824,7 @@
           },
           "algorithm": "greedy",
           "heuristicId": "H0",
-          "elapsedMs": 0.28829999999999245,
+          "elapsedMs": 0.841199999999958,
           "score": -985,
           "nodesVisited": 7,
           "cutoffs": 0
@@ -842,7 +842,7 @@
           },
           "algorithm": "minimax",
           "heuristicId": "H0",
-          "elapsedMs": 2.7046000000000276,
+          "elapsedMs": 3.3810999999999467,
           "score": 1282,
           "nodesVisited": 71,
           "cutoffs": 0
@@ -859,7 +859,7 @@
           },
           "algorithm": "greedy",
           "heuristicId": "H0",
-          "elapsedMs": 0.2869999999999777,
+          "elapsedMs": 0.3625999999999294,
           "score": -1282,
           "nodesVisited": 8,
           "cutoffs": 0
@@ -877,7 +877,7 @@
           },
           "algorithm": "minimax",
           "heuristicId": "H0",
-          "elapsedMs": 3.013400000000047,
+          "elapsedMs": 3.73619999999994,
           "score": 1379,
           "nodesVisited": 70,
           "cutoffs": 0
@@ -894,7 +894,7 @@
           },
           "algorithm": "greedy",
           "heuristicId": "H0",
-          "elapsedMs": 0.5120000000000005,
+          "elapsedMs": 0.36570000000006075,
           "score": -1379,
           "nodesVisited": 8,
           "cutoffs": 0
@@ -911,7 +911,7 @@
           },
           "algorithm": "minimax",
           "heuristicId": "H0",
-          "elapsedMs": 3.288000000000011,
+          "elapsedMs": 5.551299999999969,
           "score": 1379,
           "nodesVisited": 71,
           "cutoffs": 0
@@ -928,7 +928,7 @@
           },
           "algorithm": "greedy",
           "heuristicId": "H0",
-          "elapsedMs": 0.3281999999999812,
+          "elapsedMs": 0.38149999999996,
           "score": -1379,
           "nodesVisited": 8,
           "cutoffs": 0
@@ -945,7 +945,7 @@
           },
           "algorithm": "minimax",
           "heuristicId": "H0",
-          "elapsedMs": 3.0801999999999907,
+          "elapsedMs": 2.856300000000033,
           "score": 99999,
           "nodesVisited": 64,
           "cutoffs": 0
@@ -984,7 +984,7 @@
       "winner": "P2",
       "reason": "normal",
       "totalPlies": 14,
-      "durationMs": 9.145800000000008,
+      "durationMs": 15.135099999999966,
       "decisions": [
         {
           "ply": 1,
@@ -998,7 +998,7 @@
           },
           "algorithm": "greedy",
           "heuristicId": "H0",
-          "elapsedMs": 0.31520000000000437,
+          "elapsedMs": 0.8007999999999811,
           "score": 100,
           "nodesVisited": 9,
           "cutoffs": 0
@@ -1015,7 +1015,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 1.558900000000051,
+          "elapsedMs": 2.579900000000066,
           "score": -100,
           "nodesVisited": 26,
           "cutoffs": 8
@@ -1032,7 +1032,7 @@
           },
           "algorithm": "greedy",
           "heuristicId": "H0",
-          "elapsedMs": 0.24689999999998236,
+          "elapsedMs": 0.578899999999976,
           "score": 100,
           "nodesVisited": 10,
           "cutoffs": 0
@@ -1049,7 +1049,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 1.3970999999999663,
+          "elapsedMs": 1.873199999999997,
           "score": -100,
           "nodesVisited": 28,
           "cutoffs": 9
@@ -1066,7 +1066,7 @@
           },
           "algorithm": "greedy",
           "heuristicId": "H0",
-          "elapsedMs": 0.23720000000002983,
+          "elapsedMs": 0.5153999999999996,
           "score": 100,
           "nodesVisited": 10,
           "cutoffs": 0
@@ -1083,7 +1083,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 1.3729000000000156,
+          "elapsedMs": 1.8934000000000424,
           "score": -100,
           "nodesVisited": 28,
           "cutoffs": 9
@@ -1100,7 +1100,7 @@
           },
           "algorithm": "greedy",
           "heuristicId": "H0",
-          "elapsedMs": 0.22280000000000655,
+          "elapsedMs": 0.3062999999999647,
           "score": 100,
           "nodesVisited": 10,
           "cutoffs": 0
@@ -1117,7 +1117,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 1.1388000000000034,
+          "elapsedMs": 2.973500000000058,
           "score": 0,
           "nodesVisited": 28,
           "cutoffs": 9
@@ -1134,7 +1134,7 @@
           },
           "algorithm": "greedy",
           "heuristicId": "H0",
-          "elapsedMs": 0.17900000000003047,
+          "elapsedMs": 0.43619999999998527,
           "score": 0,
           "nodesVisited": 10,
           "cutoffs": 0
@@ -1151,7 +1151,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.9051999999999794,
+          "elapsedMs": 1.1130999999999176,
           "score": 0,
           "nodesVisited": 29,
           "cutoffs": 9
@@ -1168,7 +1168,7 @@
           },
           "algorithm": "greedy",
           "heuristicId": "H0",
-          "elapsedMs": 0.12810000000001764,
+          "elapsedMs": 0.23419999999998709,
           "score": 0,
           "nodesVisited": 10,
           "cutoffs": 0
@@ -1185,7 +1185,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.588799999999992,
+          "elapsedMs": 0.9096999999999298,
           "score": 0,
           "nodesVisited": 29,
           "cutoffs": 9
@@ -1202,7 +1202,7 @@
           },
           "algorithm": "greedy",
           "heuristicId": "H0",
-          "elapsedMs": 0.10460000000000491,
+          "elapsedMs": 0.12249999999994543,
           "score": 0,
           "nodesVisited": 10,
           "cutoffs": 0
@@ -1219,7 +1219,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.5283000000000015,
+          "elapsedMs": 0.41440000000000055,
           "score": 99999,
           "nodesVisited": 20,
           "cutoffs": 9
@@ -1258,7 +1258,7 @@
       "winner": "P1",
       "reason": "normal",
       "totalPlies": 27,
-      "durationMs": 21.8365,
+      "durationMs": 35.12080000000003,
       "decisions": [
         {
           "ply": 1,
@@ -1272,7 +1272,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 1.377299999999991,
+          "elapsedMs": 3.4641000000000304,
           "score": 0,
           "nodesVisited": 25,
           "cutoffs": 8
@@ -1289,7 +1289,7 @@
           },
           "algorithm": "greedy",
           "heuristicId": "H0",
-          "elapsedMs": 0.279200000000003,
+          "elapsedMs": 0.3650000000000091,
           "score": 0,
           "nodesVisited": 9,
           "cutoffs": 0
@@ -1306,7 +1306,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 1.4479000000000042,
+          "elapsedMs": 1.8421999999999343,
           "score": 0,
           "nodesVisited": 28,
           "cutoffs": 9
@@ -1323,7 +1323,7 @@
           },
           "algorithm": "greedy",
           "heuristicId": "H0",
-          "elapsedMs": 0.25930000000005293,
+          "elapsedMs": 0.48299999999994725,
           "score": 0,
           "nodesVisited": 10,
           "cutoffs": 0
@@ -1340,7 +1340,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 1.601500000000044,
+          "elapsedMs": 1.7350999999999885,
           "score": 0,
           "nodesVisited": 28,
           "cutoffs": 9
@@ -1357,7 +1357,7 @@
           },
           "algorithm": "greedy",
           "heuristicId": "H0",
-          "elapsedMs": 0.27420000000000755,
+          "elapsedMs": 0.4535999999999376,
           "score": 0,
           "nodesVisited": 10,
           "cutoffs": 0
@@ -1375,7 +1375,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 1.921799999999962,
+          "elapsedMs": 1.6985999999999422,
           "score": -3,
           "nodesVisited": 35,
           "cutoffs": 8
@@ -1392,7 +1392,7 @@
           },
           "algorithm": "greedy",
           "heuristicId": "H0",
-          "elapsedMs": 0.34719999999998663,
+          "elapsedMs": 0.3283000000000129,
           "score": 3,
           "nodesVisited": 10,
           "cutoffs": 0
@@ -1409,7 +1409,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 1.5172999999999774,
+          "elapsedMs": 1.9954000000000178,
           "score": 97,
           "nodesVisited": 26,
           "cutoffs": 8
@@ -1426,7 +1426,7 @@
           },
           "algorithm": "greedy",
           "heuristicId": "H0",
-          "elapsedMs": 0.16269999999997253,
+          "elapsedMs": 0.25679999999999836,
           "score": -97,
           "nodesVisited": 10,
           "cutoffs": 0
@@ -1443,7 +1443,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.8432999999999993,
+          "elapsedMs": 1.5027000000000044,
           "score": 97,
           "nodesVisited": 28,
           "cutoffs": 9
@@ -1460,7 +1460,7 @@
           },
           "algorithm": "greedy",
           "heuristicId": "H0",
-          "elapsedMs": 0.11750000000000682,
+          "elapsedMs": 0.1835999999999558,
           "score": -97,
           "nodesVisited": 9,
           "cutoffs": 0
@@ -1478,7 +1478,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.7241999999999962,
+          "elapsedMs": 1.2047999999999774,
           "score": 194,
           "nodesVisited": 34,
           "cutoffs": 8
@@ -1495,7 +1495,7 @@
           },
           "algorithm": "greedy",
           "heuristicId": "H0",
-          "elapsedMs": 0.13409999999998945,
+          "elapsedMs": 0.47519999999997253,
           "score": -194,
           "nodesVisited": 9,
           "cutoffs": 0
@@ -1513,7 +1513,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.8958000000000084,
+          "elapsedMs": 1.4232999999999265,
           "score": 391,
           "nodesVisited": 38,
           "cutoffs": 7
@@ -1530,7 +1530,7 @@
           },
           "algorithm": "greedy",
           "heuristicId": "H0",
-          "elapsedMs": 0.158299999999997,
+          "elapsedMs": 0.9273999999999205,
           "score": -391,
           "nodesVisited": 9,
           "cutoffs": 0
@@ -1548,7 +1548,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 1.1030000000000086,
+          "elapsedMs": 2.9338000000000193,
           "score": 688,
           "nodesVisited": 42,
           "cutoffs": 7
@@ -1565,7 +1565,7 @@
           },
           "algorithm": "greedy",
           "heuristicId": "H0",
-          "elapsedMs": 0.3281000000000063,
+          "elapsedMs": 0.37750000000005457,
           "score": -688,
           "nodesVisited": 9,
           "cutoffs": 0
@@ -1583,7 +1583,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 1.9876999999999612,
+          "elapsedMs": 2.0843999999999596,
           "score": 985,
           "nodesVisited": 38,
           "cutoffs": 7
@@ -1600,7 +1600,7 @@
           },
           "algorithm": "greedy",
           "heuristicId": "H0",
-          "elapsedMs": 0.27909999999997126,
+          "elapsedMs": 0.4915000000000873,
           "score": -985,
           "nodesVisited": 7,
           "cutoffs": 0
@@ -1618,7 +1618,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 1.4348999999999705,
+          "elapsedMs": 3.2712000000000216,
           "score": 1282,
           "nodesVisited": 36,
           "cutoffs": 7
@@ -1635,7 +1635,7 @@
           },
           "algorithm": "greedy",
           "heuristicId": "H0",
-          "elapsedMs": 0.3405999999999949,
+          "elapsedMs": 0.34170000000005984,
           "score": -1282,
           "nodesVisited": 8,
           "cutoffs": 0
@@ -1653,7 +1653,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 1.230099999999993,
+          "elapsedMs": 2.1551000000000613,
           "score": 1379,
           "nodesVisited": 31,
           "cutoffs": 8
@@ -1670,7 +1670,7 @@
           },
           "algorithm": "greedy",
           "heuristicId": "H0",
-          "elapsedMs": 0.22429999999997108,
+          "elapsedMs": 0.4190999999999576,
           "score": -1379,
           "nodesVisited": 8,
           "cutoffs": 0
@@ -1687,7 +1687,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 1.167599999999993,
+          "elapsedMs": 1.8962999999999965,
           "score": 1379,
           "nodesVisited": 26,
           "cutoffs": 9
@@ -1704,7 +1704,7 @@
           },
           "algorithm": "greedy",
           "heuristicId": "H0",
-          "elapsedMs": 0.3517999999999688,
+          "elapsedMs": 0.39220000000000255,
           "score": -1379,
           "nodesVisited": 8,
           "cutoffs": 0
@@ -1721,7 +1721,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.9561999999999671,
+          "elapsedMs": 1.7257000000000744,
           "score": 99999,
           "nodesVisited": 20,
           "cutoffs": 9
@@ -1760,7 +1760,7 @@
       "winner": "P2",
       "reason": "normal",
       "totalPlies": 62,
-      "durationMs": 106.40190000000001,
+      "durationMs": 154.4020999999999,
       "decisions": [
         {
           "ply": 1,
@@ -1774,7 +1774,7 @@
           },
           "algorithm": "minimax",
           "heuristicId": "H0",
-          "elapsedMs": 3.3444000000000074,
+          "elapsedMs": 3.8671000000000504,
           "score": 0,
           "nodesVisited": 71,
           "cutoffs": 0
@@ -1791,7 +1791,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 1.4121000000000095,
+          "elapsedMs": 2.283399999999915,
           "score": -100,
           "nodesVisited": 26,
           "cutoffs": 8
@@ -1808,7 +1808,7 @@
           },
           "algorithm": "minimax",
           "heuristicId": "H0",
-          "elapsedMs": 2.5861000000000445,
+          "elapsedMs": 4.328600000000051,
           "score": 0,
           "nodesVisited": 89,
           "cutoffs": 0
@@ -1825,7 +1825,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 1.2629999999999768,
+          "elapsedMs": 1.9804000000000315,
           "score": -100,
           "nodesVisited": 28,
           "cutoffs": 9
@@ -1842,7 +1842,7 @@
           },
           "algorithm": "minimax",
           "heuristicId": "H0",
-          "elapsedMs": 2.3572999999999524,
+          "elapsedMs": 4.1118000000000166,
           "score": 0,
           "nodesVisited": 89,
           "cutoffs": 0
@@ -1859,7 +1859,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 2.01279999999997,
+          "elapsedMs": 5.071199999999976,
           "score": -100,
           "nodesVisited": 28,
           "cutoffs": 9
@@ -1877,7 +1877,7 @@
           },
           "algorithm": "minimax",
           "heuristicId": "H0",
-          "elapsedMs": 9.701200000000028,
+          "elapsedMs": 12.381500000000074,
           "score": -3,
           "nodesVisited": 91,
           "cutoffs": 0
@@ -1895,7 +1895,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 3.164799999999957,
+          "elapsedMs": 3.7486999999999853,
           "score": -100,
           "nodesVisited": 39,
           "cutoffs": 7
@@ -1913,7 +1913,7 @@
           },
           "algorithm": "minimax",
           "heuristicId": "H0",
-          "elapsedMs": 2.8987999999999943,
+          "elapsedMs": 6.711699999999951,
           "score": -3,
           "nodesVisited": 72,
           "cutoffs": 0
@@ -1930,7 +1930,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 2.609299999999962,
+          "elapsedMs": 3.785600000000045,
           "score": -97,
           "nodesVisited": 31,
           "cutoffs": 7
@@ -1948,7 +1948,7 @@
           },
           "algorithm": "minimax",
           "heuristicId": "H0",
-          "elapsedMs": 4.3648000000000025,
+          "elapsedMs": 5.386200000000031,
           "score": 94,
           "nodesVisited": 72,
           "cutoffs": 0
@@ -1965,7 +1965,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 3.709799999999973,
+          "elapsedMs": 6.202099999999859,
           "score": -194,
           "nodesVisited": 25,
           "cutoffs": 8
@@ -1982,7 +1982,7 @@
           },
           "algorithm": "minimax",
           "heuristicId": "H0",
-          "elapsedMs": 5.844699999999989,
+          "elapsedMs": 5.592300000000023,
           "score": 94,
           "nodesVisited": 81,
           "cutoffs": 0
@@ -1999,7 +1999,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 2.9470999999999776,
+          "elapsedMs": 2.060799999999972,
           "score": -194,
           "nodesVisited": 28,
           "cutoffs": 9
@@ -2016,7 +2016,7 @@
           },
           "algorithm": "minimax",
           "heuristicId": "H0",
-          "elapsedMs": 5.003100000000018,
+          "elapsedMs": 3.541400000000067,
           "score": 94,
           "nodesVisited": 79,
           "cutoffs": 0
@@ -2034,7 +2034,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 1.3826999999999998,
+          "elapsedMs": 2.5990999999999076,
           "score": -197,
           "nodesVisited": 34,
           "cutoffs": 7
@@ -2052,7 +2052,7 @@
           },
           "algorithm": "minimax",
           "heuristicId": "H0",
-          "elapsedMs": 1.671100000000024,
+          "elapsedMs": 4.41190000000006,
           "score": 94,
           "nodesVisited": 63,
           "cutoffs": 0
@@ -2070,7 +2070,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 1.468500000000006,
+          "elapsedMs": 2.133100000000013,
           "score": -197,
           "nodesVisited": 34,
           "cutoffs": 5
@@ -2087,7 +2087,7 @@
           },
           "algorithm": "minimax",
           "heuristicId": "H0",
-          "elapsedMs": 2.068399999999997,
+          "elapsedMs": 2.948899999999867,
           "score": 0,
           "nodesVisited": 50,
           "cutoffs": 0
@@ -2105,7 +2105,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 1.8652000000000157,
+          "elapsedMs": 2.4862000000000535,
           "score": -100,
           "nodesVisited": 45,
           "cutoffs": 4
@@ -2123,7 +2123,7 @@
           },
           "algorithm": "minimax",
           "heuristicId": "H0",
-          "elapsedMs": 2.4493999999999687,
+          "elapsedMs": 4.607899999999972,
           "score": -3,
           "nodesVisited": 64,
           "cutoffs": 0
@@ -2141,7 +2141,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 1.7017999999999915,
+          "elapsedMs": 3.353900000000067,
           "score": -100,
           "nodesVisited": 39,
           "cutoffs": 6
@@ -2159,7 +2159,7 @@
           },
           "algorithm": "minimax",
           "heuristicId": "H0",
-          "elapsedMs": 2.423599999999965,
+          "elapsedMs": 3.6523999999999432,
           "score": -3,
           "nodesVisited": 63,
           "cutoffs": 0
@@ -2177,7 +2177,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 1.7451000000000363,
+          "elapsedMs": 2.741999999999962,
           "score": -100,
           "nodesVisited": 47,
           "cutoffs": 5
@@ -2194,7 +2194,7 @@
           },
           "algorithm": "minimax",
           "heuristicId": "H0",
-          "elapsedMs": 2.4826999999999657,
+          "elapsedMs": 3.8760999999999513,
           "score": 0,
           "nodesVisited": 64,
           "cutoffs": 0
@@ -2212,7 +2212,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 2.0767999999999915,
+          "elapsedMs": 4.3129999999998745,
           "score": 97,
           "nodesVisited": 51,
           "cutoffs": 4
@@ -2230,7 +2230,7 @@
           },
           "algorithm": "minimax",
           "heuristicId": "H0",
-          "elapsedMs": 2.809699999999964,
+          "elapsedMs": 4.267100000000028,
           "score": -497,
           "nodesVisited": 64,
           "cutoffs": 0
@@ -2248,7 +2248,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 1.6762000000000512,
+          "elapsedMs": 2.349100000000135,
           "score": 300,
           "nodesVisited": 40,
           "cutoffs": 4
@@ -2266,7 +2266,7 @@
           },
           "algorithm": "minimax",
           "heuristicId": "H0",
-          "elapsedMs": 1.9703000000000088,
+          "elapsedMs": 3.06230000000005,
           "score": -497,
           "nodesVisited": 57,
           "cutoffs": 0
@@ -2284,7 +2284,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 2.0586000000000126,
+          "elapsedMs": 2.7973000000001775,
           "score": 397,
           "nodesVisited": 34,
           "cutoffs": 5
@@ -2301,7 +2301,7 @@
           },
           "algorithm": "minimax",
           "heuristicId": "H0",
-          "elapsedMs": 2.546700000000044,
+          "elapsedMs": 4.847999999999956,
           "score": -594,
           "nodesVisited": 57,
           "cutoffs": 0
@@ -2319,7 +2319,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 2.077699999999993,
+          "elapsedMs": 3.108099999999922,
           "score": 494,
           "nodesVisited": 41,
           "cutoffs": 5
@@ -2336,7 +2336,7 @@
           },
           "algorithm": "minimax",
           "heuristicId": "H0",
-          "elapsedMs": 0.5599999999999454,
+          "elapsedMs": 0.8333999999999833,
           "score": -594,
           "nodesVisited": 28,
           "cutoffs": 0
@@ -2353,7 +2353,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.6916999999999689,
+          "elapsedMs": 1.2122000000001663,
           "score": 494,
           "nodesVisited": 15,
           "cutoffs": 0
@@ -2370,7 +2370,7 @@
           },
           "algorithm": "minimax",
           "heuristicId": "H0",
-          "elapsedMs": 0.5892000000000053,
+          "elapsedMs": 0.9184000000000196,
           "score": -594,
           "nodesVisited": 33,
           "cutoffs": 0
@@ -2387,7 +2387,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.8478999999999814,
+          "elapsedMs": 1.3085000000000946,
           "score": 494,
           "nodesVisited": 17,
           "cutoffs": 1
@@ -2404,7 +2404,7 @@
           },
           "algorithm": "minimax",
           "heuristicId": "H0",
-          "elapsedMs": 0.8158000000000243,
+          "elapsedMs": 1.0960999999999785,
           "score": -594,
           "nodesVisited": 34,
           "cutoffs": 0
@@ -2421,7 +2421,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 1.331200000000024,
+          "elapsedMs": 2.165200000000141,
           "score": 494,
           "nodesVisited": 27,
           "cutoffs": 1
@@ -2438,7 +2438,7 @@
           },
           "algorithm": "minimax",
           "heuristicId": "H0",
-          "elapsedMs": 0.7649000000000115,
+          "elapsedMs": 1.177699999999959,
           "score": -594,
           "nodesVisited": 37,
           "cutoffs": 0
@@ -2455,7 +2455,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 1.2463000000000193,
+          "elapsedMs": 3.1077000000000226,
           "score": 494,
           "nodesVisited": 22,
           "cutoffs": 0
@@ -2472,7 +2472,7 @@
           },
           "algorithm": "minimax",
           "heuristicId": "H0",
-          "elapsedMs": 0.42219999999997526,
+          "elapsedMs": 0.876299999999901,
           "score": -594,
           "nodesVisited": 25,
           "cutoffs": 0
@@ -2489,7 +2489,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.5586000000000126,
+          "elapsedMs": 0.9744000000000597,
           "score": 494,
           "nodesVisited": 11,
           "cutoffs": 1
@@ -2506,7 +2506,7 @@
           },
           "algorithm": "minimax",
           "heuristicId": "H0",
-          "elapsedMs": 0.5020999999999844,
+          "elapsedMs": 0.7554000000000087,
           "score": -594,
           "nodesVisited": 28,
           "cutoffs": 0
@@ -2523,7 +2523,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.5511000000000195,
+          "elapsedMs": 0.6682000000000698,
           "score": 494,
           "nodesVisited": 10,
           "cutoffs": 1
@@ -2540,7 +2540,7 @@
           },
           "algorithm": "minimax",
           "heuristicId": "H0",
-          "elapsedMs": 0.46519999999998163,
+          "elapsedMs": 0.8984999999997854,
           "score": -594,
           "nodesVisited": 25,
           "cutoffs": 0
@@ -2557,7 +2557,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.43870000000003984,
+          "elapsedMs": 0.6266999999998006,
           "score": 494,
           "nodesVisited": 10,
           "cutoffs": 1
@@ -2574,7 +2574,7 @@
           },
           "algorithm": "minimax",
           "heuristicId": "H0",
-          "elapsedMs": 0.6894000000000347,
+          "elapsedMs": 1.2545000000000073,
           "score": -594,
           "nodesVisited": 33,
           "cutoffs": 0
@@ -2591,7 +2591,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.8553999999999746,
+          "elapsedMs": 0.7712000000001353,
           "score": 494,
           "nodesVisited": 12,
           "cutoffs": 2
@@ -2608,7 +2608,7 @@
           },
           "algorithm": "minimax",
           "heuristicId": "H0",
-          "elapsedMs": 1.3070999999999913,
+          "elapsedMs": 0.8723999999999705,
           "score": -594,
           "nodesVisited": 25,
           "cutoffs": 0
@@ -2625,7 +2625,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 1.172399999999982,
+          "elapsedMs": 0.5713000000000648,
           "score": 494,
           "nodesVisited": 11,
           "cutoffs": 1
@@ -2642,7 +2642,7 @@
           },
           "algorithm": "minimax",
           "heuristicId": "H0",
-          "elapsedMs": 0.7493000000000052,
+          "elapsedMs": 0.6494000000000142,
           "score": -594,
           "nodesVisited": 27,
           "cutoffs": 0
@@ -2659,7 +2659,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.5627999999999815,
+          "elapsedMs": 0.5127999999999702,
           "score": 494,
           "nodesVisited": 10,
           "cutoffs": 1
@@ -2676,7 +2676,7 @@
           },
           "algorithm": "minimax",
           "heuristicId": "H0",
-          "elapsedMs": 0.7125000000000341,
+          "elapsedMs": 0.5687000000000353,
           "score": -594,
           "nodesVisited": 24,
           "cutoffs": 0
@@ -2693,7 +2693,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.1997000000000071,
+          "elapsedMs": 0.33199999999987995,
           "score": 494,
           "nodesVisited": 10,
           "cutoffs": 1
@@ -2711,7 +2711,7 @@
           },
           "algorithm": "minimax",
           "heuristicId": "H0",
-          "elapsedMs": 0.262800000000027,
+          "elapsedMs": 0.389699999999948,
           "score": -597,
           "nodesVisited": 37,
           "cutoffs": 0
@@ -2728,7 +2728,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.247099999999989,
+          "elapsedMs": 0.3876000000000204,
           "score": 400,
           "nodesVisited": 12,
           "cutoffs": 2
@@ -2746,7 +2746,7 @@
           },
           "algorithm": "minimax",
           "heuristicId": "H0",
-          "elapsedMs": 0.24840000000000373,
+          "elapsedMs": 0.4067999999999756,
           "score": -500,
           "nodesVisited": 36,
           "cutoffs": 0
@@ -2763,7 +2763,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.041200000000003456,
+          "elapsedMs": 0.07400000000006912,
           "score": 400,
           "nodesVisited": 8,
           "cutoffs": 2
@@ -2780,7 +2780,7 @@
           },
           "algorithm": "minimax",
           "heuristicId": "H0",
-          "elapsedMs": 0.043200000000013006,
+          "elapsedMs": 0.07970000000000255,
           "score": -500,
           "nodesVisited": 9,
           "cutoffs": 0
@@ -2797,7 +2797,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.033299999999997,
+          "elapsedMs": 0.057500000000118234,
           "score": 400,
           "nodesVisited": 9,
           "cutoffs": 2
@@ -2814,7 +2814,7 @@
           },
           "algorithm": "minimax",
           "heuristicId": "H0",
-          "elapsedMs": 0.22690000000000055,
+          "elapsedMs": 0.10819999999989705,
           "score": -99998,
           "nodesVisited": 16,
           "cutoffs": 0
@@ -2831,7 +2831,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.028599999999983083,
+          "elapsedMs": 0.03939999999988686,
           "score": 99999,
           "nodesVisited": 8,
           "cutoffs": 3
@@ -2870,7 +2870,7 @@
       "winner": "P2",
       "reason": "normal",
       "totalPlies": 62,
-      "durationMs": 95.73500000000001,
+      "durationMs": 131.64710000000014,
       "decisions": [
         {
           "ply": 1,
@@ -2884,7 +2884,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 5.120800000000031,
+          "elapsedMs": 4.815000000000055,
           "score": 0,
           "nodesVisited": 25,
           "cutoffs": 8
@@ -2901,7 +2901,7 @@
           },
           "algorithm": "minimax",
           "heuristicId": "H0",
-          "elapsedMs": 4.343900000000019,
+          "elapsedMs": 6.7625000000000455,
           "score": -100,
           "nodesVisited": 80,
           "cutoffs": 0
@@ -2918,7 +2918,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 3.8600000000000136,
+          "elapsedMs": 2.128500000000031,
           "score": 0,
           "nodesVisited": 28,
           "cutoffs": 9
@@ -2935,7 +2935,7 @@
           },
           "algorithm": "minimax",
           "heuristicId": "H0",
-          "elapsedMs": 4.092100000000016,
+          "elapsedMs": 3.579099999999926,
           "score": -100,
           "nodesVisited": 89,
           "cutoffs": 0
@@ -2952,7 +2952,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 2.1235000000000355,
+          "elapsedMs": 2.638500000000022,
           "score": 0,
           "nodesVisited": 28,
           "cutoffs": 9
@@ -2969,7 +2969,7 @@
           },
           "algorithm": "minimax",
           "heuristicId": "H0",
-          "elapsedMs": 4.583500000000015,
+          "elapsedMs": 3.580799999999954,
           "score": -100,
           "nodesVisited": 90,
           "cutoffs": 0
@@ -2987,7 +2987,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 2.367500000000007,
+          "elapsedMs": 1.714200000000119,
           "score": -3,
           "nodesVisited": 35,
           "cutoffs": 8
@@ -3005,7 +3005,7 @@
           },
           "algorithm": "minimax",
           "heuristicId": "H0",
-          "elapsedMs": 3.2443000000000097,
+          "elapsedMs": 3.1335999999998876,
           "score": -100,
           "nodesVisited": 80,
           "cutoffs": 0
@@ -3023,7 +3023,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 1.4348000000000525,
+          "elapsedMs": 2.2936999999999443,
           "score": -3,
           "nodesVisited": 38,
           "cutoffs": 6
@@ -3040,7 +3040,7 @@
           },
           "algorithm": "minimax",
           "heuristicId": "H0",
-          "elapsedMs": 2.195100000000025,
+          "elapsedMs": 3.979400000000169,
           "score": -97,
           "nodesVisited": 72,
           "cutoffs": 0
@@ -3058,7 +3058,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 1.5985000000000014,
+          "elapsedMs": 4.290499999999838,
           "score": 94,
           "nodesVisited": 34,
           "cutoffs": 7
@@ -3075,7 +3075,7 @@
           },
           "algorithm": "minimax",
           "heuristicId": "H0",
-          "elapsedMs": 2.240000000000009,
+          "elapsedMs": 3.6338000000000648,
           "score": -194,
           "nodesVisited": 71,
           "cutoffs": 0
@@ -3092,7 +3092,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 1.2520000000000095,
+          "elapsedMs": 1.9418000000000575,
           "score": 94,
           "nodesVisited": 26,
           "cutoffs": 8
@@ -3109,7 +3109,7 @@
           },
           "algorithm": "minimax",
           "heuristicId": "H0",
-          "elapsedMs": 2.4688000000000443,
+          "elapsedMs": 3.8355000000001382,
           "score": -194,
           "nodesVisited": 88,
           "cutoffs": 0
@@ -3126,7 +3126,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 1.6675000000000182,
+          "elapsedMs": 1.8826999999998861,
           "score": 94,
           "nodesVisited": 28,
           "cutoffs": 9
@@ -3144,7 +3144,7 @@
           },
           "algorithm": "minimax",
           "heuristicId": "H0",
-          "elapsedMs": 2.067799999999977,
+          "elapsedMs": 3.4959000000001197,
           "score": -197,
           "nodesVisited": 71,
           "cutoffs": 0
@@ -3162,7 +3162,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 1.219699999999932,
+          "elapsedMs": 1.9004999999999654,
           "score": 94,
           "nodesVisited": 34,
           "cutoffs": 5
@@ -3180,7 +3180,7 @@
           },
           "algorithm": "minimax",
           "heuristicId": "H0",
-          "elapsedMs": 1.92349999999999,
+          "elapsedMs": 2.7007999999998447,
           "score": -197,
           "nodesVisited": 56,
           "cutoffs": 0
@@ -3197,7 +3197,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 1.651899999999955,
+          "elapsedMs": 2.019700000000057,
           "score": 0,
           "nodesVisited": 32,
           "cutoffs": 6
@@ -3215,7 +3215,7 @@
           },
           "algorithm": "minimax",
           "heuristicId": "H0",
-          "elapsedMs": 1.89650000000006,
+          "elapsedMs": 2.910000000000082,
           "score": -100,
           "nodesVisited": 65,
           "cutoffs": 0
@@ -3233,7 +3233,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 1.5313999999999623,
+          "elapsedMs": 2.63149999999996,
           "score": -3,
           "nodesVisited": 38,
           "cutoffs": 6
@@ -3251,7 +3251,7 @@
           },
           "algorithm": "minimax",
           "heuristicId": "H0",
-          "elapsedMs": 2.2053999999999405,
+          "elapsedMs": 4.939000000000078,
           "score": -100,
           "nodesVisited": 64,
           "cutoffs": 0
@@ -3269,7 +3269,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 1.7141000000000304,
+          "elapsedMs": 2.682399999999916,
           "score": -3,
           "nodesVisited": 40,
           "cutoffs": 5
@@ -3287,7 +3287,7 @@
           },
           "algorithm": "minimax",
           "heuristicId": "H0",
-          "elapsedMs": 2.945600000000013,
+          "elapsedMs": 3.8344999999999345,
           "score": -100,
           "nodesVisited": 65,
           "cutoffs": 0
@@ -3304,7 +3304,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 1.824100000000044,
+          "elapsedMs": 2.4671999999998206,
           "score": 0,
           "nodesVisited": 32,
           "cutoffs": 7
@@ -3322,7 +3322,7 @@
           },
           "algorithm": "minimax",
           "heuristicId": "H0",
-          "elapsedMs": 3.7776000000000067,
+          "elapsedMs": 3.370300000000043,
           "score": 97,
           "nodesVisited": 64,
           "cutoffs": 0
@@ -3340,7 +3340,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 3.119100000000003,
+          "elapsedMs": 4.708300000000008,
           "score": -497,
           "nodesVisited": 52,
           "cutoffs": 6
@@ -3358,7 +3358,7 @@
           },
           "algorithm": "minimax",
           "heuristicId": "H0",
-          "elapsedMs": 1.9660000000000082,
+          "elapsedMs": 3.2690999999999804,
           "score": 300,
           "nodesVisited": 56,
           "cutoffs": 0
@@ -3376,7 +3376,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 1.5634999999999764,
+          "elapsedMs": 2.4767000000001644,
           "score": -497,
           "nodesVisited": 39,
           "cutoffs": 5
@@ -3394,7 +3394,7 @@
           },
           "algorithm": "minimax",
           "heuristicId": "H0",
-          "elapsedMs": 2.7889999999999873,
+          "elapsedMs": 3.5133999999998196,
           "score": 397,
           "nodesVisited": 56,
           "cutoffs": 0
@@ -3411,7 +3411,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 2.0335000000000036,
+          "elapsedMs": 3.5676999999998316,
           "score": -594,
           "nodesVisited": 41,
           "cutoffs": 6
@@ -3429,7 +3429,7 @@
           },
           "algorithm": "minimax",
           "heuristicId": "H0",
-          "elapsedMs": 2.783900000000017,
+          "elapsedMs": 5.213999999999942,
           "score": 494,
           "nodesVisited": 65,
           "cutoffs": 0
@@ -3446,7 +3446,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.5510000000000446,
+          "elapsedMs": 1.3096000000000458,
           "score": -594,
           "nodesVisited": 28,
           "cutoffs": 7
@@ -3463,7 +3463,7 @@
           },
           "algorithm": "minimax",
           "heuristicId": "H0",
-          "elapsedMs": 0.6852000000000089,
+          "elapsedMs": 1.090400000000045,
           "score": 494,
           "nodesVisited": 15,
           "cutoffs": 0
@@ -3480,7 +3480,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.5076999999999998,
+          "elapsedMs": 0.7902000000001408,
           "score": -594,
           "nodesVisited": 27,
           "cutoffs": 6
@@ -3497,7 +3497,7 @@
           },
           "algorithm": "minimax",
           "heuristicId": "H0",
-          "elapsedMs": 0.9906000000000859,
+          "elapsedMs": 1.8100999999999203,
           "score": 494,
           "nodesVisited": 22,
           "cutoffs": 0
@@ -3514,7 +3514,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.7248000000000729,
+          "elapsedMs": 0.9090000000001055,
           "score": -594,
           "nodesVisited": 32,
           "cutoffs": 7
@@ -3531,7 +3531,7 @@
           },
           "algorithm": "minimax",
           "heuristicId": "H0",
-          "elapsedMs": 1.3310999999999922,
+          "elapsedMs": 2.0755000000001473,
           "score": 494,
           "nodesVisited": 33,
           "cutoffs": 0
@@ -3548,7 +3548,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.6002000000000862,
+          "elapsedMs": 0.8899999999998727,
           "score": -594,
           "nodesVisited": 35,
           "cutoffs": 8
@@ -3565,7 +3565,7 @@
           },
           "algorithm": "minimax",
           "heuristicId": "H0",
-          "elapsedMs": 0.9446000000000367,
+          "elapsedMs": 1.3872999999998683,
           "score": 494,
           "nodesVisited": 22,
           "cutoffs": 0
@@ -3582,7 +3582,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.40019999999992706,
+          "elapsedMs": 0.7333000000000993,
           "score": -594,
           "nodesVisited": 18,
           "cutoffs": 7
@@ -3599,7 +3599,7 @@
           },
           "algorithm": "minimax",
           "heuristicId": "H0",
-          "elapsedMs": 0.6962999999999511,
+          "elapsedMs": 2.2810000000001764,
           "score": 494,
           "nodesVisited": 17,
           "cutoffs": 0
@@ -3616,7 +3616,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.3810999999999467,
+          "elapsedMs": 1.194400000000087,
           "score": -594,
           "nodesVisited": 21,
           "cutoffs": 7
@@ -3633,7 +3633,7 @@
           },
           "algorithm": "minimax",
           "heuristicId": "H0",
-          "elapsedMs": 0.6485999999999876,
+          "elapsedMs": 1.3126999999999498,
           "score": 494,
           "nodesVisited": 15,
           "cutoffs": 0
@@ -3650,7 +3650,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.3667000000000371,
+          "elapsedMs": 0.6630000000000109,
           "score": -594,
           "nodesVisited": 19,
           "cutoffs": 6
@@ -3667,7 +3667,7 @@
           },
           "algorithm": "minimax",
           "heuristicId": "H0",
-          "elapsedMs": 0.6272999999999911,
+          "elapsedMs": 0.8279999999999745,
           "score": 494,
           "nodesVisited": 15,
           "cutoffs": 0
@@ -3684,7 +3684,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.3833999999999378,
+          "elapsedMs": 0.5874999999998636,
           "score": -594,
           "nodesVisited": 21,
           "cutoffs": 6
@@ -3701,7 +3701,7 @@
           },
           "algorithm": "minimax",
           "heuristicId": "H0",
-          "elapsedMs": 1.1201999999999543,
+          "elapsedMs": 1.3064999999999145,
           "score": 494,
           "nodesVisited": 22,
           "cutoffs": 0
@@ -3718,7 +3718,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.5664000000000442,
+          "elapsedMs": 0.4776999999999134,
           "score": -594,
           "nodesVisited": 19,
           "cutoffs": 6
@@ -3735,7 +3735,7 @@
           },
           "algorithm": "minimax",
           "heuristicId": "H0",
-          "elapsedMs": 0.5740999999999303,
+          "elapsedMs": 0.6550999999999476,
           "score": 494,
           "nodesVisited": 17,
           "cutoffs": 0
@@ -3752,7 +3752,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.28129999999998745,
+          "elapsedMs": 0.39259999999990214,
           "score": -594,
           "nodesVisited": 20,
           "cutoffs": 8
@@ -3769,7 +3769,7 @@
           },
           "algorithm": "minimax",
           "heuristicId": "H0",
-          "elapsedMs": 0.5041999999999689,
+          "elapsedMs": 0.7231999999999061,
           "score": 494,
           "nodesVisited": 15,
           "cutoffs": 0
@@ -3786,7 +3786,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.20879999999999654,
+          "elapsedMs": 0.2817999999999756,
           "score": -594,
           "nodesVisited": 18,
           "cutoffs": 7
@@ -3803,7 +3803,7 @@
           },
           "algorithm": "minimax",
           "heuristicId": "H0",
-          "elapsedMs": 0.26099999999996726,
+          "elapsedMs": 0.37770000000000437,
           "score": 494,
           "nodesVisited": 15,
           "cutoffs": 0
@@ -3821,7 +3821,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.17429999999990287,
+          "elapsedMs": 0.23310000000014952,
           "score": -597,
           "nodesVisited": 23,
           "cutoffs": 6
@@ -3838,7 +3838,7 @@
           },
           "algorithm": "minimax",
           "heuristicId": "H0",
-          "elapsedMs": 0.5724999999999909,
+          "elapsedMs": 0.7690999999999804,
           "score": 400,
           "nodesVisited": 22,
           "cutoffs": 0
@@ -3856,7 +3856,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.15830000000005384,
+          "elapsedMs": 0.2256999999999607,
           "score": -500,
           "nodesVisited": 22,
           "cutoffs": 6
@@ -3873,7 +3873,7 @@
           },
           "algorithm": "minimax",
           "heuristicId": "H0",
-          "elapsedMs": 0.05080000000009477,
+          "elapsedMs": 0.07680000000004839,
           "score": 400,
           "nodesVisited": 10,
           "cutoffs": 0
@@ -3890,7 +3890,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.03139999999996235,
+          "elapsedMs": 0.046600000000125874,
           "score": -500,
           "nodesVisited": 7,
           "cutoffs": 1
@@ -3907,7 +3907,7 @@
           },
           "algorithm": "minimax",
           "heuristicId": "H0",
-          "elapsedMs": 0.06020000000000891,
+          "elapsedMs": 0.0907999999999447,
           "score": 400,
           "nodesVisited": 13,
           "cutoffs": 0
@@ -3924,7 +3924,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.02509999999995216,
+          "elapsedMs": 0.03499999999985448,
           "score": -99998,
           "nodesVisited": 10,
           "cutoffs": 2
@@ -3941,7 +3941,7 @@
           },
           "algorithm": "minimax",
           "heuristicId": "H0",
-          "elapsedMs": 0.03890000000001237,
+          "elapsedMs": 0.06190000000015061,
           "score": 99999,
           "nodesVisited": 11,
           "cutoffs": 0
@@ -3980,7 +3980,7 @@
       "winner": "P2",
       "reason": "normal",
       "totalPlies": 62,
-      "durationMs": 62.171299999999974,
+      "durationMs": 127.54430000000002,
       "decisions": [
         {
           "ply": 1,
@@ -3994,7 +3994,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 1.6490999999999758,
+          "elapsedMs": 9.025400000000218,
           "score": 0,
           "nodesVisited": 25,
           "cutoffs": 8
@@ -4011,7 +4011,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H2",
-          "elapsedMs": 1.4698999999999387,
+          "elapsedMs": 4.296799999999848,
           "score": -100,
           "nodesVisited": 26,
           "cutoffs": 8
@@ -4028,7 +4028,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 1.3061999999999898,
+          "elapsedMs": 4.372699999999895,
           "score": 0,
           "nodesVisited": 28,
           "cutoffs": 9
@@ -4045,7 +4045,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H2",
-          "elapsedMs": 1.302699999999959,
+          "elapsedMs": 3.599100000000135,
           "score": -100,
           "nodesVisited": 28,
           "cutoffs": 9
@@ -4062,7 +4062,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 1.1220999999999322,
+          "elapsedMs": 3.016800000000103,
           "score": 0,
           "nodesVisited": 28,
           "cutoffs": 9
@@ -4079,7 +4079,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H2",
-          "elapsedMs": 1.1723000000000638,
+          "elapsedMs": 3.8606999999999516,
           "score": -100,
           "nodesVisited": 28,
           "cutoffs": 9
@@ -4097,7 +4097,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 1.1405999999999494,
+          "elapsedMs": 5.215399999999818,
           "score": -3,
           "nodesVisited": 35,
           "cutoffs": 8
@@ -4115,7 +4115,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H2",
-          "elapsedMs": 1.4721999999999298,
+          "elapsedMs": 3.6441999999999553,
           "score": -100,
           "nodesVisited": 39,
           "cutoffs": 7
@@ -4133,7 +4133,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 1.3596000000000004,
+          "elapsedMs": 3.13370000000009,
           "score": -3,
           "nodesVisited": 38,
           "cutoffs": 6
@@ -4150,7 +4150,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H2",
-          "elapsedMs": 1.4427999999999201,
+          "elapsedMs": 2.180900000000065,
           "score": -85,
           "nodesVisited": 31,
           "cutoffs": 7
@@ -4168,7 +4168,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 1.3348000000000866,
+          "elapsedMs": 2.2493999999999232,
           "score": 94,
           "nodesVisited": 34,
           "cutoffs": 7
@@ -4185,7 +4185,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H2",
-          "elapsedMs": 2.1274000000000797,
+          "elapsedMs": 3.8148999999998523,
           "score": -170,
           "nodesVisited": 25,
           "cutoffs": 8
@@ -4202,7 +4202,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 1.5315999999999121,
+          "elapsedMs": 2.4487000000001444,
           "score": 94,
           "nodesVisited": 26,
           "cutoffs": 8
@@ -4219,7 +4219,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H2",
-          "elapsedMs": 1.2480000000000473,
+          "elapsedMs": 2.1404999999999745,
           "score": -170,
           "nodesVisited": 28,
           "cutoffs": 9
@@ -4236,7 +4236,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 1.1602000000000317,
+          "elapsedMs": 1.8950999999999567,
           "score": 94,
           "nodesVisited": 28,
           "cutoffs": 9
@@ -4254,7 +4254,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H2",
-          "elapsedMs": 1.1732000000000653,
+          "elapsedMs": 2.0747999999998683,
           "score": -185,
           "nodesVisited": 34,
           "cutoffs": 7
@@ -4272,7 +4272,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 1.1925999999999704,
+          "elapsedMs": 1.872000000000071,
           "score": 94,
           "nodesVisited": 34,
           "cutoffs": 5
@@ -4290,7 +4290,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H2",
-          "elapsedMs": 1.4087999999999283,
+          "elapsedMs": 2.194099999999935,
           "score": -185,
           "nodesVisited": 34,
           "cutoffs": 5
@@ -4307,7 +4307,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 1.2065000000000055,
+          "elapsedMs": 4.573599999999942,
           "score": 0,
           "nodesVisited": 32,
           "cutoffs": 6
@@ -4325,7 +4325,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H2",
-          "elapsedMs": 1.4428000000000338,
+          "elapsedMs": 3.2066999999999553,
           "score": -100,
           "nodesVisited": 45,
           "cutoffs": 4
@@ -4343,7 +4343,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 1.623199999999997,
+          "elapsedMs": 2.906300000000101,
           "score": -3,
           "nodesVisited": 38,
           "cutoffs": 6
@@ -4361,7 +4361,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H2",
-          "elapsedMs": 1.4542999999999893,
+          "elapsedMs": 2.2933000000000447,
           "score": -100,
           "nodesVisited": 39,
           "cutoffs": 6
@@ -4379,7 +4379,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 1.6616999999999962,
+          "elapsedMs": 2.692099999999982,
           "score": -3,
           "nodesVisited": 40,
           "cutoffs": 5
@@ -4397,7 +4397,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H2",
-          "elapsedMs": 1.9827999999999975,
+          "elapsedMs": 2.9412999999999556,
           "score": -100,
           "nodesVisited": 47,
           "cutoffs": 5
@@ -4414,7 +4414,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 1.5335999999999785,
+          "elapsedMs": 3.1014000000000124,
           "score": 0,
           "nodesVisited": 32,
           "cutoffs": 7
@@ -4432,7 +4432,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H2",
-          "elapsedMs": 1.95799999999997,
+          "elapsedMs": 2.7413000000001375,
           "score": 85,
           "nodesVisited": 51,
           "cutoffs": 4
@@ -4450,7 +4450,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 2.3069000000000415,
+          "elapsedMs": 3.4963000000000193,
           "score": -497,
           "nodesVisited": 52,
           "cutoffs": 6
@@ -4468,7 +4468,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H2",
-          "elapsedMs": 1.6050000000000182,
+          "elapsedMs": 2.7394999999999072,
           "score": 300,
           "nodesVisited": 40,
           "cutoffs": 4
@@ -4486,7 +4486,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 1.5775000000001,
+          "elapsedMs": 2.3717999999998938,
           "score": -497,
           "nodesVisited": 39,
           "cutoffs": 5
@@ -4504,7 +4504,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H2",
-          "elapsedMs": 1.6698000000000093,
+          "elapsedMs": 3.323599999999942,
           "score": 385,
           "nodesVisited": 34,
           "cutoffs": 5
@@ -4521,7 +4521,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 2.120200000000068,
+          "elapsedMs": 3.602500000000191,
           "score": -594,
           "nodesVisited": 41,
           "cutoffs": 6
@@ -4539,7 +4539,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H2",
-          "elapsedMs": 2.0241999999999507,
+          "elapsedMs": 3.298400000000129,
           "score": 470,
           "nodesVisited": 41,
           "cutoffs": 5
@@ -4556,7 +4556,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.5550000000000637,
+          "elapsedMs": 0.8367999999998119,
           "score": -594,
           "nodesVisited": 28,
           "cutoffs": 7
@@ -4573,7 +4573,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H2",
-          "elapsedMs": 0.7903999999999769,
+          "elapsedMs": 1.1163000000001375,
           "score": 470,
           "nodesVisited": 15,
           "cutoffs": 0
@@ -4590,7 +4590,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.523900000000026,
+          "elapsedMs": 0.7850000000000819,
           "score": -594,
           "nodesVisited": 27,
           "cutoffs": 6
@@ -4607,7 +4607,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H2",
-          "elapsedMs": 0.8770999999999276,
+          "elapsedMs": 1.35550000000012,
           "score": 470,
           "nodesVisited": 17,
           "cutoffs": 1
@@ -4624,7 +4624,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.6159000000000106,
+          "elapsedMs": 1.2285999999999149,
           "score": -594,
           "nodesVisited": 32,
           "cutoffs": 7
@@ -4641,7 +4641,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H2",
-          "elapsedMs": 1.150600000000054,
+          "elapsedMs": 3.27819999999997,
           "score": 470,
           "nodesVisited": 27,
           "cutoffs": 1
@@ -4658,7 +4658,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.7055000000000291,
+          "elapsedMs": 1.539199999999937,
           "score": -594,
           "nodesVisited": 35,
           "cutoffs": 8
@@ -4675,7 +4675,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H2",
-          "elapsedMs": 0.9221000000000004,
+          "elapsedMs": 1.5092999999999392,
           "score": 470,
           "nodesVisited": 22,
           "cutoffs": 0
@@ -4692,7 +4692,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.3550000000000182,
+          "elapsedMs": 0.5782000000001517,
           "score": -594,
           "nodesVisited": 18,
           "cutoffs": 7
@@ -4709,7 +4709,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H2",
-          "elapsedMs": 0.43430000000000746,
+          "elapsedMs": 0.8961000000001604,
           "score": 470,
           "nodesVisited": 11,
           "cutoffs": 1
@@ -4726,7 +4726,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.5108999999999924,
+          "elapsedMs": 0.5815999999999804,
           "score": -594,
           "nodesVisited": 21,
           "cutoffs": 7
@@ -4743,7 +4743,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H2",
-          "elapsedMs": 0.39200000000005275,
+          "elapsedMs": 0.8103000000000975,
           "score": 470,
           "nodesVisited": 10,
           "cutoffs": 1
@@ -4760,7 +4760,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.5078999999999496,
+          "elapsedMs": 0.5416000000000167,
           "score": -594,
           "nodesVisited": 19,
           "cutoffs": 6
@@ -4777,7 +4777,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H2",
-          "elapsedMs": 0.39639999999997144,
+          "elapsedMs": 0.6261999999999261,
           "score": 470,
           "nodesVisited": 10,
           "cutoffs": 1
@@ -4794,7 +4794,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.36219999999991614,
+          "elapsedMs": 0.7651000000000749,
           "score": -594,
           "nodesVisited": 21,
           "cutoffs": 6
@@ -4811,7 +4811,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H2",
-          "elapsedMs": 0.6183999999999514,
+          "elapsedMs": 0.7880000000000109,
           "score": 470,
           "nodesVisited": 12,
           "cutoffs": 2
@@ -4828,7 +4828,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.3143999999999778,
+          "elapsedMs": 0.47280000000000655,
           "score": -594,
           "nodesVisited": 19,
           "cutoffs": 6
@@ -4845,7 +4845,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H2",
-          "elapsedMs": 0.3266000000000986,
+          "elapsedMs": 0.6985999999999422,
           "score": 470,
           "nodesVisited": 11,
           "cutoffs": 1
@@ -4862,7 +4862,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.3672000000000253,
+          "elapsedMs": 0.4067000000000007,
           "score": -594,
           "nodesVisited": 20,
           "cutoffs": 8
@@ -4879,7 +4879,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H2",
-          "elapsedMs": 0.24680000000000746,
+          "elapsedMs": 0.3806999999999334,
           "score": 470,
           "nodesVisited": 10,
           "cutoffs": 1
@@ -4896,7 +4896,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.18089999999995143,
+          "elapsedMs": 0.3165000000001328,
           "score": -594,
           "nodesVisited": 18,
           "cutoffs": 7
@@ -4913,7 +4913,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H2",
-          "elapsedMs": 0.24710000000004584,
+          "elapsedMs": 0.314200000000028,
           "score": 470,
           "nodesVisited": 10,
           "cutoffs": 1
@@ -4931,7 +4931,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.14859999999998763,
+          "elapsedMs": 0.534099999999853,
           "score": -597,
           "nodesVisited": 23,
           "cutoffs": 6
@@ -4948,7 +4948,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H2",
-          "elapsedMs": 0.25660000000004857,
+          "elapsedMs": 0.44069999999987886,
           "score": 400,
           "nodesVisited": 12,
           "cutoffs": 2
@@ -4966,7 +4966,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.3046999999999116,
+          "elapsedMs": 0.337099999999964,
           "score": -500,
           "nodesVisited": 22,
           "cutoffs": 6
@@ -4983,7 +4983,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H2",
-          "elapsedMs": 0.03890000000001237,
+          "elapsedMs": 0.06359999999995125,
           "score": 400,
           "nodesVisited": 8,
           "cutoffs": 2
@@ -5000,7 +5000,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.028900000000021464,
+          "elapsedMs": 0.053599999999960346,
           "score": -500,
           "nodesVisited": 7,
           "cutoffs": 1
@@ -5017,7 +5017,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H2",
-          "elapsedMs": 0.033999999999991815,
+          "elapsedMs": 0.06320000000005166,
           "score": 400,
           "nodesVisited": 9,
           "cutoffs": 2
@@ -5034,7 +5034,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.024200000000064392,
+          "elapsedMs": 0.04339999999979227,
           "score": -99998,
           "nodesVisited": 10,
           "cutoffs": 2
@@ -5051,7 +5051,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H2",
-          "elapsedMs": 0.02179999999998472,
+          "elapsedMs": 0.03749999999990905,
           "score": 99999,
           "nodesVisited": 8,
           "cutoffs": 3
@@ -5090,7 +5090,7 @@
       "winner": "P2",
       "reason": "normal",
       "totalPlies": 62,
-      "durationMs": 63.31370000000004,
+      "durationMs": 113.15719999999988,
       "decisions": [
         {
           "ply": 1,
@@ -5104,7 +5104,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H2",
-          "elapsedMs": 1.7561000000000604,
+          "elapsedMs": 5.809700000000021,
           "score": 0,
           "nodesVisited": 25,
           "cutoffs": 8
@@ -5121,7 +5121,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 2.4466999999999643,
+          "elapsedMs": 3.733299999999872,
           "score": -100,
           "nodesVisited": 26,
           "cutoffs": 8
@@ -5138,7 +5138,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H2",
-          "elapsedMs": 1.2840999999999667,
+          "elapsedMs": 2.947900000000118,
           "score": 0,
           "nodesVisited": 28,
           "cutoffs": 9
@@ -5155,7 +5155,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 1.3630000000000564,
+          "elapsedMs": 1.8036999999999352,
           "score": -100,
           "nodesVisited": 28,
           "cutoffs": 9
@@ -5172,7 +5172,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H2",
-          "elapsedMs": 1.1929999999999836,
+          "elapsedMs": 2.2898999999999887,
           "score": 0,
           "nodesVisited": 28,
           "cutoffs": 9
@@ -5189,7 +5189,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 1.203899999999976,
+          "elapsedMs": 1.7717000000000098,
           "score": -100,
           "nodesVisited": 28,
           "cutoffs": 9
@@ -5207,7 +5207,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H2",
-          "elapsedMs": 1.2250000000000227,
+          "elapsedMs": 2.26279999999997,
           "score": -15,
           "nodesVisited": 35,
           "cutoffs": 8
@@ -5225,7 +5225,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 1.476799999999912,
+          "elapsedMs": 3.5300999999999476,
           "score": -100,
           "nodesVisited": 39,
           "cutoffs": 7
@@ -5243,7 +5243,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H2",
-          "elapsedMs": 1.4020000000000437,
+          "elapsedMs": 2.3101999999998952,
           "score": -15,
           "nodesVisited": 38,
           "cutoffs": 6
@@ -5260,7 +5260,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 1.3549000000000433,
+          "elapsedMs": 2.3120000000001255,
           "score": -97,
           "nodesVisited": 31,
           "cutoffs": 7
@@ -5278,7 +5278,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H2",
-          "elapsedMs": 1.4968999999999824,
+          "elapsedMs": 1.9740999999999076,
           "score": 70,
           "nodesVisited": 34,
           "cutoffs": 7
@@ -5295,7 +5295,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 1.349399999999946,
+          "elapsedMs": 2.1326000000001386,
           "score": -194,
           "nodesVisited": 25,
           "cutoffs": 8
@@ -5312,7 +5312,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H2",
-          "elapsedMs": 1.2736000000001013,
+          "elapsedMs": 1.8770999999999276,
           "score": 70,
           "nodesVisited": 26,
           "cutoffs": 8
@@ -5329,7 +5329,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 1.5371000000000095,
+          "elapsedMs": 1.9851000000001022,
           "score": -194,
           "nodesVisited": 28,
           "cutoffs": 9
@@ -5346,7 +5346,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H2",
-          "elapsedMs": 1.334699999999998,
+          "elapsedMs": 3.09069999999997,
           "score": 70,
           "nodesVisited": 28,
           "cutoffs": 9
@@ -5364,7 +5364,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 1.2891000000000759,
+          "elapsedMs": 2.0403000000001157,
           "score": -197,
           "nodesVisited": 34,
           "cutoffs": 7
@@ -5382,7 +5382,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H2",
-          "elapsedMs": 1.2386000000000195,
+          "elapsedMs": 2.0516999999999825,
           "score": 70,
           "nodesVisited": 34,
           "cutoffs": 5
@@ -5400,7 +5400,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 1.275700000000029,
+          "elapsedMs": 1.8466000000000804,
           "score": -197,
           "nodesVisited": 34,
           "cutoffs": 5
@@ -5417,7 +5417,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H2",
-          "elapsedMs": 1.3134999999999764,
+          "elapsedMs": 1.8985000000000127,
           "score": 0,
           "nodesVisited": 32,
           "cutoffs": 6
@@ -5435,7 +5435,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 1.4107000000000198,
+          "elapsedMs": 2.134399999999914,
           "score": -100,
           "nodesVisited": 45,
           "cutoffs": 4
@@ -5453,7 +5453,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H2",
-          "elapsedMs": 1.4708000000000538,
+          "elapsedMs": 2.4821999999999207,
           "score": -15,
           "nodesVisited": 38,
           "cutoffs": 6
@@ -5471,7 +5471,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 1.530300000000011,
+          "elapsedMs": 3.8809000000001106,
           "score": -100,
           "nodesVisited": 39,
           "cutoffs": 6
@@ -5489,7 +5489,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H2",
-          "elapsedMs": 1.584699999999998,
+          "elapsedMs": 2.6506999999999152,
           "score": -15,
           "nodesVisited": 40,
           "cutoffs": 5
@@ -5507,7 +5507,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 1.9949000000000296,
+          "elapsedMs": 2.442099999999982,
           "score": -100,
           "nodesVisited": 47,
           "cutoffs": 5
@@ -5524,7 +5524,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H2",
-          "elapsedMs": 1.8079000000000178,
+          "elapsedMs": 2.230099999999993,
           "score": 0,
           "nodesVisited": 32,
           "cutoffs": 7
@@ -5542,7 +5542,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 2.314999999999941,
+          "elapsedMs": 2.841999999999871,
           "score": 97,
           "nodesVisited": 51,
           "cutoffs": 4
@@ -5560,7 +5560,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H2",
-          "elapsedMs": 2.7151000000000067,
+          "elapsedMs": 3.8575000000000728,
           "score": -485,
           "nodesVisited": 52,
           "cutoffs": 6
@@ -5578,7 +5578,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 1.6173000000000002,
+          "elapsedMs": 2.7538999999999305,
           "score": 300,
           "nodesVisited": 40,
           "cutoffs": 4
@@ -5596,7 +5596,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H2",
-          "elapsedMs": 1.375099999999975,
+          "elapsedMs": 2.691100000000006,
           "score": -485,
           "nodesVisited": 39,
           "cutoffs": 5
@@ -5614,7 +5614,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 1.722599999999943,
+          "elapsedMs": 3.118700000000217,
           "score": 397,
           "nodesVisited": 34,
           "cutoffs": 5
@@ -5631,7 +5631,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H2",
-          "elapsedMs": 2.004199999999969,
+          "elapsedMs": 3.4681000000000495,
           "score": -570,
           "nodesVisited": 41,
           "cutoffs": 6
@@ -5649,7 +5649,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 2.039800000000014,
+          "elapsedMs": 3.6502000000000407,
           "score": 494,
           "nodesVisited": 41,
           "cutoffs": 5
@@ -5666,7 +5666,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H2",
-          "elapsedMs": 0.531400000000076,
+          "elapsedMs": 2.1339000000000397,
           "score": -570,
           "nodesVisited": 28,
           "cutoffs": 7
@@ -5683,7 +5683,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.5716999999999643,
+          "elapsedMs": 1.8623999999999796,
           "score": 494,
           "nodesVisited": 15,
           "cutoffs": 0
@@ -5700,7 +5700,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H2",
-          "elapsedMs": 0.693300000000022,
+          "elapsedMs": 0.8343999999999596,
           "score": -570,
           "nodesVisited": 27,
           "cutoffs": 6
@@ -5717,7 +5717,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.7530000000000427,
+          "elapsedMs": 1.741700000000037,
           "score": 494,
           "nodesVisited": 17,
           "cutoffs": 1
@@ -5734,7 +5734,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H2",
-          "elapsedMs": 0.5951999999999771,
+          "elapsedMs": 3.029199999999946,
           "score": -570,
           "nodesVisited": 32,
           "cutoffs": 7
@@ -5751,7 +5751,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 1.2776000000000067,
+          "elapsedMs": 1.7558999999998832,
           "score": 494,
           "nodesVisited": 27,
           "cutoffs": 1
@@ -5768,7 +5768,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H2",
-          "elapsedMs": 0.5843000000000984,
+          "elapsedMs": 0.8819999999998345,
           "score": -570,
           "nodesVisited": 35,
           "cutoffs": 8
@@ -5785,7 +5785,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.8464000000000169,
+          "elapsedMs": 1.703800000000001,
           "score": 494,
           "nodesVisited": 22,
           "cutoffs": 0
@@ -5802,7 +5802,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H2",
-          "elapsedMs": 0.5152000000000498,
+          "elapsedMs": 0.5419999999999163,
           "score": -570,
           "nodesVisited": 18,
           "cutoffs": 7
@@ -5819,7 +5819,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.43899999999996453,
+          "elapsedMs": 0.6648000000000138,
           "score": 494,
           "nodesVisited": 11,
           "cutoffs": 1
@@ -5836,7 +5836,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H2",
-          "elapsedMs": 0.3712000000000444,
+          "elapsedMs": 0.5535999999999603,
           "score": -570,
           "nodesVisited": 21,
           "cutoffs": 7
@@ -5853,7 +5853,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.41829999999993106,
+          "elapsedMs": 0.955600000000004,
           "score": 494,
           "nodesVisited": 10,
           "cutoffs": 1
@@ -5870,7 +5870,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H2",
-          "elapsedMs": 0.360300000000052,
+          "elapsedMs": 1.376700000000028,
           "score": -570,
           "nodesVisited": 19,
           "cutoffs": 6
@@ -5887,7 +5887,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.5817000000000689,
+          "elapsedMs": 1.0148999999998978,
           "score": 494,
           "nodesVisited": 10,
           "cutoffs": 1
@@ -5904,7 +5904,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H2",
-          "elapsedMs": 0.36749999999995,
+          "elapsedMs": 0.5893000000000939,
           "score": -570,
           "nodesVisited": 21,
           "cutoffs": 6
@@ -5921,7 +5921,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.5153999999999996,
+          "elapsedMs": 0.7787999999998192,
           "score": 494,
           "nodesVisited": 12,
           "cutoffs": 2
@@ -5938,7 +5938,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H2",
-          "elapsedMs": 0.3065000000000282,
+          "elapsedMs": 0.500400000000127,
           "score": -570,
           "nodesVisited": 19,
           "cutoffs": 6
@@ -5955,7 +5955,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.3310000000000173,
+          "elapsedMs": 0.573699999999917,
           "score": 494,
           "nodesVisited": 11,
           "cutoffs": 1
@@ -5972,7 +5972,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H2",
-          "elapsedMs": 0.2762000000000171,
+          "elapsedMs": 0.9494999999999436,
           "score": -570,
           "nodesVisited": 20,
           "cutoffs": 8
@@ -5989,7 +5989,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.24989999999991142,
+          "elapsedMs": 0.4492999999999938,
           "score": 494,
           "nodesVisited": 10,
           "cutoffs": 1
@@ -6006,7 +6006,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H2",
-          "elapsedMs": 0.3826999999999998,
+          "elapsedMs": 0.29399999999986903,
           "score": -570,
           "nodesVisited": 18,
           "cutoffs": 7
@@ -6023,7 +6023,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.20470000000000255,
+          "elapsedMs": 0.30520000000001346,
           "score": 494,
           "nodesVisited": 10,
           "cutoffs": 1
@@ -6041,7 +6041,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H2",
-          "elapsedMs": 0.14850000000001273,
+          "elapsedMs": 0.2236000000000331,
           "score": -585,
           "nodesVisited": 23,
           "cutoffs": 6
@@ -6058,7 +6058,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.2533000000000811,
+          "elapsedMs": 0.4086000000002059,
           "score": 400,
           "nodesVisited": 12,
           "cutoffs": 2
@@ -6076,7 +6076,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H2",
-          "elapsedMs": 0.14170000000001437,
+          "elapsedMs": 0.33540000000016335,
           "score": -500,
           "nodesVisited": 22,
           "cutoffs": 6
@@ -6093,7 +6093,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.03480000000001837,
+          "elapsedMs": 0.052999999999883585,
           "score": 400,
           "nodesVisited": 8,
           "cutoffs": 2
@@ -6110,7 +6110,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H2",
-          "elapsedMs": 0.030399999999985994,
+          "elapsedMs": 0.04599999999982174,
           "score": -500,
           "nodesVisited": 7,
           "cutoffs": 1
@@ -6127,7 +6127,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.035000000000081855,
+          "elapsedMs": 0.05900000000019645,
           "score": 400,
           "nodesVisited": 9,
           "cutoffs": 2
@@ -6144,7 +6144,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H2",
-          "elapsedMs": 0.02549999999996544,
+          "elapsedMs": 0.051300000000082946,
           "score": -99998,
           "nodesVisited": 10,
           "cutoffs": 2
@@ -6161,7 +6161,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.020199999999931606,
+          "elapsedMs": 0.041999999999916326,
           "score": 99999,
           "nodesVisited": 8,
           "cutoffs": 3
@@ -6200,7 +6200,7 @@
       "winner": null,
       "reason": "max_plies_capped",
       "totalPlies": 70,
-      "durationMs": 2564.0061,
+      "durationMs": 3694.8130999999994,
       "decisions": [
         {
           "ply": 1,
@@ -6214,7 +6214,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 3.9156999999999016,
+          "elapsedMs": 8.4692,
           "score": 0,
           "nodesVisited": 25,
           "cutoffs": 8
@@ -6231,7 +6231,7 @@
           },
           "algorithm": "mcts",
           "heuristicId": "MCTS-UCT",
-          "elapsedMs": 102.11300000000006,
+          "elapsedMs": 138.86879999999996,
           "score": 47.7,
           "nodesVisited": 51,
           "cutoffs": 0,
@@ -6249,7 +6249,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 1.8339999999999463,
+          "elapsedMs": 1.7027999999997974,
           "score": 0,
           "nodesVisited": 28,
           "cutoffs": 9
@@ -6266,7 +6266,7 @@
           },
           "algorithm": "mcts",
           "heuristicId": "MCTS-UCT",
-          "elapsedMs": 65.15210000000002,
+          "elapsedMs": 89.44319999999993,
           "score": 60.28,
           "nodesVisited": 51,
           "cutoffs": 0,
@@ -6284,7 +6284,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 1.8988000000000511,
+          "elapsedMs": 3.3197000000000116,
           "score": 100,
           "nodesVisited": 28,
           "cutoffs": 9
@@ -6301,7 +6301,7 @@
           },
           "algorithm": "mcts",
           "heuristicId": "MCTS-UCT",
-          "elapsedMs": 63.52959999999996,
+          "elapsedMs": 84.43690000000015,
           "score": 63.87,
           "nodesVisited": 51,
           "cutoffs": 0,
@@ -6319,7 +6319,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 1.1838000000000193,
+          "elapsedMs": 1.2981999999999516,
           "score": 100,
           "nodesVisited": 28,
           "cutoffs": 9
@@ -6337,7 +6337,7 @@
           },
           "algorithm": "mcts",
           "heuristicId": "MCTS-UCT",
-          "elapsedMs": 60.32860000000005,
+          "elapsedMs": 74.3873000000001,
           "score": 50.86,
           "nodesVisited": 51,
           "cutoffs": 0,
@@ -6355,7 +6355,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 1.2373999999999796,
+          "elapsedMs": 1.945799999999963,
           "score": 103,
           "nodesVisited": 33,
           "cutoffs": 7
@@ -6373,7 +6373,7 @@
           },
           "algorithm": "mcts",
           "heuristicId": "MCTS-UCT",
-          "elapsedMs": 59.03750000000002,
+          "elapsedMs": 75.53049999999985,
           "score": 56.57,
           "nodesVisited": 51,
           "cutoffs": 0,
@@ -6392,7 +6392,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 1.6671000000001186,
+          "elapsedMs": 2.080600000000004,
           "score": 103,
           "nodesVisited": 35,
           "cutoffs": 8
@@ -6410,7 +6410,7 @@
           },
           "algorithm": "mcts",
           "heuristicId": "MCTS-UCT",
-          "elapsedMs": 65.57349999999997,
+          "elapsedMs": 84.62049999999999,
           "score": 31.01,
           "nodesVisited": 51,
           "cutoffs": 0,
@@ -6429,7 +6429,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 1.434099999999944,
+          "elapsedMs": 2.444600000000264,
           "score": 203,
           "nodesVisited": 33,
           "cutoffs": 7
@@ -6447,7 +6447,7 @@
           },
           "algorithm": "mcts",
           "heuristicId": "MCTS-UCT",
-          "elapsedMs": 69.82510000000002,
+          "elapsedMs": 108.88589999999976,
           "score": 64.57,
           "nodesVisited": 51,
           "cutoffs": 0,
@@ -6465,7 +6465,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 1.2550000000001091,
+          "elapsedMs": 1.732300000000123,
           "score": 109,
           "nodesVisited": 42,
           "cutoffs": 6
@@ -6483,7 +6483,7 @@
           },
           "algorithm": "mcts",
           "heuristicId": "MCTS-UCT",
-          "elapsedMs": 80.83569999999986,
+          "elapsedMs": 114.22740000000022,
           "score": 87.33,
           "nodesVisited": 51,
           "cutoffs": 0,
@@ -6502,7 +6502,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 2.1299999999998818,
+          "elapsedMs": 3.319500000000062,
           "score": -491,
           "nodesVisited": 57,
           "cutoffs": 5
@@ -6520,7 +6520,7 @@
           },
           "algorithm": "mcts",
           "heuristicId": "MCTS-UCT",
-          "elapsedMs": 127.28719999999998,
+          "elapsedMs": 171.55359999999973,
           "score": 89.3,
           "nodesVisited": 51,
           "cutoffs": 0,
@@ -6538,7 +6538,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 1.8945000000001073,
+          "elapsedMs": 3.1713999999997213,
           "score": -588,
           "nodesVisited": 41,
           "cutoffs": 6
@@ -6556,7 +6556,7 @@
           },
           "algorithm": "mcts",
           "heuristicId": "MCTS-UCT",
-          "elapsedMs": 124.2838999999999,
+          "elapsedMs": 181.39249999999993,
           "score": 96.02,
           "nodesVisited": 51,
           "cutoffs": 0,
@@ -6574,7 +6574,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 2.927500000000009,
+          "elapsedMs": 5.247100000000046,
           "score": -685,
           "nodesVisited": 48,
           "cutoffs": 7
@@ -6592,7 +6592,7 @@
           },
           "algorithm": "mcts",
           "heuristicId": "MCTS-UCT",
-          "elapsedMs": 124.28279999999995,
+          "elapsedMs": 183.69939999999997,
           "score": 95.78,
           "nodesVisited": 51,
           "cutoffs": 0,
@@ -6611,7 +6611,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 3.487100000000055,
+          "elapsedMs": 5.362499999999727,
           "score": -585,
           "nodesVisited": 77,
           "cutoffs": 7
@@ -6628,7 +6628,7 @@
           },
           "algorithm": "mcts",
           "heuristicId": "MCTS-UCT",
-          "elapsedMs": 117.83909999999992,
+          "elapsedMs": 188.17180000000008,
           "score": 92.56,
           "nodesVisited": 51,
           "cutoffs": 0,
@@ -6647,7 +6647,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 2.9295999999999367,
+          "elapsedMs": 5.8703999999997905,
           "score": -688,
           "nodesVisited": 59,
           "cutoffs": 8
@@ -6665,7 +6665,7 @@
           },
           "algorithm": "mcts",
           "heuristicId": "MCTS-UCT",
-          "elapsedMs": 129.41330000000016,
+          "elapsedMs": 250.2428,
           "score": 94.32,
           "nodesVisited": 51,
           "cutoffs": 0,
@@ -6684,7 +6684,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 5.054699999999912,
+          "elapsedMs": 9.980799999999817,
           "score": -688,
           "nodesVisited": 60,
           "cutoffs": 7
@@ -6701,7 +6701,7 @@
           },
           "algorithm": "mcts",
           "heuristicId": "MCTS-UCT",
-          "elapsedMs": 124.91550000000007,
+          "elapsedMs": 188.2823999999996,
           "score": 91.66,
           "nodesVisited": 51,
           "cutoffs": 0,
@@ -6720,7 +6720,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 4.374200000000201,
+          "elapsedMs": 7.707899999999881,
           "score": -591,
           "nodesVisited": 68,
           "cutoffs": 8
@@ -6738,7 +6738,7 @@
           },
           "algorithm": "mcts",
           "heuristicId": "MCTS-UCT",
-          "elapsedMs": 111.73769999999968,
+          "elapsedMs": 183.8230999999996,
           "score": 88.05,
           "nodesVisited": 51,
           "cutoffs": 0,
@@ -6756,7 +6756,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 1.3126999999999498,
+          "elapsedMs": 1.0549000000000888,
           "score": -591,
           "nodesVisited": 26,
           "cutoffs": 8
@@ -6773,7 +6773,7 @@
           },
           "algorithm": "mcts",
           "heuristicId": "MCTS-UCT",
-          "elapsedMs": 107.70089999999982,
+          "elapsedMs": 114.12090000000035,
           "score": 91.79,
           "nodesVisited": 51,
           "cutoffs": 0,
@@ -6791,7 +6791,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 1.6224999999999454,
+          "elapsedMs": 1.833599999999933,
           "score": -591,
           "nodesVisited": 31,
           "cutoffs": 7
@@ -6808,7 +6808,7 @@
           },
           "algorithm": "mcts",
           "heuristicId": "MCTS-UCT",
-          "elapsedMs": 100.14260000000013,
+          "elapsedMs": 127.04539999999997,
           "score": 77.26,
           "nodesVisited": 51,
           "cutoffs": 0,
@@ -6826,7 +6826,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 1.0367000000001099,
+          "elapsedMs": 1.6618000000003121,
           "score": -391,
           "nodesVisited": 27,
           "cutoffs": 6
@@ -6843,7 +6843,7 @@
           },
           "algorithm": "mcts",
           "heuristicId": "MCTS-UCT",
-          "elapsedMs": 90.96160000000009,
+          "elapsedMs": 155.91640000000007,
           "score": 72.27,
           "nodesVisited": 51,
           "cutoffs": 0,
@@ -6861,7 +6861,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 1.0985000000000582,
+          "elapsedMs": 1.4371000000001004,
           "score": -391,
           "nodesVisited": 29,
           "cutoffs": 6
@@ -6878,7 +6878,7 @@
           },
           "algorithm": "mcts",
           "heuristicId": "MCTS-UCT",
-          "elapsedMs": 96.68550000000005,
+          "elapsedMs": 122.14879999999994,
           "score": 73.52,
           "nodesVisited": 51,
           "cutoffs": 0,
@@ -6896,7 +6896,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.9949000000001433,
+          "elapsedMs": 1.0196999999998297,
           "score": -391,
           "nodesVisited": 29,
           "cutoffs": 6
@@ -6913,7 +6913,7 @@
           },
           "algorithm": "mcts",
           "heuristicId": "MCTS-UCT",
-          "elapsedMs": 94.95149999999967,
+          "elapsedMs": 111.30659999999989,
           "score": 63.56,
           "nodesVisited": 51,
           "cutoffs": 0,
@@ -6931,7 +6931,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 1.2334999999998217,
+          "elapsedMs": 1.1257000000005064,
           "score": -391,
           "nodesVisited": 26,
           "cutoffs": 7
@@ -6948,7 +6948,7 @@
           },
           "algorithm": "mcts",
           "heuristicId": "MCTS-UCT",
-          "elapsedMs": 85.77629999999999,
+          "elapsedMs": 133.15570000000025,
           "score": 81.66,
           "nodesVisited": 51,
           "cutoffs": 0,
@@ -6966,7 +6966,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.6776999999997315,
+          "elapsedMs": 2.158499999999549,
           "score": -391,
           "nodesVisited": 20,
           "cutoffs": 8
@@ -6983,7 +6983,7 @@
           },
           "algorithm": "mcts",
           "heuristicId": "MCTS-UCT",
-          "elapsedMs": 80.14820000000009,
+          "elapsedMs": 129.93059999999969,
           "score": 87.99,
           "nodesVisited": 51,
           "cutoffs": 0,
@@ -7001,7 +7001,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.6405999999997221,
+          "elapsedMs": 1.3069000000004962,
           "score": -391,
           "nodesVisited": 20,
           "cutoffs": 8
@@ -7018,7 +7018,7 @@
           },
           "algorithm": "mcts",
           "heuristicId": "MCTS-UCT",
-          "elapsedMs": 71.90340000000015,
+          "elapsedMs": 116.72969999999987,
           "score": 93.26,
           "nodesVisited": 51,
           "cutoffs": 0,
@@ -7036,7 +7036,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.9863000000000284,
+          "elapsedMs": 1.59440000000086,
           "score": -391,
           "nodesVisited": 23,
           "cutoffs": 7
@@ -7053,7 +7053,7 @@
           },
           "algorithm": "mcts",
           "heuristicId": "MCTS-UCT",
-          "elapsedMs": 61.18170000000009,
+          "elapsedMs": 104.09559999999965,
           "score": 81.43,
           "nodesVisited": 51,
           "cutoffs": 0,
@@ -7072,7 +7072,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.6287000000002081,
+          "elapsedMs": 0.8645999999998821,
           "score": -194,
           "nodesVisited": 23,
           "cutoffs": 5
@@ -7089,7 +7089,7 @@
           },
           "algorithm": "mcts",
           "heuristicId": "MCTS-UCT",
-          "elapsedMs": 58.84889999999996,
+          "elapsedMs": 76.26850000000013,
           "score": 81,
           "nodesVisited": 51,
           "cutoffs": 0,
@@ -7107,7 +7107,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.576799999999821,
+          "elapsedMs": 1.480600000000777,
           "score": -194,
           "nodesVisited": 24,
           "cutoffs": 7
@@ -7124,7 +7124,7 @@
           },
           "algorithm": "mcts",
           "heuristicId": "MCTS-UCT",
-          "elapsedMs": 49.279099999999744,
+          "elapsedMs": 60.918800000000374,
           "score": 63.72,
           "nodesVisited": 51,
           "cutoffs": 0,
@@ -7142,7 +7142,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.5344000000000051,
+          "elapsedMs": 0.7410999999992782,
           "score": -194,
           "nodesVisited": 23,
           "cutoffs": 8
@@ -7159,7 +7159,7 @@
           },
           "algorithm": "mcts",
           "heuristicId": "MCTS-UCT",
-          "elapsedMs": 39.76229999999987,
+          "elapsedMs": 52.03699999999935,
           "score": 71.75,
           "nodesVisited": 51,
           "cutoffs": 0,
@@ -7177,7 +7177,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.752100000000155,
+          "elapsedMs": 1.3242999999993117,
           "score": -194,
           "nodesVisited": 22,
           "cutoffs": 8
@@ -7194,7 +7194,7 @@
           },
           "algorithm": "mcts",
           "heuristicId": "MCTS-UCT",
-          "elapsedMs": 37.13599999999997,
+          "elapsedMs": 57.027100000000246,
           "score": 52.6,
           "nodesVisited": 51,
           "cutoffs": 0,
@@ -7212,7 +7212,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.5115000000000691,
+          "elapsedMs": 0.6198999999996886,
           "score": -194,
           "nodesVisited": 23,
           "cutoffs": 7
@@ -7229,7 +7229,7 @@
           },
           "algorithm": "mcts",
           "heuristicId": "MCTS-UCT",
-          "elapsedMs": 40.56489999999985,
+          "elapsedMs": 47.81739999999991,
           "score": 48.53,
           "nodesVisited": 51,
           "cutoffs": 0,
@@ -7247,7 +7247,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.5347000000001572,
+          "elapsedMs": 0.4804999999996653,
           "score": -194,
           "nodesVisited": 23,
           "cutoffs": 9
@@ -7264,7 +7264,7 @@
           },
           "algorithm": "mcts",
           "heuristicId": "MCTS-UCT",
-          "elapsedMs": 31.46210000000019,
+          "elapsedMs": 36.70349999999962,
           "score": 82.17,
           "nodesVisited": 51,
           "cutoffs": 0,
@@ -7282,7 +7282,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.3044999999997344,
+          "elapsedMs": 0.44250000000010914,
           "score": -94,
           "nodesVisited": 23,
           "cutoffs": 9
@@ -7299,7 +7299,7 @@
           },
           "algorithm": "mcts",
           "heuristicId": "MCTS-UCT",
-          "elapsedMs": 26.528999999999996,
+          "elapsedMs": 32.11319999999978,
           "score": 55.17,
           "nodesVisited": 51,
           "cutoffs": 0,
@@ -7318,7 +7318,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.3769000000002052,
+          "elapsedMs": 0.41789999999946303,
           "score": 3,
           "nodesVisited": 20,
           "cutoffs": 7
@@ -7335,7 +7335,7 @@
           },
           "algorithm": "mcts",
           "heuristicId": "MCTS-UCT",
-          "elapsedMs": 7.2007000000003245,
+          "elapsedMs": 6.754700000000412,
           "score": 39.52,
           "nodesVisited": 51,
           "cutoffs": 0,
@@ -7354,7 +7354,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.2943000000000211,
+          "elapsedMs": 0.6240999999999985,
           "score": 100,
           "nodesVisited": 21,
           "cutoffs": 6
@@ -7371,7 +7371,7 @@
           },
           "algorithm": "mcts",
           "heuristicId": "MCTS-UCT",
-          "elapsedMs": 1.5005000000001019,
+          "elapsedMs": 2.864300000000185,
           "score": 15.13,
           "nodesVisited": 51,
           "cutoffs": 0,
@@ -7389,7 +7389,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.05819999999994252,
+          "elapsedMs": 0.06900000000041473,
           "score": 200,
           "nodesVisited": 8,
           "cutoffs": 1
@@ -7406,7 +7406,7 @@
           },
           "algorithm": "mcts",
           "heuristicId": "MCTS-UCT",
-          "elapsedMs": 1.0758999999998196,
+          "elapsedMs": 1.2145000000000437,
           "score": 28.83,
           "nodesVisited": 51,
           "cutoffs": 0,
@@ -7424,7 +7424,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.041300000000319415,
+          "elapsedMs": 0.04550000000017462,
           "score": 200,
           "nodesVisited": 8,
           "cutoffs": 2
@@ -7441,7 +7441,7 @@
           },
           "algorithm": "mcts",
           "heuristicId": "MCTS-UCT",
-          "elapsedMs": 0.8765000000003056,
+          "elapsedMs": 0.9480999999996129,
           "score": 17.35,
           "nodesVisited": 51,
           "cutoffs": 0,
@@ -7481,7 +7481,7 @@
       "winner": "P2",
       "reason": "normal",
       "totalPlies": 60,
-      "durationMs": 2266.1959,
+      "durationMs": 3988.7448000000004,
       "decisions": [
         {
           "ply": 1,
@@ -7496,7 +7496,7 @@
           },
           "algorithm": "mcts",
           "heuristicId": "MCTS-UCT",
-          "elapsedMs": 87.66540000000032,
+          "elapsedMs": 100.78669999999966,
           "score": 74.56,
           "nodesVisited": 51,
           "cutoffs": 0,
@@ -7514,7 +7514,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 1.6741000000001804,
+          "elapsedMs": 1.909099999999853,
           "score": 3,
           "nodesVisited": 25,
           "cutoffs": 8
@@ -7532,7 +7532,7 @@
           },
           "algorithm": "mcts",
           "heuristicId": "MCTS-UCT",
-          "elapsedMs": 85.01880000000028,
+          "elapsedMs": 154.97299999999996,
           "score": 76.25,
           "nodesVisited": 51,
           "cutoffs": 0,
@@ -7550,7 +7550,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 1.7824000000000524,
+          "elapsedMs": 4.3586999999997715,
           "score": -91,
           "nodesVisited": 32,
           "cutoffs": 7
@@ -7568,7 +7568,7 @@
           },
           "algorithm": "mcts",
           "heuristicId": "MCTS-UCT",
-          "elapsedMs": 87.93669999999975,
+          "elapsedMs": 182.5595999999996,
           "score": 88.93,
           "nodesVisited": 51,
           "cutoffs": 0,
@@ -7586,7 +7586,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 2.1449000000002343,
+          "elapsedMs": 3.9841000000005806,
           "score": -188,
           "nodesVisited": 34,
           "cutoffs": 8
@@ -7604,7 +7604,7 @@
           },
           "algorithm": "mcts",
           "heuristicId": "MCTS-UCT",
-          "elapsedMs": 108.32720000000018,
+          "elapsedMs": 195.21509999999944,
           "score": 91.65,
           "nodesVisited": 51,
           "cutoffs": 0,
@@ -7622,7 +7622,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 2.117699999999786,
+          "elapsedMs": 4.383100000000013,
           "score": -285,
           "nodesVisited": 45,
           "cutoffs": 7
@@ -7639,7 +7639,7 @@
           },
           "algorithm": "mcts",
           "heuristicId": "MCTS-UCT",
-          "elapsedMs": 109.66620000000012,
+          "elapsedMs": 192.17090000000007,
           "score": 97.75,
           "nodesVisited": 51,
           "cutoffs": 0,
@@ -7658,7 +7658,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 1.9367999999999483,
+          "elapsedMs": 4.654100000000653,
           "score": -188,
           "nodesVisited": 46,
           "cutoffs": 6
@@ -7676,7 +7676,7 @@
           },
           "algorithm": "mcts",
           "heuristicId": "MCTS-UCT",
-          "elapsedMs": 111.76020000000017,
+          "elapsedMs": 209.76450000000023,
           "score": 93.94,
           "nodesVisited": 51,
           "cutoffs": 0,
@@ -7694,7 +7694,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 2.761200000000372,
+          "elapsedMs": 4.844700000000557,
           "score": -285,
           "nodesVisited": 32,
           "cutoffs": 7
@@ -7712,7 +7712,7 @@
           },
           "algorithm": "mcts",
           "heuristicId": "MCTS-UCT",
-          "elapsedMs": 128.32930000000033,
+          "elapsedMs": 224.01429999999982,
           "score": 97.83,
           "nodesVisited": 51,
           "cutoffs": 0,
@@ -7730,7 +7730,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 2.225300000000061,
+          "elapsedMs": 2.9342999999998938,
           "score": -382,
           "nodesVisited": 31,
           "cutoffs": 7
@@ -7748,7 +7748,7 @@
           },
           "algorithm": "mcts",
           "heuristicId": "MCTS-UCT",
-          "elapsedMs": 132.71159999999963,
+          "elapsedMs": 241.67360000000008,
           "score": 93.45,
           "nodesVisited": 51,
           "cutoffs": 0,
@@ -7766,7 +7766,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 2.426800000000185,
+          "elapsedMs": 4.13799999999992,
           "score": -579,
           "nodesVisited": 29,
           "cutoffs": 7
@@ -7784,7 +7784,7 @@
           },
           "algorithm": "mcts",
           "heuristicId": "MCTS-UCT",
-          "elapsedMs": 136.3103999999994,
+          "elapsedMs": 224.51549999999952,
           "score": 93.96,
           "nodesVisited": 51,
           "cutoffs": 0,
@@ -7802,7 +7802,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 2.5960000000004584,
+          "elapsedMs": 5.810999999999694,
           "score": -476,
           "nodesVisited": 40,
           "cutoffs": 7
@@ -7820,7 +7820,7 @@
           },
           "algorithm": "mcts",
           "heuristicId": "MCTS-UCT",
-          "elapsedMs": 120.26469999999972,
+          "elapsedMs": 204.22000000000025,
           "score": 91.72,
           "nodesVisited": 51,
           "cutoffs": 0,
@@ -7838,7 +7838,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 2.8149999999996,
+          "elapsedMs": 4.185800000000199,
           "score": -373,
           "nodesVisited": 34,
           "cutoffs": 7
@@ -7856,7 +7856,7 @@
           },
           "algorithm": "mcts",
           "heuristicId": "MCTS-UCT",
-          "elapsedMs": 69.45430000000033,
+          "elapsedMs": 125.66940000000068,
           "score": 88.24,
           "nodesVisited": 51,
           "cutoffs": 0,
@@ -7874,7 +7874,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.9225999999998749,
+          "elapsedMs": 0.740299999999479,
           "score": -373,
           "nodesVisited": 18,
           "cutoffs": 7
@@ -7891,7 +7891,7 @@
           },
           "algorithm": "mcts",
           "heuristicId": "MCTS-UCT",
-          "elapsedMs": 62.79829999999947,
+          "elapsedMs": 108.05959999999959,
           "score": 69.45,
           "nodesVisited": 51,
           "cutoffs": 0,
@@ -7910,7 +7910,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.548399999999674,
+          "elapsedMs": 1.4355999999997948,
           "score": -176,
           "nodesVisited": 19,
           "cutoffs": 5
@@ -7927,7 +7927,7 @@
           },
           "algorithm": "mcts",
           "heuristicId": "MCTS-UCT",
-          "elapsedMs": 63.15860000000066,
+          "elapsedMs": 98.02540000000045,
           "score": 51.39,
           "nodesVisited": 51,
           "cutoffs": 0,
@@ -7946,7 +7946,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.6190999999998894,
+          "elapsedMs": 0.9197999999996682,
           "score": 121,
           "nodesVisited": 20,
           "cutoffs": 5
@@ -7963,7 +7963,7 @@
           },
           "algorithm": "mcts",
           "heuristicId": "MCTS-UCT",
-          "elapsedMs": 67.59680000000026,
+          "elapsedMs": 113.1242999999995,
           "score": 37.72,
           "nodesVisited": 51,
           "cutoffs": 0,
@@ -7982,7 +7982,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.6233999999994921,
+          "elapsedMs": 0.9232999999994718,
           "score": 418,
           "nodesVisited": 20,
           "cutoffs": 5
@@ -7999,7 +7999,7 @@
           },
           "algorithm": "mcts",
           "heuristicId": "MCTS-UCT",
-          "elapsedMs": 69.6246000000001,
+          "elapsedMs": 112.79790000000048,
           "score": 16.02,
           "nodesVisited": 51,
           "cutoffs": 0,
@@ -8017,7 +8017,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.7265999999999622,
+          "elapsedMs": 0.9922999999998865,
           "score": 418,
           "nodesVisited": 19,
           "cutoffs": 6
@@ -8034,7 +8034,7 @@
           },
           "algorithm": "mcts",
           "heuristicId": "MCTS-UCT",
-          "elapsedMs": 71.1264000000001,
+          "elapsedMs": 118.5668999999998,
           "score": 26.58,
           "nodesVisited": 51,
           "cutoffs": 0,
@@ -8052,7 +8052,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.5919000000003507,
+          "elapsedMs": 1.0110999999997148,
           "score": 418,
           "nodesVisited": 19,
           "cutoffs": 6
@@ -8069,7 +8069,7 @@
           },
           "algorithm": "mcts",
           "heuristicId": "MCTS-UCT",
-          "elapsedMs": 68.23649999999998,
+          "elapsedMs": 115.72459999999955,
           "score": 20.64,
           "nodesVisited": 51,
           "cutoffs": 0,
@@ -8087,7 +8087,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.6093000000000757,
+          "elapsedMs": 1.0286999999998443,
           "score": 418,
           "nodesVisited": 19,
           "cutoffs": 6
@@ -8104,7 +8104,7 @@
           },
           "algorithm": "mcts",
           "heuristicId": "MCTS-UCT",
-          "elapsedMs": 66.21389999999974,
+          "elapsedMs": 111.20440000000053,
           "score": 34.29,
           "nodesVisited": 51,
           "cutoffs": 0,
@@ -8122,7 +8122,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.596599999999853,
+          "elapsedMs": 1.2619999999997162,
           "score": 418,
           "nodesVisited": 19,
           "cutoffs": 6
@@ -8139,7 +8139,7 @@
           },
           "algorithm": "mcts",
           "heuristicId": "MCTS-UCT",
-          "elapsedMs": 66.94120000000021,
+          "elapsedMs": 111.90519999999924,
           "score": 23.92,
           "nodesVisited": 51,
           "cutoffs": 0,
@@ -8157,7 +8157,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.566899999999805,
+          "elapsedMs": 0.8955999999998312,
           "score": 418,
           "nodesVisited": 22,
           "cutoffs": 6
@@ -8174,7 +8174,7 @@
           },
           "algorithm": "mcts",
           "heuristicId": "MCTS-UCT",
-          "elapsedMs": 59.965799999999945,
+          "elapsedMs": 110.78959999999825,
           "score": 24.71,
           "nodesVisited": 51,
           "cutoffs": 0,
@@ -8192,7 +8192,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.6098999999994703,
+          "elapsedMs": 1.137799999998606,
           "score": 418,
           "nodesVisited": 27,
           "cutoffs": 7
@@ -8209,7 +8209,7 @@
           },
           "algorithm": "mcts",
           "heuristicId": "MCTS-UCT",
-          "elapsedMs": 61.36210000000028,
+          "elapsedMs": 97.00799999999981,
           "score": 17.03,
           "nodesVisited": 51,
           "cutoffs": 0,
@@ -8228,7 +8228,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.6594999999997526,
+          "elapsedMs": 0.8765999999995984,
           "score": 515,
           "nodesVisited": 28,
           "cutoffs": 8
@@ -8245,7 +8245,7 @@
           },
           "algorithm": "mcts",
           "heuristicId": "MCTS-UCT",
-          "elapsedMs": 60.447799999999916,
+          "elapsedMs": 99.52889999999934,
           "score": 10.5,
           "nodesVisited": 51,
           "cutoffs": 0,
@@ -8263,7 +8263,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.6187999999992826,
+          "elapsedMs": 1.7623999999996158,
           "score": 515,
           "nodesVisited": 36,
           "cutoffs": 9
@@ -8280,7 +8280,7 @@
           },
           "algorithm": "mcts",
           "heuristicId": "MCTS-UCT",
-          "elapsedMs": 56.95259999999962,
+          "elapsedMs": 124.02499999999964,
           "score": 5.33,
           "nodesVisited": 51,
           "cutoffs": 0,
@@ -8298,7 +8298,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.8492999999998574,
+          "elapsedMs": 0.8476000000009662,
           "score": 515,
           "nodesVisited": 25,
           "cutoffs": 9
@@ -8315,7 +8315,7 @@
           },
           "algorithm": "mcts",
           "heuristicId": "MCTS-UCT",
-          "elapsedMs": 55.162999999999556,
+          "elapsedMs": 103.66799999999967,
           "score": 7.52,
           "nodesVisited": 51,
           "cutoffs": 0,
@@ -8333,7 +8333,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.4434000000001106,
+          "elapsedMs": 0.7427999999999884,
           "score": 515,
           "nodesVisited": 25,
           "cutoffs": 9
@@ -8350,7 +8350,7 @@
           },
           "algorithm": "mcts",
           "heuristicId": "MCTS-UCT",
-          "elapsedMs": 47.565599999999904,
+          "elapsedMs": 100.61520000000019,
           "score": 15.35,
           "nodesVisited": 51,
           "cutoffs": 0,
@@ -8368,7 +8368,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.5518000000001848,
+          "elapsedMs": 0.788300000000163,
           "score": 515,
           "nodesVisited": 27,
           "cutoffs": 9
@@ -8385,7 +8385,7 @@
           },
           "algorithm": "mcts",
           "heuristicId": "MCTS-UCT",
-          "elapsedMs": 48.14629999999943,
+          "elapsedMs": 97.04989999999998,
           "score": 17.99,
           "nodesVisited": 51,
           "cutoffs": 0,
@@ -8404,7 +8404,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.345299999999952,
+          "elapsedMs": 1.0066999999999098,
           "score": 612,
           "nodesVisited": 26,
           "cutoffs": 7
@@ -8421,7 +8421,7 @@
           },
           "algorithm": "mcts",
           "heuristicId": "MCTS-UCT",
-          "elapsedMs": 43.06720000000041,
+          "elapsedMs": 91.70639999999912,
           "score": 7.87,
           "nodesVisited": 51,
           "cutoffs": 0,
@@ -8440,7 +8440,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.5376000000005661,
+          "elapsedMs": 0.8070000000006985,
           "score": 909,
           "nodesVisited": 24,
           "cutoffs": 6
@@ -8457,7 +8457,7 @@
           },
           "algorithm": "mcts",
           "heuristicId": "MCTS-UCT",
-          "elapsedMs": 44.07020000000011,
+          "elapsedMs": 77.28240000000005,
           "score": 2.36,
           "nodesVisited": 51,
           "cutoffs": 0,
@@ -8475,7 +8475,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.4647000000004482,
+          "elapsedMs": 0.8098000000009051,
           "score": 1109,
           "nodesVisited": 21,
           "cutoffs": 7
@@ -8492,7 +8492,7 @@
           },
           "algorithm": "mcts",
           "heuristicId": "MCTS-UCT",
-          "elapsedMs": 26.14690000000064,
+          "elapsedMs": 46.525799999999435,
           "score": 2.9,
           "nodesVisited": 51,
           "cutoffs": 0,
@@ -8510,7 +8510,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.5961999999999534,
+          "elapsedMs": 0.8689000000013039,
           "score": 1109,
           "nodesVisited": 22,
           "cutoffs": 9
@@ -8527,7 +8527,7 @@
           },
           "algorithm": "mcts",
           "heuristicId": "MCTS-UCT",
-          "elapsedMs": 13.939300000000003,
+          "elapsedMs": 30.6234000000004,
           "score": 0,
           "nodesVisited": 47,
           "cutoffs": 0,
@@ -8545,7 +8545,7 @@
           },
           "algorithm": "alpha-beta",
           "heuristicId": "H0",
-          "elapsedMs": 0.39620000000013533,
+          "elapsedMs": 0.7229999999999563,
           "score": 99999,
           "nodesVisited": 18,
           "cutoffs": 8

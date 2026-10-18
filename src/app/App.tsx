@@ -9,9 +9,8 @@ import { Board } from '../components/Board';
 import { Panel } from '../components/Panel';
 import { ArenaView } from '../components/ArenaView';
 import { TournamentView } from '../components/TournamentView';
-import { HeuristicLabView } from '../components/HeuristicLabView';
 
-export type AppTab = 'human-vs-ai' | 'arena' | 'tournaments' | 'heuristics';
+export type AppTab = 'human-vs-ai' | 'arena' | 'tournaments';
 
 export const App: React.FC = () => {
   const [activeTab, setActiveTab] = useState<AppTab>('human-vs-ai');
@@ -163,15 +162,7 @@ export const App: React.FC = () => {
           className={`nav-tab ${activeTab === 'tournaments' ? 'active' : ''}`}
           onClick={() => setActiveTab('tournaments')}
         >
-          🏆 Tournaments & Experiments
-        </button>
-        <button
-          role="tab"
-          aria-selected={activeTab === 'heuristics'}
-          className={`nav-tab ${activeTab === 'heuristics' ? 'active' : ''}`}
-          onClick={() => setActiveTab('heuristics')}
-        >
-          🧪 Heuristic Lab
+          🏆 Tournaments
         </button>
       </nav>
 
@@ -203,7 +194,6 @@ export const App: React.FC = () => {
 
       {activeTab === 'arena' && <ArenaView />}
       {activeTab === 'tournaments' && <TournamentView />}
-      {activeTab === 'heuristics' && <HeuristicLabView />}
     </div>
   );
 };

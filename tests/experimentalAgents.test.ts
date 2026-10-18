@@ -132,7 +132,7 @@ describe('Milestone C: Iterative Deepening & Cycle Diagnostics', () => {
   });
 });
 
-describe('Milestone D: Modular Heuristics Laboratory', () => {
+describe('Milestone D: Modular Heuristics & Presets Engine', () => {
   it('all presets yield finite, deterministic scores for fixed states', () => {
     const state = createInitialState();
     state.activePlayer = 'P2';

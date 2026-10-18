@@ -2,7 +2,7 @@
 
 An original, polished, browser-based **Quoridor AI Experimentation Platform** demonstrating fundamental Artificial Intelligence techniques: state-space problem formulation, **BFS and A\*** shortest-path finding, modular heuristic evaluation, **Minimax adversarial search**, **Alpha-Beta pruning**, and an original **Monte Carlo Tree Search (MCTS)** agent.
 
-Built with **React 18 + TypeScript + Vite**, featuring a decoupled rules engine, 69 automated Vitest unit and integration tests, an interactive AI-vs-AI Arena, a Modular Heuristic Laboratory, an Automated Tournament Runner, and a CLI benchmark suite with CSV/JSON exports.
+Built with **React 18 + TypeScript + Vite**, featuring a decoupled rules engine, 70 automated Vitest unit and integration tests, an interactive AI-vs-AI Arena, an Automated Tournament Runner, and a CLI benchmark suite with CSV/JSON exports.
 
 ---
 
@@ -23,7 +23,7 @@ npm install
 |---|---|
 | `npm run dev` | Launch local Vite development server (default: `http://localhost:3000`) |
 | `npm run build` | Compile TypeScript and build production bundle into `dist/` |
-| `npm run test` | Run Vitest automated test suite (69 unit and integration tests) |
+| `npm run test` | Run Vitest automated test suite (70 unit and integration tests) |
 | `npm run typecheck` | Run strict TypeScript validation (`tsc --noEmit`) |
 | `npm run lint` | Run ESLint across all TypeScript source files |
 | `npm run benchmark` | Run reproducible AI vs AI tournament and emit reports |
@@ -33,7 +33,7 @@ npm install
 
 ## 2. Platform Modes & Capabilities
 
-The platform provides four integrated, high-level modes via top navigation tabs:
+The platform provides three core integrated modes via top navigation tabs:
 
 ### 🎮 Human vs AI
 - Play against any AI agent: **Alpha-Beta (Recommended)**, **Minimax**, **Greedy Baseline**, or **MCTS**.
@@ -41,13 +41,13 @@ The platform provides four integrated, high-level modes via top navigation tabs:
 - Match controls: New Game, Undo Turn, and live decision metrics inspector (nodes visited, cutoffs, elapsed milliseconds, and selected action).
 
 ### ⚔️ AI vs AI Arena
-- Configure Player 1 (Blue) and Player 2 (Red) independently with any algorithm, heuristic preset, depth, time budget, or MCTS iterations.
+- Configure Player 1 (Blue) and Player 2 (Red) independently with any algorithm, heuristic preset ($H_0$..$H_3$), depth, time budget, or MCTS iterations.
 - Playback controls: **Play**, **Pause**, **Step 1 Ply**, and **Restart**.
 - Configurable speed slider (50ms–1200ms) and safety Max Plies cap.
 - Real-time **Cycle Repetition Detector** alerting when agents oscillate in repetitive pawn moves.
 - Complete scrollable move history log with coordinate notation and per-move decision telemetry.
 
-### 🏆 Tournaments & Experiments
+### 🏆 Tournaments
 - Automated round-robin and head-to-head match runner with **strict side rotation** to eliminate first-mover tempo advantage.
 - Built-in experiment presets:
   - **Standard Benchmark (6 Games):** Alpha-Beta vs Minimax vs Greedy.
@@ -58,16 +58,7 @@ The platform provides four integrated, high-level modes via top navigation tabs:
 - Summary analytics cards, side-specific win counts (`P1 Wins` vs `P2 Wins` with explicit denominators), mean decision times, and plies.
 - One-click browser downloads for complete machine-readable **JSON reports** and formatted **CSV tables**.
 
-### 🧪 Modular Heuristic Laboratory
-- Compare and tune heuristic evaluation functions in real time.
-- Standard presets:
-  - **$H_0$ Baseline:** $100 \times (D_{opp} - D_{own}) + 3 \times (W_{own} - W_{opp})$
-  - **$H_1$ Pure Distance:** $100 \times (D_{opp} - D_{own})$ (ignores wall reserves)
-  - **$H_2$ Wall-Resource-Aware:** $100 \times (D_{opp} - D_{own}) + 15 \times (W_{own} - W_{opp})$
-  - **$H_3$ Strategic Composite:** Path advantage + wall conservation + opponent detour disruption + goal advancement.
-- Interactive weight sliders: Shortest Path Weight ($W_{path}$), Wall Reserve Weight ($W_{walls}$), Disruption Bonus, Goal Advancement, and Cycle Penalty.
-- Pre-configured tactical scenarios: Initial Board, Wall Choke / Blockade, Advancement Sprint, and Asymmetric Wall Advantage.
-- Live feature decomposition table breaking down exact numerical contributions to the net score.
+*(Note: Supported heuristic presets $H_0$ Baseline, $H_1$ Distance, $H_2$ Wall-Aware, and $H_3$ Composite remain fully available as internal AI evaluation settings within Arena and Tournament agent configurations.)*
 
 ---
 
@@ -101,14 +92,13 @@ d:\Quoridor_AI/
 │   │   ├── Panel.tsx           # Human vs AI control panel and metrics
 │   │   ├── ArenaView.tsx       # AI vs AI Arena with lifecycle controls
 │   │   ├── TournamentView.tsx  # Tournament runner, progress, and download actions
-│   │   ├── HeuristicLabView.tsx# Heuristic presets, sliders, and breakdown inspector
 │   │   └── Header.tsx          # Application header and navigation
 │   ├── app/
 │   │   └── App.tsx             # Main React application shell & tab routing
 │   ├── styles/
 │   │   └── index.css           # High-contrast, responsive CSS styling
 │   └── main.tsx                # React DOM entry point
-├── tests/                      # Automated Vitest test suites (69 tests)
+├── tests/                      # Automated Vitest test suites (70 tests)
 │   ├── engine.test.ts          # State transitions, jumps, collisions, rules
 │   ├── pathfinding.test.ts     # BFS vs A* equivalence, heuristics, mazes
 │   ├── ai.test.ts              # Minimax, Alpha-Beta cutoffs, win detection
@@ -176,14 +166,14 @@ npm run benchmark -- --preset mcts
 
 ## 6. Verification & Test Suite
 
-All 69 unit and integration tests pass cleanly:
+All 70 unit and integration tests pass cleanly:
 ```bash
 npm run check:all
 ```
 This executes:
 1. `tsc --noEmit` (0 type errors)
 2. `eslint .` (0 warnings, 0 errors)
-3. `vitest run` (69 passing tests across 6 suites)
+3. `vitest run` (70 passing tests across 6 suites)
 4. `vite build` (production build succeeds in <1s)
 
 Detailed documentation is available in [`docs/EXPERIMENTS_AND_METHODOLOGY.md`](file:///d:/Quoridor_AI/docs/EXPERIMENTS_AND_METHODOLOGY.md) and [`docs/EXPERIMENT_PLATFORM_STATUS.md`](file:///d:/Quoridor_AI/docs/EXPERIMENT_PLATFORM_STATUS.md).
