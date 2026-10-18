@@ -15,7 +15,7 @@ Built with **React 18 + TypeScript + Vite**, featuring a decoupled rules engine,
 ### Setup
 ```bash
 # Install dependencies
-npm install
+npm ci
 ```
 
 ### Essential Commands
@@ -177,3 +177,16 @@ This executes:
 4. `vite build` (production build succeeds in <1s)
 
 Detailed documentation is available in [`docs/EXPERIMENTS_AND_METHODOLOGY.md`](file:///d:/Quoridor_AI/docs/EXPERIMENTS_AND_METHODOLOGY.md) and [`docs/EXPERIMENT_PLATFORM_STATUS.md`](file:///d:/Quoridor_AI/docs/EXPERIMENT_PLATFORM_STATUS.md).
+
+---
+
+## 7. Contributing & AI Agent Policy
+
+- **Human Contributors:** Please review [CONTRIBUTING.md](CONTRIBUTING.md) for branch naming conventions (`<person-name>/<short-task-name>`), local verification requirements, and the Pull Request workflow. Direct commits and pushes to `main` are prohibited.
+- **AI Coding Agents:** Operating guidelines and constraints for autonomous AI assistants are specified in [AGENTS.md](AGENTS.md).
+
+---
+
+## 8. License
+
+This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
