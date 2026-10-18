@@ -139,7 +139,7 @@ export const App: React.FC = () => {
       <Header />
 
       {/* Experimentation Platform Navigation Tabs */}
-      <nav className="nav-tabs" role="tablist" aria-label="Game Modes" style={{ marginBottom: 20 }}>
+      <nav className="nav-tabs" role="tablist" aria-label="Game Modes">
         <button
           role="tab"
           aria-selected={activeTab === 'human-vs-ai'}
